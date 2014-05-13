@@ -36,6 +36,9 @@ public class camera : MonoBehaviour {
 	public GameObject l4w; //11
 	public GameObject l4y; //12
 
+	public GameObject l5;
+	public GameObject l50;
+
 	public GameObject end;
 
 	public GameObject levelText;
@@ -44,6 +47,8 @@ public class camera : MonoBehaviour {
 	public GameObject l2Objective2;
 	public GameObject l2Objective3;
 	public GameObject l3Report;
+
+	public GameObject l5report;
 
 	public bool xvalue = true;
 	public int level = -1;
@@ -54,6 +59,7 @@ public class camera : MonoBehaviour {
 	Vector3 level1Start = new Vector3(-3f,15.12f,0);
 	Vector3 level3Start = new Vector3(-99f,-21.8f,0);
 	Vector3 level4Start = new Vector3(-138f,-28.8f,0);
+	Vector3 level5Start = new Vector3(-248f,104.2f,0);
 
 	int level2LeftBoundary = -37;
 	int level21TopBoundary = -8;
@@ -144,11 +150,15 @@ public class camera : MonoBehaviour {
 			}
 		}
 		if ((41 <= level && level <= 49) || (410 <= level && level <= 412)) {
-			if (target.transform.position.x > 0){level = 100;}
+			if (target.transform.position.x > 0){tm.text = "5";level = 50;}
 			else if (target.transform.position.y < level4botVBoundary){
 				if (target.transform.position.x > level4lefHBoundary){level=4;}
 			}
 		
+		}
+
+		if (level == 5){
+			if (l5report.GetComponent<TextMesh>().text == "Correct!"){level = 100;}
 		}
 
 
@@ -169,6 +179,10 @@ public class camera : MonoBehaviour {
 			if (Input.GetKeyDown("4")){
 				level = 40;
 				tm.text = "4";
+			}
+			if (Input.GetKeyDown("5")){
+				level = 50;
+				tm.text = "5";
 			}
 			break;
 		case 0:
@@ -303,6 +317,20 @@ public class camera : MonoBehaviour {
 		case 412:
 			camera.transform.position = new Vector3 (l4y.transform.position.x+2, target.transform.position.y, -5f);;
 			camera.orthographicSize = 4;
+			break;
+
+
+		case 5:
+			camera.transform.position = new Vector3 (l5.transform.position.x+2, target.transform.position.y, -5f);;
+			camera.orthographicSize = 5;
+			break;
+		case 50:
+			camera.transform.position = new Vector3 (l50.transform.position.x, l50.transform.position.y, -5f);
+			camera.orthographicSize = 6;
+			if (Input.GetButtonDown("Jump")){
+				level = 5;
+				target.transform.position = level5Start;
+			}
 			break;
 
 

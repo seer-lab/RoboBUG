@@ -46,6 +46,8 @@ Assets/Scripts/L3Output.cs
 Assets/Scripts/L3ReportTextSetter.cs
 Assets/Scripts/L3TextSetter.cs
 Assets/Scripts/L4TextSetter.cs
+Assets/Scripts/L5ReportTextSetter.cs
+Assets/Scripts/L5TextSetter.cs
 Assets/Scripts/Return.cs
 Assets/Scripts/TextSetterblack.cs
 Assets/Scripts/TextSetterblue.cs
@@ -61,6 +63,8 @@ Assets/Scripts/TextSetterwhite.cs
 Assets/Scripts/TextSetteryellow.cs
 Assets/Scripts/ValueGetter.cs
 Assets/Scripts/ValuesGetter.cs
+Assets/Scripts/breakpoint.cs
+Assets/Scripts/breakpointHandler.cs
 Assets/Scripts/bug.cs
 Assets/Scripts/camera.cs
 Assets/Scripts/heroControllerScript.cs
@@ -70,6 +74,7 @@ Assets/Scripts/l3bug.cs
 Assets/Scripts/l4Return.cs
 Assets/Scripts/l4bug.cs
 Assets/Scripts/l4error.cs
+Assets/Scripts/l5bug.cs
 Assets/Scripts/maxPrinter.cs
 Assets/Scripts/midTest.cs
 Assets/Scripts/minPrinter.cs

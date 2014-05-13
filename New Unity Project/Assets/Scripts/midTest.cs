@@ -33,7 +33,7 @@ public class midTest : MonoBehaviour {
 							string[] vals = inputText.Split(',');
 							double mid;
 							if (vals.Length % 2 == 0){
-								mid = (double)System.Convert.ToDouble(vals[vals.Length/2-1]) + System.Convert.ToDouble(vals[vals.Length/2]) / 2;
+								mid = (double)System.Convert.ToDouble(vals[vals.Length/2-2]) + System.Convert.ToDouble(vals[vals.Length/2-1]) / 2.0;
 							}
 							else{
 								mid = System.Convert.ToDouble(vals[vals.Length/2]);

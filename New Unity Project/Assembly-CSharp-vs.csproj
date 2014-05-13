@@ -54,6 +54,8 @@
      <Compile Include="Assets\Scripts\L3ReportTextSetter.cs" />
      <Compile Include="Assets\Scripts\L3TextSetter.cs" />
      <Compile Include="Assets\Scripts\L4TextSetter.cs" />
+     <Compile Include="Assets\Scripts\L5ReportTextSetter.cs" />
+     <Compile Include="Assets\Scripts\L5TextSetter.cs" />
      <Compile Include="Assets\Scripts\Return.cs" />
      <Compile Include="Assets\Scripts\TextSetterblack.cs" />
      <Compile Include="Assets\Scripts\TextSetterblue.cs" />
@@ -69,6 +71,8 @@
      <Compile Include="Assets\Scripts\TextSetteryellow.cs" />
      <Compile Include="Assets\Scripts\ValueGetter.cs" />
      <Compile Include="Assets\Scripts\ValuesGetter.cs" />
+     <Compile Include="Assets\Scripts\breakpoint.cs" />
+     <Compile Include="Assets\Scripts\breakpointHandler.cs" />
      <Compile Include="Assets\Scripts\bug.cs" />
      <Compile Include="Assets\Scripts\camera.cs" />
      <Compile Include="Assets\Scripts\heroControllerScript.cs" />
@@ -78,6 +82,7 @@
      <Compile Include="Assets\Scripts\l4Return.cs" />
      <Compile Include="Assets\Scripts\l4bug.cs" />
      <Compile Include="Assets\Scripts\l4error.cs" />
+     <Compile Include="Assets\Scripts\l5bug.cs" />
      <Compile Include="Assets\Scripts\maxPrinter.cs" />
      <Compile Include="Assets\Scripts\midTest.cs" />
      <Compile Include="Assets\Scripts\minPrinter.cs" />

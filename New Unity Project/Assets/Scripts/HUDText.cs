@@ -16,4 +16,5 @@ public class HUDText : MonoBehaviour {
 		TextMesh tm = level.GetComponent<TextMesh> ();
 		gi.text = "Level " + tm.text;
 	}
+
 }

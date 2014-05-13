@@ -8,7 +8,7 @@ public class heroControllerScript : MonoBehaviour {
 	public Rigidbody2D projectile;
 	bool onWall = false;
 	bool facingRight = true;
-	float fireRate = 2f;
+	float fireRate = 0.1f;
 	private float nextFire = 0.0f;
 	float animTime = 0.3f;
 	private float animDelay = 0.0f;
