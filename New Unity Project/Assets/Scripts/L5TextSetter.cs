@@ -7,7 +7,7 @@ public class L5TextSetter : MonoBehaviour {
 		"\n" +
 		"\n#include <stdio.h>" +
 		"\n#include <colorprinter.h>" +
-		"\n" +
+		"\n#include <namedcolors.h>" +
 		"\n#define TOTAL_COLORS   12" +
 		"\n" +
 		"\nusing namespace colorprinter" +

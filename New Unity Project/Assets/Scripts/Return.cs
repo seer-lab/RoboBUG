@@ -9,8 +9,6 @@ public class Return : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		TextMesh tm = GetComponent<TextMesh>();
-		tm.color = Color.blue;
 	}
 	
 	// Update is called once per frame

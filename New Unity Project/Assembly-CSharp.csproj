@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AvgTest.cs" />
+     <Compile Include="Assets\Scripts\CColorTest.cs" />
+     <Compile Include="Assets\Scripts\ColorGetter.cs" />
+     <Compile Include="Assets\Scripts\FColorTest.cs" />
      <Compile Include="Assets\Scripts\HUDText.cs" />
      <Compile Include="Assets\Scripts\L1TextSetter.cs" />
      <Compile Include="Assets\Scripts\L2TextSetter.cs" />
@@ -56,6 +59,8 @@
      <Compile Include="Assets\Scripts\L4TextSetter.cs" />
      <Compile Include="Assets\Scripts\L5ReportTextSetter.cs" />
      <Compile Include="Assets\Scripts\L5TextSetter.cs" />
+     <Compile Include="Assets\Scripts\L7TextSetter.cs" />
+     <Compile Include="Assets\Scripts\OColorTest.cs" />
      <Compile Include="Assets\Scripts\Return.cs" />
      <Compile Include="Assets\Scripts\TextSetterblack.cs" />
      <Compile Include="Assets\Scripts\TextSetterblue.cs" />
@@ -83,6 +88,15 @@
      <Compile Include="Assets\Scripts\l4bug.cs" />
      <Compile Include="Assets\Scripts\l4error.cs" />
      <Compile Include="Assets\Scripts\l5bug.cs" />
+     <Compile Include="Assets\Scripts\l5variables.cs" />
+     <Compile Include="Assets\Scripts\l6breakpointhandler.cs" />
+     <Compile Include="Assets\Scripts\l6bug.cs" />
+     <Compile Include="Assets\Scripts\l6codetest.cs" />
+     <Compile Include="Assets\Scripts\l6dblack.cs" />
+     <Compile Include="Assets\Scripts\l6dtextsetter.cs" />
+     <Compile Include="Assets\Scripts\l6errortext.cs" />
+     <Compile Include="Assets\Scripts\l6lastbug.cs" />
+     <Compile Include="Assets\Scripts\l6variables.cs" />
      <Compile Include="Assets\Scripts\maxPrinter.cs" />
      <Compile Include="Assets\Scripts\midTest.cs" />
      <Compile Include="Assets\Scripts\minPrinter.cs" />

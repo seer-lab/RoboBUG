@@ -39,6 +39,13 @@ public class camera : MonoBehaviour {
 	public GameObject l5;
 	public GameObject l50;
 
+	public GameObject l6;
+	public GameObject l60;
+	public GameObject l6a;
+	public GameObject l6b;
+	public GameObject l6c;
+	public GameObject l6d;
+
 	public GameObject end;
 
 	public GameObject levelText;
@@ -50,6 +57,10 @@ public class camera : MonoBehaviour {
 
 	public GameObject l5report;
 
+	public GameObject l6report;
+
+	public GameObject lastbug;
+
 	public bool xvalue = true;
 	public int level = -1;
 	public int stars = 0;
@@ -60,6 +71,13 @@ public class camera : MonoBehaviour {
 	Vector3 level3Start = new Vector3(-99f,-21.8f,0);
 	Vector3 level4Start = new Vector3(-138f,-28.8f,0);
 	Vector3 level5Start = new Vector3(-248f,104.2f,0);
+	Vector3 level6Start = new Vector3(-286f,73.2f,0);
+	Vector3 level6cStart = new Vector3(-343f,109.2f,0);
+
+	int level6testVBoundary = -295;
+	int level6testHBoundary = 50;
+
+	int level6debugVBoundary = -358;
 
 	int level2LeftBoundary = -37;
 	int level21TopBoundary = -8;
@@ -158,8 +176,40 @@ public class camera : MonoBehaviour {
 		}
 
 		if (level == 5){
-			if (l5report.GetComponent<TextMesh>().text == "Correct!"){level = 100;}
+			if (l5report.GetComponent<TextMesh>().text == "Correct!"){level = 60; tm.text = "6";}
 		}
+
+		if (level == 6) {
+			if (target.transform.position.x < level6testVBoundary){
+				if (target.transform.position.y > level6testHBoundary){
+					level = 62;
+				}
+				else{
+					level = 61;
+				}
+			}
+		}
+		if (level == 61 || level == 62) {
+			if (target.transform.position.x > level6testVBoundary){
+				level = 6;
+			}
+		}
+
+		if (level == 6 && l6report.renderer.enabled == true){
+			level = 63;
+			target.transform.position = level6cStart;
+		}
+
+		if (level == 63 && target.transform.position.x < level6debugVBoundary){
+			level = 64;
+		}
+		if (level == 64 && target.transform.position.x > level6debugVBoundary){
+			level = 63;
+		}
+
+		if (level == 63 && lastbug.renderer.enabled == true) {
+			level = 100;
+				}
 
 
 
@@ -183,6 +233,10 @@ public class camera : MonoBehaviour {
 			if (Input.GetKeyDown("5")){
 				level = 50;
 				tm.text = "5";
+			}
+			if (Input.GetKeyDown("6")){
+				level = 60;
+				tm.text = "6";
 			}
 			break;
 		case 0:
@@ -331,6 +385,35 @@ public class camera : MonoBehaviour {
 				level = 5;
 				target.transform.position = level5Start;
 			}
+			break;
+
+		case 6:
+			camera.transform.position = new Vector3 (l6.transform.position.x+2, target.transform.position.y, -5f);;
+			camera.orthographicSize = 5;
+			break;
+		case 60:
+			camera.transform.position = new Vector3 (l60.transform.position.x, l60.transform.position.y, -5f);
+			camera.orthographicSize = 6;
+			if (Input.GetButtonDown("Jump")){
+				level = 6;
+				target.transform.position = level6Start;
+			}
+			break;
+		case 61:
+			camera.transform.position = new Vector3 (l6a.transform.position.x, l6a.transform.position.y, -5f);
+			camera.orthographicSize = 6;
+			break;
+		case 62:
+			camera.transform.position = new Vector3 (l6b.transform.position.x, l6b.transform.position.y, -5f);
+			camera.orthographicSize = 6;
+			break;
+		case 63:
+			camera.transform.position = new Vector3 (l6c.transform.position.x+2, target.transform.position.y, -5f);;
+			camera.orthographicSize = 5;
+			break;
+		case 64:
+			camera.transform.position = new Vector3 (l6d.transform.position.x, target.transform.position.y, -5f);
+			camera.orthographicSize = 5;
 			break;
 
 
