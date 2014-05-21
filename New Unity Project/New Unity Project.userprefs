@@ -1,11 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\camera.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\L1TextSetter.cs">
     <Files>
-      <File FileName="Assets\Scripts\l6breakpointhandler.cs" Line="59" Column="26" />
-      <File FileName="Assets\Scripts\l6lastbug.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\l6variables.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\camera.cs" Line="210" Column="28" />
+      <File FileName="Assets\Scripts\CColorTest.cs" Line="44" Column="43" />
+      <File FileName="Assets\Scripts\FColorTest.cs" Line="43" Column="43" />
+      <File FileName="Assets\Scripts\sumTest.cs" Line="41" Column="43" />
+      <File FileName="Assets\Scripts\AvgTest.cs" Line="41" Column="43" />
+      <File FileName="Assets\Scripts\midTest.cs" Line="36" Column="5" />
+      <File FileName="Assets\Scripts\Return.cs" Line="16" Column="3" />
+      <File FileName="Assets\Scripts\l4Return.cs" Line="48" Column="4" />
+      <File FileName="Assets\Scripts\sidebardescription.cs" Line="34" Column="207" />
+      <File FileName="Assets\Scripts\Points.cs" Line="23" Column="75" />
+      <File FileName="Assets\Scripts\l5bug.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\L1TextSetter.cs" Line="16" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

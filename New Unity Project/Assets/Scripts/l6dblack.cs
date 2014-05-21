@@ -14,7 +14,7 @@ public class l6dblack : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D p){
-		if (p.name == "projectile(Clone)") {
+		if (p.name == "projectileComment(Clone)") {
 			TextMesh tm = GetComponent<TextMesh>();
 			tm.color = Color.green;
 			tm.text = "{ \"black\",     0,   0,   0 },";

@@ -16,7 +16,7 @@ public class l3bug : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D(Collider2D p){
-		if (p.name == "projectile(Clone)") {
+		if (p.name == "projectileBug(Clone)") {
 			if (firstguess){
 				TextMesh tm = l3output.GetComponent<TextMesh>();
 				tm.text = "The bug is that the min is wrong" +

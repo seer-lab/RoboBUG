@@ -7,6 +7,7 @@ public class l6breakpointhandler : MonoBehaviour
 		public GameObject[] breakpoints;
 		public GameObject[] debugtexts;
 		public GameObject l6dblack;
+		public GameObject hero;
 		public int[] breakstate;
 		public int col1num = 0;
 		public int col2num = 15;
@@ -25,6 +26,7 @@ public class l6breakpointhandler : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
+				this.renderer.enabled = false;
 				colors = namedcolors.Replace ("},{", "@").Split ('@');
 				//colors = namedcolors.Split('@');
 				breakstate = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -70,6 +72,7 @@ public class l6breakpointhandler : MonoBehaviour
 												SpriteRenderer current = breakpoints [stepnum].GetComponent<SpriteRenderer> ();
 												if (current.color == Color.magenta) {
 														current.color = Color.red;
+														hero.transform.position = new Vector3(hero.transform.position.x, breakpoints[stepnum].transform.position.y, 0);
 												}
 										}
 										stepnum++;
@@ -96,6 +99,7 @@ public class l6breakpointhandler : MonoBehaviour
 																SpriteRenderer ssr = breakpoints [i].GetComponent<SpriteRenderer> ();
 																if (ssr.color == Color.magenta) {
 																		ssr.color = Color.red;
+																		hero.transform.position = new Vector3(hero.transform.position.x, breakpoints[i].transform.position.y, 0);
 																}
 														}
 														col1num = 0;
@@ -180,7 +184,7 @@ public class l6breakpointhandler : MonoBehaviour
 	
 		void OnTriggerEnter2D (Collider2D c)
 		{
-				if (c.name == "projectile(Clone)") {
+				if (c.name == "projectileDebug(Clone)") {
 						SpriteRenderer nxt = GetComponent<SpriteRenderer> ();
 						nxt.color = Color.magenta;
 				}

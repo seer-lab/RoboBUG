@@ -12,12 +12,9 @@ public class l2bug : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-
-	void OnTriggerEnter2D(Collider2D p){
 		if (text.GetComponent<TextMesh>().text == "ERROR!!!"){
 			this.renderer.enabled = true;
 		}
 	}
+	
 }

@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AvgTest.cs" />
+     <Compile Include="Assets\Scripts\Badbreakpoint.cs" />
      <Compile Include="Assets\Scripts\CColorTest.cs" />
      <Compile Include="Assets\Scripts\ColorGetter.cs" />
      <Compile Include="Assets\Scripts\FColorTest.cs" />
      <Compile Include="Assets\Scripts\HUDText.cs" />
+     <Compile Include="Assets\Scripts\L1CommentSetter.cs" />
+     <Compile Include="Assets\Scripts\L1KeywordSetter.cs" />
      <Compile Include="Assets\Scripts\L1TextSetter.cs" />
      <Compile Include="Assets\Scripts\L2TextSetter.cs" />
      <Compile Include="Assets\Scripts\L3Output.cs" />
@@ -61,6 +64,7 @@
      <Compile Include="Assets\Scripts\L5TextSetter.cs" />
      <Compile Include="Assets\Scripts\L7TextSetter.cs" />
      <Compile Include="Assets\Scripts\OColorTest.cs" />
+     <Compile Include="Assets\Scripts\Points.cs" />
      <Compile Include="Assets\Scripts\Return.cs" />
      <Compile Include="Assets\Scripts\TextSetterblack.cs" />
      <Compile Include="Assets\Scripts\TextSetterblue.cs" />
@@ -74,6 +78,7 @@
      <Compile Include="Assets\Scripts\TextSetterred.cs" />
      <Compile Include="Assets\Scripts\TextSetterwhite.cs" />
      <Compile Include="Assets\Scripts\TextSetteryellow.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\ValueGetter.cs" />
      <Compile Include="Assets\Scripts\ValuesGetter.cs" />
      <Compile Include="Assets\Scripts\breakpoint.cs" />
@@ -97,10 +102,19 @@
      <Compile Include="Assets\Scripts\l6errortext.cs" />
      <Compile Include="Assets\Scripts\l6lastbug.cs" />
      <Compile Include="Assets\Scripts\l6variables.cs" />
+     <Compile Include="Assets\Scripts\l7code.cs" />
      <Compile Include="Assets\Scripts\maxPrinter.cs" />
      <Compile Include="Assets\Scripts\midTest.cs" />
      <Compile Include="Assets\Scripts\minPrinter.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
+     <Compile Include="Assets\Scripts\sidebarbug.cs" />
+     <Compile Include="Assets\Scripts\sidebarcomment.cs" />
+     <Compile Include="Assets\Scripts\sidebardebug.cs" />
+     <Compile Include="Assets\Scripts\sidebardescription.cs" />
+     <Compile Include="Assets\Scripts\sidebarprint.cs" />
+     <Compile Include="Assets\Scripts\sidebartest.cs" />
+     <Compile Include="Assets\Scripts\sidebarwarp.cs" />
+     <Compile Include="Assets\Scripts\starttime.cs" />
      <Compile Include="Assets\Scripts\sumTest.cs" />
   </ItemGroup>
   <ItemGroup>

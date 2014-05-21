@@ -44,8 +44,8 @@ public class L5TextSetter : MonoBehaviour {
 		"\n       red2   = coltab[color2].table[i2].red;" +
 		"\n       green2 = coltab[color2].table[i2].green;" +
 		"\n       blue2  = coltab[color2].table[i2].blue;" +
-		"\n       brighter = Compare(red1,green1,blue1,red2,green2,blue2);" +
-		"\n    }" +
+//		"\n       brighter = Compare(red1,green1,blue1,red2,green2,blue2);" +
+		"\n\n    }" +
 		"\n   }" +
 		"\n  }" +
 		"\n }" +

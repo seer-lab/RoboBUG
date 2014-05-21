@@ -46,6 +46,8 @@ public class camera : MonoBehaviour {
 	public GameObject l6c;
 	public GameObject l6d;
 
+	public GameObject l7;
+
 	public GameObject end;
 
 	public GameObject levelText;
@@ -60,6 +62,7 @@ public class camera : MonoBehaviour {
 	public GameObject l6report;
 
 	public GameObject lastbug;
+	public GameObject verylastbug;
 
 	public bool xvalue = true;
 	public int level = -1;
@@ -208,8 +211,12 @@ public class camera : MonoBehaviour {
 		}
 
 		if (level == 63 && lastbug.renderer.enabled == true) {
+			level = 7;
+		}
+
+		if (level == 7 && verylastbug.renderer.enabled == true) {
 			level = 100;
-				}
+			}
 
 
 
@@ -413,6 +420,11 @@ public class camera : MonoBehaviour {
 			break;
 		case 64:
 			camera.transform.position = new Vector3 (l6d.transform.position.x, target.transform.position.y, -5f);
+			camera.orthographicSize = 5;
+			break;
+
+		case 7:
+			camera.transform.position = new Vector3 (l7.transform.position.x, target.transform.position.y, -5f);
 			camera.orthographicSize = 5;
 			break;
 

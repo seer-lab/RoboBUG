@@ -15,7 +15,7 @@ public class l5bug : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D(Collider2D p){
-		if (p.name == "projectile(Clone)") {
+		if (p.name == "projectileBug(Clone)") {
 				TextMesh tm = l5output.GetComponent<TextMesh>();
 				tm.text = "Correct!";
 		}

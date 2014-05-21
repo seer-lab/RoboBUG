@@ -16,7 +16,7 @@ public class l1bug : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D p){
-		if (p.name == "projectile(Clone)") {
+		if (p.name == "projectileBug(Clone)") {
 			this.renderer.enabled = true;
 			Destroy (p.gameObject);
 				}

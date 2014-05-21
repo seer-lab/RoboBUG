@@ -10,6 +10,7 @@ public class breakpointHandler : MonoBehaviour {
 	public int col2num = 15;
 	public int stepnum = 0;
 	public bool stop = false;
+	public GameObject hero;
 
 	public string teststr;
 
@@ -22,6 +23,7 @@ public class breakpointHandler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		this.renderer.enabled = false;
 		colors = namedcolors.Replace ("},{", "@").Split('@');
 		//colors = namedcolors.Split('@');
 		breakstate = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -67,6 +69,7 @@ public class breakpointHandler : MonoBehaviour {
 					if (breakstate[stepnum]==1){
 						sr.color = Color.magenta;
 						stop = true;
+						hero.transform.position = new Vector3(hero.transform.position.x, breakpoints[stepnum].transform.position.y, 0);
 					}
 				}
 			}
@@ -131,7 +134,7 @@ public class breakpointHandler : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D c){
-		if (c.name == "projectile(Clone)") {
+		if (c.name == "projectileDebug(Clone)") {
 				SpriteRenderer nxt = GetComponent<SpriteRenderer>();
 				nxt.color = Color.magenta;
 

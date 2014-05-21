@@ -23,7 +23,7 @@ public class maxPrinter : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D p){
-		if (p.name == "projectile(Clone)") {
+		if (p.name == "projectilePrint(Clone)") {
 			output = !output;
 		}
 	}

@@ -33,18 +33,18 @@ public class L7TextSetter : MonoBehaviour {
 		"\n                 MAROON, NAVY, OLIVE, PURPLE, RED, SILVER," +
 		"                   TEAL, WHITE, YELLOW  color2;" +
 		"\n  struct colour *brighter;" +
-		"\n int i1 = 0;" +
-		"\n int i2 = 0;" +
+		"\n" +
+		"\n" +
 		"\n int red1 = 0, green1 = 0, blue1 = 0, red2 = 0, green2 = 0, blue3 = 0;" + //\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
 		"\n   for(color1 = AQUA; color1 < TOTAL_COLORS;) {" +
-		"\n     red1   = coltab[color1].table[i1].red;" +
-		"\n     green1 = coltab[color1].table[i1].green;" +
-		"\n     blue1  = coltab[color1].table[i1].blue;"+
+		"\n     red1   = coltab[color1].table[color1].red;" +
+		"\n     green1 = coltab[color1].table[color1].green;" +
+		"\n     blue1  = coltab[color1].table[color1].blue;"+
 		"\n     for(color2 = YELLOW; color2 > color1;) {" +
-		"\n       red2   = coltab[color2].table[i2].red;" +
-		"\n       green2 = coltab[color2].table[i2].green;" +
-		"\n       blue2  = coltab[color2].table[i2].blue;" +
-		"\n       brighter = Compare(red1,green1,blue1,red2,green2,blue2);" +
+		"\n       red2   = coltab[color2].table[color2].red;" +
+		"\n       green2 = coltab[color2].table[color2].green;" +
+		"\n       blue2  = coltab[color2].table[color2].blue;" +
+		"\n       closer = Compare(red1,green1,blue1,red2,green2,blue2,closer);" +
 		"\n       color2--;" +
 		"\n    }" + "color1++;" +
 		"\n   }" +

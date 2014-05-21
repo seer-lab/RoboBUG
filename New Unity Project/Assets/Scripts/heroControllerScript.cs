@@ -5,7 +5,19 @@ public class heroControllerScript : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	public float climbSpeed = 1f;
+
 	public Rigidbody2D projectile;
+
+
+	public Rigidbody2D projectileB;
+	public Rigidbody2D projectileC;
+	public Rigidbody2D projectileD;
+	public Rigidbody2D projectileP;
+	public Rigidbody2D projectileW;
+	public Rigidbody2D projectileT;
+
+	int projectilecode = 0;
+
 	bool onWall = false;
 	bool facingRight = true;
 	float fireRate = 0.1f;
@@ -24,6 +36,22 @@ public class heroControllerScript : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 	}
 	void FixedUpdate () {
+
+		//stars
+		if (Input.GetKeyDown("0")) {projectilecode = 0;
+				}
+		if (Input.GetKeyDown("1")) {projectilecode = 1;
+		}
+		if (Input.GetKeyDown("2")) {projectilecode = 2;
+		}
+		if (Input.GetKeyDown("3")) {projectilecode = 3;
+		}
+		if (Input.GetKeyDown("4")) {projectilecode = 4;
+		}
+		if (Input.GetKeyDown("5")) {projectilecode = 5;
+		}
+		if (Input.GetKeyDown("6")) {projectilecode = 6;
+		}
 
 		//movement
 		float move = Input.GetAxis ("Horizontal");
@@ -81,11 +109,63 @@ public class heroControllerScript : MonoBehaviour {
 			anim.SetBool ("throw", true);
 			nextFire = Time.time + fireRate;
 			animDelay = Time.time + animTime;
-			Rigidbody2D newstar = (Rigidbody2D) Instantiate(projectile, transform.position, transform.rotation);
-			if (facingRight){
+			Rigidbody2D newstar;
+			switch(projectilecode){
+			case 0:
+				newstar = (Rigidbody2D) Instantiate(projectile, transform.position, transform.rotation);
+				if (facingRight){
+					newstar.rigidbody2D.AddForce(Vector2.right*300);}
+				else{
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				break;
+			case 1:
+				newstar = (Rigidbody2D) Instantiate(projectileB, transform.position, transform.rotation);
+				if (facingRight){
+					newstar.rigidbody2D.AddForce(Vector2.right*300);}
+				else{
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				break;
+			case 2:
+				newstar = (Rigidbody2D) Instantiate(projectileC, transform.position, transform.rotation);
+				if (facingRight){
+					newstar.rigidbody2D.AddForce(Vector2.right*300);}
+				else{
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				break;
+			case 3:
+				newstar = (Rigidbody2D) Instantiate(projectileD, transform.position, transform.rotation);
+				if (facingRight){
+					newstar.rigidbody2D.AddForce(Vector2.right*300);}
+				else{
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				break;
+			case 4:
+				newstar = (Rigidbody2D) Instantiate(projectileP, transform.position, transform.rotation);
+				if (facingRight){
+					newstar.rigidbody2D.AddForce(Vector2.right*300);}
+				else{
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				break;
+			case 5:
+				newstar = (Rigidbody2D) Instantiate(projectileW, transform.position, transform.rotation);
+				if (facingRight){
+					newstar.rigidbody2D.AddForce(Vector2.right*300);}
+				else{
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				break;
+			case 6:
+				newstar = (Rigidbody2D) Instantiate(projectileT, transform.position, transform.rotation);
+				if (facingRight){
+					newstar.rigidbody2D.AddForce(Vector2.right*300);}
+				else{
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				break;
+			}
+			//Rigidbody2D newstar = (Rigidbody2D) Instantiate(projectile, transform.position, transform.rotation);
+			/*if (facingRight){
 				newstar.rigidbody2D.AddForce(Vector2.right*300);}
 			else{
-				newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+				newstar.rigidbody2D.AddForce(Vector2.right*-300);}*/
 		}
 		if (Time.time > animDelay) {
 						anim.SetBool ("throw", false);
