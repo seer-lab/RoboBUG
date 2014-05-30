@@ -17,7 +17,7 @@ public class l6dblack : MonoBehaviour {
 		if (p.name == "projectileComment(Clone)") {
 			TextMesh tm = GetComponent<TextMesh>();
 			tm.color = Color.green;
-			tm.text = "{ \"black\",     0,   0,   0 },";
+			tm.text = "{\"IO/Communications\",0,0,0},";
 		}
 	}
 }

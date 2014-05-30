@@ -11,7 +11,12 @@ public class FColorTest : MonoBehaviour
 		public Collider2D coll;
 		float textdelay = 5f;
 		private float removetext = 0.0f;
-		public string namedcolors = "\"aqua\",\"0\",\"255\",\"255\"},{\"black\",\"0\",\"0\",\"0\"},{\"blue\",\"0\",\"0\",\"255\"},{\"fuchsia\",\"255\",\"0\",\"255\"},{\"gray\",\"128\",\"128\",\"128\"},{\"green\",\"0\",\"128\",\"0\"},{\"lime\",\"0\",\"255\",\"0\"},{\"maroon\",\"128\",\"0\",\"0\"},{\"navy\",\"0\",\"0\",\"128\"},{\"olive\",\"128\",\"128\",\"0\"},{\"purple\",\"128\",\"0\",\"128\"},{\"red\",\"255\",\"0\",\"0\"},{\"silver\",\"192\",\"192\",\"192\"},{\"teal\",\"0\",\"128\",\"128\"},{\"white\",\"255\",\"255\",\"255\"},{\"yellow\",\"255\",\"255\",\"0\"";
+		public string namedcolors = "\"Senses\",\"100\",\"100\",\"100\"},{\"IO/Communications\",\"0\",\"0\",\"0\"}," +
+				"{\"MotorControl\",\"25\",\"85\",\"35\"},{\"CPU\",\"50\",\"100\",\"100\"}," +
+				"{\"Memory\",\"100\",\"100\",\"100\"},{\"EnergyManagement\",\"10\",\"100\",\"100\"},{\"Head\",\"100\",\"100\",\"75\"}," +
+				"{\"RightHand\",\"50\",\"95\",\"40\"},{\"LeftHand\",\"100\",\"100\",\"80\"},{\"RightArm\",\"50\",\"50\",\"70\"}," +
+				"{\"LeftArm\",\"30\",\"50\",\"60\"},{\"RightLeg\",\"100\",\"90\",\"80\"},{\"LeftLeg\",\"75\",\"75\",\"75\"}," +
+				"{\"RightFoot\",\"25\",\"25\",\"50\"},{\"LeftFoot\",\"100\",\"50\",\"100\"},{\"Torso\",\"50\",\"100\",\"100\"";
 		public string[] colors;
 	
 		// Use this for initialization
@@ -41,21 +46,29 @@ public class FColorTest : MonoBehaviour
 								TextMesh tm = GetComponent<TextMesh> ();
 								tm.color = Color.green;
 						} else if (c.name == "projectileTest(Clone)") {
+								int elements = 0;
 								inputText = input.GetComponent<TextMesh> ().text;
 								string[] color = inputText.Split (',');
 								if (color.Length == 3) {
 										if (color [2] != "") {
 												string[] col;
-												int farness = 0;
-												string farcol = "white";
+												string farcol = "";
 												foreach (string s in colors) {
 														col = s.Split (',');
-														int newc = (int)Mathf.Abs (System.Convert.ToInt32 (color [0]) - System.Convert.ToInt32 (col [1]));
-														newc += (int)Mathf.Abs (System.Convert.ToInt32 (color [1]) - System.Convert.ToInt32 (col [2]));
-														newc += (int)Mathf.Abs (System.Convert.ToInt32 (color [2]) - System.Convert.ToInt32 (col [3]));
-														if (newc > farness) {
-																farness = newc;
-																farcol = col [0];
+														if (System.Convert.ToInt32 (color [0]) <= System.Convert.ToInt32 (col [1])) {
+																if (System.Convert.ToInt32 (color [1]) <= System.Convert.ToInt32 (col [2])) {
+																		if (System.Convert.ToInt32 (color [2]) <= System.Convert.ToInt32 (col [3])) {
+																				if (elements > 0) {
+																						farcol += ", ";
+																				}
+																				elements++;
+																				if (elements % 5 == 0) {
+																						farcol += "\n";
+																				}
+																				farcol += col [0];
+																
+																		}
+																}
 														} 
 												}
 												resultText = farcol;

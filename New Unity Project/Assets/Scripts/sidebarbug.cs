@@ -7,6 +7,7 @@ public class sidebarbug : MonoBehaviour {
 	void Start () {
 		GUIText tm = GetComponent<GUIText> ();
 		tm.text = "";
+		this.GetComponent<GUIText> ().color = Color.green;
 	}
 	
 	// Update is called once per frame

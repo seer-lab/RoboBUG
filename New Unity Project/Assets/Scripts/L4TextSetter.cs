@@ -3,31 +3,31 @@ using System.Collections;
 
 public class L4TextSetter : MonoBehaviour {
 
-	string main = "//Display +200 colors, rgb values, their hex equivalents and names" +
+	string main = "" +
 		"\n" +
-		"\n#include <stdio.h>" +
 		"\n" +
-		"\n#define TOTAL_COLORS   12" +
-		"\n" +
-		"\nstruct colour {" +
-		"\n char name[28];" +
-		"\n int red;" +
-		"\n int green;" +
-		"\n int blue;" +
+			"\n                <stdio.h>" +
+			"\n                <colourmanager.h>" +
+			"\n                TOTAL_COLORS   12" +
+		"\n             colour {" +
+		"\n             name[28];" +
+		"\n           red;" +
+		"\n           green;" +
+		"\n           blue;" +
 		"\n};" +
 		"\n" +
-		"\nstruct tabs {" +
-		"\n struct colour *table;" +
-		"\n int tabsize;" +
+		"\n             tabs {" +
+		"\n                 colour *table;" +
+		"\n           tabsize;" +
 		"\n} coltab[TOTAL_COLORS];" +
-		"\n\nint main(void) {" +
-		"\n  enum colours { WHITE, GREY, BLACK, RED, BROWN, ORANGE, YELLOW, " +
-		"\n                 GREEN, CYAN, BLUE, MAGENTA, NAMED } color;" +
-		"\n" +
-		"\n char *colourname[] = { \"white\", \"grey\", \"black\", \"red\", \"brown\", \"orange\"," +
-		"\n                        \"yellow\", \"green\", \"cyan\", \"blue\", \"magenta\", " +
-		"\n                        \"named colors\" };" +
-		"\n int i = 0;\n int red = 0, green = 0, blue = 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" +
+		"\n\n         main() {" +
+		"\n            colours { WHITE, GREY, BLACK, RED, BROWN, " +
+		"\nORANGE, YELLOW, GREEN, CYAN, BLUE, " +
+		"\nMAGENTA, NAMED } color;" +
+		"\n         *colourname[] = { \"white\", \"grey\", \"black\", \"red\", " +
+		"\n\"brown\", \"orange\", \"yellow\", \"green\", \"cyan\", \"blue\"," +
+		"\n\"magenta\", \"named colors\" };" +
+		"\n        i = 0;\n        red = 0, green = 0, blue = 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" +
 /*		"\n\n coltab[WHITE].table = whitetab;" +
 		"\n coltab[WHITE].tabsize = sizeof(whitetab) / sizeof(whitetab[0]);" +
 		"\n coltab[GREY].table = greytab;" +
@@ -52,16 +52,17 @@ public class L4TextSetter : MonoBehaviour {
 		"\n coltab[MAGENTA].tabsize = sizeof(magentatab) / sizeof(magentatab[0]);" +
 		"\n coltab[NAMED].table = namedtab;" +
 		"\n coltab[NAMED].tabsize = sizeof(namedtab) / sizeof(namedtab[0]);" +
-*/		"\n\n for(color = WHITE; color < TOTAL_COLORS; color++) {" +
-		"\n  printf(\"" +
-		"\n ==> %s <==" +
-		"\n\", colourname[color]);" +
-		"\n  for(i = 0; i < coltab[color].tabsize; i++) {" +
-		"\n   red   = coltab[color].table[i].red;" +
-		"\n   green = coltab[color].table[i].green;" +
-		"\n   blue  = coltab[color].table[i].blue;" +
-		"\n   " +
-		"\n   printf(\" %03d %03d %03d - #%02x%02x%02x - %s" +
+*/		"\n\n              color = 0; color < TOTAL_COLORS; color++) {" +
+	//	"\n  printf(\"" +
+	//	"\n ==> %s <==" +
+	//	"\n\", colourname[color]);" +
+		"\n            i = 0; i < coltab[color].tabsize; i++) {" +
+		"\n               red   = coltab[color].table[i].red;" +
+		"\n               green = coltab[color].table[i].green;" +
+		"\n               blue  = coltab[color].table[i].blue;" +
+		"\n                     name = coltab[color].table[i].name;" + 
+		"\n                          (red, green, blue, name);" +
+	/*	"\n   printf(\" %03d %03d %03d - #%02x%02x%02x - %s" +
 		"\n\", " +
 		"\n     red, green, blue, red, green, blue, coltab[color].table[i].name);" +
 		"\n  }" +
@@ -69,13 +70,14 @@ public class L4TextSetter : MonoBehaviour {
 		"\n" +
 		"\n return 0;" +
 		"\n}" +
-		"\n" +
-		"\n";
+		"\n" +*/
+			"\n    }\n}";
 
 	// Use this for initialization
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = main;	
+		Tm.color = Color.black;
 	}
 	
 	// Update is called once per frame

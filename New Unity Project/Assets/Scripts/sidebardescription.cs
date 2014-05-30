@@ -22,7 +22,7 @@ public class sidebardescription : MonoBehaviour {
 			GetComponent<GUIText>().text = "Objective:\nModify each test case till you get an error\nFind all 3 bugs to proceed\nuse the warp tool to move about the functions";
 			break;
 		case 3:
-			GetComponent<GUIText>().text = "Objective:\nTurn on/off print statements with the printer tool\nobserve the output at the bottom\nreport the bug at the bottom of the code";
+			GetComponent<GUIText>().text = "Objective:\nTurn on/off print statements with the printer tool\nobserve the output by following the output warp\nlocate the bugs in the min/max functions\nidentify any include statements with buggy functions";
 			break;
 		case 4:
 			GetComponent<GUIText>().text = "Objective:\nread the error report\ncomment out lines of code\nfigure out where the bug is and catch it";
@@ -31,7 +31,7 @@ public class sidebardescription : MonoBehaviour {
 			GetComponent<GUIText>().text = "Objective:\nuse the breakpointer tool to activate/deactivate breakpoints\ndetermine where the bug is";
 			break;
 		case 6:
-			GetComponent<GUIText>().text = "Objective:\n1)figure out which function is faulty and throw a bugcatcher at it\n2)use the error message to determine the source of bug#1\nUse the breakpoints to find bug#2";
+			GetComponent<GUIText>().text = "Objective:\n1)figure out which function is faulty and throw a bugcatcher at it\n2)use the error message to determine the source of bug#1 and fix it\n3)Use the breakpoints to find bug#2\n4)Throw a bugcatcher at the exact place the bug occurs\n5)Find and catch the final bug";
 			break;
 		case 0:
 			GetComponent<GUIText>().text = "Objective:\n";

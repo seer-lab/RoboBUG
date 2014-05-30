@@ -11,25 +11,26 @@ public class l6codetest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		TextMesh Tm = GetComponent<TextMesh>();
-		Tm.text = "//To Find furthest, closest, and most opposite color  " +
-						"\n//Input : color " +
+		Tm.text = "" +
 						"\n" +
-						"\nstring furthest (int[] color);" +
-						"\nstring closest (int[] color);" +
-						"\nstring opposite (int[] color);" +
 						"\n" +
-						"\nstring furthest (){" +
-						"\n	int color[] = " +
+						"\n               PassRequirements (           levels);" +
+						"\n" +
+				"\n               FailRequirements (           levels);" +
+						"\n" +
+				"\n              PassTest (){" +
+						"\n	       levels[] = " +
 						"\n" +
 				//		"\n	return sumCalc(values[]) == total;" +
 						"\n" +
 						"\n}" +
-						"\n" +
-						"\nstring closest ();{" +
-						"\n	int color[] = " +
+						"\n\n\n" +
+				"\n               FailTest ();{" +
+						"\n	       levels[] = " +
 						"\n" +
 				//		"\n	return medianCalc(values[]) == mid;" +
 						"\n" +
 						"\n}";
+		Tm.color = Color.black;
 	}
 }

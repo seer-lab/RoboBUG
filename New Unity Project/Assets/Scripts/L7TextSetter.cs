@@ -3,61 +3,60 @@ using System.Collections;
 
 public class L7TextSetter : MonoBehaviour {
 
-	string main = "//Compare each pair of colors and show which is brighter and which is darker" +
+	string main = "" +
+		"\n " +
 		"\n" +
-		"\n#include <stdio.h>" +
-		"\n#include <colorprinter.h>" + "\n"+
+		"\n"+
+			"\n                <stdio.h>" +
+			"\n                <robotmain.h>" + "\n"+
 	//	"\n#include <namedcolors.h>" +
-		"\n#define TOTAL_COLORS   12" +
 		"\n" +
-		"\nusing namespace colorprinter" +
+			"\n                                robotmain;" +
 		"\n" +
-		"\nstruct colour {" +
-		"\n char name[28];" +
-		"\n int red;" +
-		"\n int green;" +
-		"\n int blue;" +
+			"\n             part {" +
+			"\n          name[28];" +
+		"\n        power;" +
+			"\n        cond;t" +
+			"\n        effic; " +
 		"\n};" +
 		"\n" +
 		"\n" +
-		"\nstruct tabs {" +
-		"\n struct colour *table;" +
-		"\n int tabsize;" +
-		"\n} coltab[TOTAL_COLORS];" +
 		"\n" +
-		"\nint main(void) {" +
-		"\n  enum colours { AQUA, BLACK, BLUE, FUCHSIA, GRAY, GREEN, LIME," +
-		"\n                 MAROON, NAVY, OLIVE, PURPLE, RED, SILVER," +
-		"                   TEAL, WHITE, YELLOW } color1;" +
-		"\n  enum colours { AQUA, BLACK, BLUE, FUCHSIA, GRAY, GREEN, LIME," +
-		"\n                 MAROON, NAVY, OLIVE, PURPLE, RED, SILVER," +
-		"                   TEAL, WHITE, YELLOW  color2;" +
-		"\n  struct colour *brighter;" +
+			"\n                  *p = getAllParts();" +
 		"\n" +
 		"\n" +
-		"\n int red1 = 0, green1 = 0, blue1 = 0, red2 = 0, green2 = 0, blue3 = 0;" + //\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-		"\n   for(color1 = AQUA; color1 < TOTAL_COLORS;) {" +
-		"\n     red1   = coltab[color1].table[color1].red;" +
-		"\n     green1 = coltab[color1].table[color1].green;" +
-		"\n     blue1  = coltab[color1].table[color1].blue;"+
-		"\n     for(color2 = YELLOW; color2 > color1;) {" +
-		"\n       red2   = coltab[color2].table[color2].red;" +
-		"\n       green2 = coltab[color2].table[color2].green;" +
-		"\n       blue2  = coltab[color2].table[color2].blue;" +
-		"\n       closer = Compare(red1,green1,blue1,red2,green2,blue2,closer);" +
-		"\n       color2--;" +
-		"\n    }" + "color1++;" +
+		"\n         diagnosticComparision() {" +
+			"\n                       { p[0], p[1], p[2], p[3], p[4], p[5], p[6]," +
+		"\n                 p[7], p[8], p[9], p[10], p[11], p[12]," +
+		"\n                 p[13], p[14], p[15] } part1;" +
+			"\n                       { p[0], p[1], p[2], p[3], p[4], p[5], p[6]," +
+		"\n                 p[7], p[8], p[9], p[10], p[11], p[12]," +
+		"\n                 p[13], p[14], p[15] } part2;" +
+			"\n                        *similar;" +
+		"\n        power1 = 0, cond1 = 0, effic1 = 0, power2 = 0, cond2 = 0, effic3 = 0;" + //\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+		"\n         (part1 = p[0]; part1 < p.                ;) {" +
+		"\n     power1   = part1.power;" +
+		"\n     cond1 = part1.cond;" +
+		"\n     effic1  = part1.effic;"+
+		"\n           (part2 = p[15]; part2 > part1;) {" +
+		"\n       power2   = part2.power;" +
+		"\n       cond2 = part2.cond;" +
+		"\n       effic2  = part2.effic;" +
+		"\n       similar =                     (part1,part2,similar);" +
+		"\n       part2--;" +
+		"\n    }" + "part1++;" +
 		"\n   }" +
 		"\n  }" +
 		"\n }" +
 		"\n" +
-		"\n return 0;" +
+		"\n" +
 		"\n}";
 
 	// Use this for initialization
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = main;	
+		Tm.color = Color.black;
 	}
 	
 	// Update is called once per frame

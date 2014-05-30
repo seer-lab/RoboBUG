@@ -17,7 +17,7 @@ public class ColorGetter : MonoBehaviour
 		void Start ()
 		{
 				TextMesh Tm = GetComponent<TextMesh> ();
-				Tm.text = "Color = [\n\n];";
+				Tm.text = "Levels = [\n\n];";
 		}
 	
 		// Update is called once per frame
@@ -135,7 +135,7 @@ public class ColorGetter : MonoBehaviour
 												valueText += ",";
 										}
 								}
-								if (digits == 3 && thisnum > 255) {
+								if (digits == 3 && thisnum > 100) {
 										validInput = false;
 										valueText = "<INVALID INPUT>";
 								}

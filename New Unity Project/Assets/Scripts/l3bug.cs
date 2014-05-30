@@ -4,7 +4,9 @@ using System.Collections;
 public class l3bug : MonoBehaviour {
 
 	public GameObject l3output;
-	bool firstguess = true;
+//	bool firstguess = true;
+	public GameObject l3bug1;
+	public GameObject l3bug2;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +19,11 @@ public class l3bug : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D p){
 		if (p.name == "projectileBug(Clone)") {
-			if (firstguess){
+			if (l3bug1.renderer.enabled == true && l3bug2.renderer.enabled == true){
+				TextMesh tm = l3output.GetComponent<TextMesh>();
+				tm.text = "Correct!";
+			}
+			else {
 				TextMesh tm = l3output.GetComponent<TextMesh>();
 				tm.text = "The bug is that the min is wrong" +
 					"\nThe bug is that the max is wrong" +
@@ -27,13 +33,11 @@ public class l3bug : MonoBehaviour {
 					"\nThe bug is that the array has invalid numbers" +
 					"\nThe bug is that the loop doesn't finish" +
 					"\nThe bug is that it thinks 5>6 and 2<0";
-				this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y + 1.2f, 0);
-				firstguess = false;
+				this.renderer.enabled = true;
+				//this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y - 33f, 0);
+			//	firstguess = false;
 			}
-			else{
-				TextMesh tm = l3output.GetComponent<TextMesh>();
-				tm.text = "Correct!";
-			}
+
 		}
 	}
 }

@@ -16,7 +16,12 @@ public class l6breakpointhandler : MonoBehaviour
 		public int closeness = 1000;
 		public bool stop = false;
 		public string teststr;
-		public string namedcolors = "\"aqua\",\"0\",\"255\",\"255\"},{\"black\",\"0\",\"0\",\"0\"},{\"blue\",\"0\",\"0\",\"255\"},{\"fuchsia\",\"255\",\"0\",\"255\"},{\"gray\",\"128\",\"128\",\"128\"},{\"green\",\"0\",\"128\",\"0\"},{\"lime\",\"0\",\"255\",\"0\"},{\"maroon\",\"128\",\"0\",\"0\"},{\"navy\",\"0\",\"0\",\"128\"},{\"olive\",\"128\",\"128\",\"0\"},{\"purple\",\"128\",\"0\",\"128\"},{\"red\",\"255\",\"0\",\"0\"},{\"silver\",\"192\",\"192\",\"192\"},{\"teal\",\"0\",\"128\",\"128\"},{\"white\",\"255\",\"255\",\"255\"},{\"yellow\",\"255\",\"255\",\"0\"";
+	public string namedcolors = "\"Senses\",\"100\",\"100\",\"100\"},{\"IO/Communications\",\"0\",\"0\",\"0\"}," +
+		"{\"MotorControl\",\"25\",\"85\",\"35\"},{\"CPU\",\"50\",\"100\",\"100\"}," +
+			"{\"Memory\",\"100\",\"100\",\"100\"},{\"EnergyManagement\",\"10\",\"100\",\"100\"},{\"Head\",\"100\",\"100\",\"75\"}," +
+			"{\"RightHand\",\"50\",\"95\",\"40\"},{\"LeftHand\",\"100\",\"100\",\"80\"},{\"RightArm\",\"50\",\"50\",\"70\"}," +
+			"{\"LeftArm\",\"30\",\"50\",\"60\"},{\"RightLeg\",\"100\",\"90\",\"80\"},{\"LeftLeg\",\"75\",\"75\",\"75\"}," +
+			"{\"RightFoot\",\"25\",\"25\",\"50\"},{\"LeftFoot\",\"100\",\"50\",\"100\"},{\"Torso\",\"50\",\"100\",\"100\"";
 		public string[] colors;
 		public string[] col1;
 		public string[] col2;
@@ -61,7 +66,7 @@ public class l6breakpointhandler : MonoBehaviour
 								while (col2num >= col1num && !stop) {
 										if (col2num % 6 == 0) {
 												closeness = 0;
-												closestcolor = "\"cyan\"";
+												closestcolor = "\"MEMORYLEAK\"";
 										}
 										if ((col2num + 1) % 6 == 0) {
 												closeness = 1000;
@@ -93,7 +98,7 @@ public class l6breakpointhandler : MonoBehaviour
 												sr.color = Color.magenta;
 												stop = true;
 										}
-										if (l6dblack.GetComponent<TextMesh> ().text != "{ \"black\",     0,   0,   0 },") {
+											if (l6dblack.GetComponent<TextMesh> ().text != "{\"IO/Communications\",0,0,0},") {
 												if (col2num == 1) {
 														for (int i =0; i<11; i++) {
 																SpriteRenderer ssr = breakpoints [i].GetComponent<SpriteRenderer> ();
@@ -132,40 +137,40 @@ public class l6breakpointhandler : MonoBehaviour
 				switch (stepnum) {
 				case 0:
 						col1 = colors [col1num].Split (',');
-						debugtexts [7].GetComponent<GUIText> ().text = "Color 1 = " + col1 [0];
+						debugtexts [7].GetComponent<GUIText> ().text = "part1 = " + col1 [0];
 						break;
 				case 1:
-						debugtexts [0].GetComponent<GUIText> ().text = "red 1 = " + col1 [1];
+						debugtexts [0].GetComponent<GUIText> ().text = "power1 = " + col1 [1];
 						break;
 				case 2:
-						debugtexts [1].GetComponent<GUIText> ().text = "green 1 = " + col1 [2];
+						debugtexts [1].GetComponent<GUIText> ().text = "cond1 = " + col1 [2];
 						break;
 				case 3:
-						debugtexts [2].GetComponent<GUIText> ().text = "blue 1 = " + col1 [3];
+						debugtexts [2].GetComponent<GUIText> ().text = "effic1 = " + col1 [3];
 						break;
 				case 4:
 						col2 = colors [col2num].Split (',');
-						debugtexts [8].GetComponent<GUIText> ().text = "Color 2 = " + col2 [0];
+						debugtexts [8].GetComponent<GUIText> ().text = "part2 = " + col2 [0];
 						break;
 				case 5:
-						debugtexts [3].GetComponent<GUIText> ().text = "red 2 = " + col2 [1];
+						debugtexts [3].GetComponent<GUIText> ().text = "power2 = " + col2 [1];
 						break;
 				case 6:
-						debugtexts [4].GetComponent<GUIText> ().text = "green 2 = " + col2 [2];
+						debugtexts [4].GetComponent<GUIText> ().text = "cond2 = " + col2 [2];
 						break;
 				case 7:
-						debugtexts [5].GetComponent<GUIText> ().text = "blue 2 = " + col2 [3];
+						debugtexts [5].GetComponent<GUIText> ().text = "effic2 = " + col2 [3];
 						break;
 				case 8:
-						debugtexts [6].GetComponent<GUIText> ().text = "closer = " + closer (col1, col2);
+						debugtexts [6].GetComponent<GUIText> ().text = "similar = " + closer (col1, col2);
 						break;
 				case 9:
 						col2num--;
-						debugtexts [10].GetComponent<GUIText> ().text = "color2num = " + System.Convert.ToString (col2num);
+						debugtexts [10].GetComponent<GUIText> ().text = "part2num = " + System.Convert.ToString (col2num);
 						break;
 				case 10:
 						col1num++;
-						debugtexts [9].GetComponent<GUIText> ().text = "color1num = " + System.Convert.ToString (col1num);
+						debugtexts [9].GetComponent<GUIText> ().text = "part1num = " + System.Convert.ToString (col1num);
 						break;
 				}
 		}

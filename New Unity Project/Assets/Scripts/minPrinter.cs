@@ -25,6 +25,7 @@ public class minPrinter : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D p){
 		if (p.name == "projectilePrint(Clone)") {
 			output = !output;
+			Destroy(p.gameObject);
 		}
 	}
 }

@@ -14,6 +14,7 @@ public class L3Output : MonoBehaviour {
 	bool premaxma = false;
 	bool postmaxma = false;
 	bool endma = false;
+	bool iprint = false;
 
 	public GameObject Tinitmi;
 	public GameObject Tpreminmi;
@@ -25,6 +26,7 @@ public class L3Output : MonoBehaviour {
 	public GameObject Tpremaxma;
 	public GameObject Tpostmaxma;
 	public GameObject Tendma;
+	public GameObject Tiprinter;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +50,8 @@ public class L3Output : MonoBehaviour {
 		t = Tpostmaxma.GetComponent<TextMesh>();
 		t.text = "";
 		t = Tendma.GetComponent<TextMesh>();
+		t.text = "";
+		t = Tiprinter.GetComponent<TextMesh>();
 		t.text = "";
 	}
 	
@@ -74,6 +78,8 @@ public class L3Output : MonoBehaviour {
 		postmaxma = t.text == "Console.WriteLine(max);";
 		t = Tendma.GetComponent<TextMesh>();
 		endma = t.text == "Console.WriteLine(max);";
+		t = Tiprinter.GetComponent<TextMesh>();
+		iprint = t.text == "Console.WriteLine(i);";
 		SetText ();
 	}
 
@@ -89,6 +95,9 @@ public class L3Output : MonoBehaviour {
 		int max = 0;
 		int[] values = {0,4,1,6,3,2,5};
 		for (int i =0; i<7;i++){
+			if (iprint){
+				output += "i = " + System.Convert.ToString(i) + "\n"; 
+			}
 			if (preminmi){
 				output += "Min = " + System.Convert.ToString(min) + "\n";
 			}
@@ -128,5 +137,6 @@ public class L3Output : MonoBehaviour {
 		}
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = output;
+		Tm.color = Color.black;
 	}
 }

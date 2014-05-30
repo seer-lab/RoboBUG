@@ -29,7 +29,7 @@ public class Return : MonoBehaviour {
 		//coll = c;
 		if (c.name == "hero"){		
 			TextMesh tm = GetComponent<TextMesh>();
-			tm.color = Color.red;
+			tm.color = Color.blue;
 		}
 	}
 }

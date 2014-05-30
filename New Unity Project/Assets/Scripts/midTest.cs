@@ -25,7 +25,7 @@ public class midTest : MonoBehaviour
 		{
 				result.GetComponent<TextMesh> ().text = resultText;
 				if (Time.time > removetext) {
-						resultText = "";
+					result.renderer.enabled = false;
 				}
 			
 
@@ -36,13 +36,14 @@ public class midTest : MonoBehaviour
 				if (c.name == "hero") {
 						TextMesh tm = GetComponent<TextMesh> ();
 						tm.color = Color.green;
-				} else if (c.name == "projectileTest(clone)") {
+				} else if (c.name == "projectileTest(Clone)") {
 						string inputText = input.GetComponent<TextMesh> ().text;
 						string outputText = output.GetComponent<TextMesh> ().text;
 						if (inputText != "<INVALID INPUT>") {
 								if (inputText == "") {
 										result.GetComponent<TextMesh> ().color = Color.black;
 										resultText = "ERROR!!!";
+										result.renderer.enabled = true;
 										removetext = Time.time + textdelay;
 								} else if (inputText != "" && outputText != "") {
 										string[] vals = inputText.Split (',');
@@ -56,9 +57,11 @@ public class midTest : MonoBehaviour
 										if (mid == System.Convert.ToDouble (outputText)) {
 												resultText = "True.";
 												removetext = Time.time + textdelay;
+												result.renderer.enabled = true;
 										} else {
 												resultText = "False.";
 												removetext = Time.time + textdelay;
+												result.renderer.enabled = true;	
 										}
 								}
 						}
@@ -70,7 +73,7 @@ public class midTest : MonoBehaviour
 				//coll = c;
 				if (c.name == "hero") {		
 						TextMesh tm = GetComponent<TextMesh> ();
-						tm.color = Color.red;
+						tm.color = Color.blue;
 				}
 		}
 }

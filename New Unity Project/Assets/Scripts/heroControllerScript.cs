@@ -4,7 +4,10 @@ using System.Collections;
 public class heroControllerScript : MonoBehaviour {
 
 	public float maxSpeed = 10f;
-	public float climbSpeed = 1f;
+	public float climbSpeed = 10f;
+
+	public GameObject level;
+	public GameObject falsepositive;
 
 	public Rigidbody2D projectile;
 
@@ -16,7 +19,9 @@ public class heroControllerScript : MonoBehaviour {
 	public Rigidbody2D projectileW;
 	public Rigidbody2D projectileT;
 
-	int projectilecode = 0;
+	int projectilecode = 1;
+	int levelnum = 0;
+	int currentlevel = 0;
 
 	bool onWall = false;
 	bool facingRight = true;
@@ -37,21 +42,7 @@ public class heroControllerScript : MonoBehaviour {
 	}
 	void FixedUpdate () {
 
-		//stars
-		if (Input.GetKeyDown("0")) {projectilecode = 0;
-				}
-		if (Input.GetKeyDown("1")) {projectilecode = 1;
-		}
-		if (Input.GetKeyDown("2")) {projectilecode = 2;
-		}
-		if (Input.GetKeyDown("3")) {projectilecode = 3;
-		}
-		if (Input.GetKeyDown("4")) {projectilecode = 4;
-		}
-		if (Input.GetKeyDown("5")) {projectilecode = 5;
-		}
-		if (Input.GetKeyDown("6")) {projectilecode = 6;
-		}
+
 
 		//movement
 		float move = Input.GetAxis ("Horizontal");
@@ -104,6 +95,35 @@ public class heroControllerScript : MonoBehaviour {
 				}
 	}
 	void Update(){
+
+		//stars
+		if (Input.GetKeyDown("0")) {projectilecode = 0;
+		}
+		if (Input.GetKeyDown("1")) {projectilecode = 1;
+		}
+		if (Input.GetKeyDown("2")) {projectilecode = 2;
+		}
+		if (Input.GetKeyDown("3")) {projectilecode = 3;
+		}
+		if (Input.GetKeyDown("4")) {projectilecode = 4;
+		}
+		if (Input.GetKeyDown("5")) {projectilecode = 5;
+		}
+		if (Input.GetKeyDown("6")) {projectilecode = 6;
+		}
+
+
+		levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
+		if (levelnum != currentlevel) {
+			currentlevel = levelnum;
+			maxSpeed = 10f;
+			climbSpeed = 10f;
+		}
+		if (falsepositive.GetComponent<TextMesh> ().text == "Pointed") {
+			falsepositive.GetComponent<TextMesh> ().text = "";
+			maxSpeed *= 0.9f;
+			climbSpeed *= 0.9f;
+		}
 	//firing
 		if (Input.GetButton ("Fire1") && Time.time > nextFire && !onWall && rigidbody2D.velocity == Vector2.zero) {
 			anim.SetBool ("throw", true);

@@ -1,18 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\L1TextSetter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\camera.cs">
     <Files>
-      <File FileName="Assets\Scripts\CColorTest.cs" Line="44" Column="43" />
-      <File FileName="Assets\Scripts\FColorTest.cs" Line="43" Column="43" />
-      <File FileName="Assets\Scripts\sumTest.cs" Line="41" Column="43" />
-      <File FileName="Assets\Scripts\AvgTest.cs" Line="41" Column="43" />
-      <File FileName="Assets\Scripts\midTest.cs" Line="36" Column="5" />
-      <File FileName="Assets\Scripts\Return.cs" Line="16" Column="3" />
-      <File FileName="Assets\Scripts\l4Return.cs" Line="48" Column="4" />
-      <File FileName="Assets\Scripts\sidebardescription.cs" Line="34" Column="207" />
-      <File FileName="Assets\Scripts\Points.cs" Line="23" Column="75" />
-      <File FileName="Assets\Scripts\l5bug.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\L1TextSetter.cs" Line="16" Column="14" />
+      <File FileName="Assets\Scripts\l6lastbug.cs" Line="22" Column="36" />
+      <File FileName="Assets\Scripts\l6lastbug.cs" Line="39" Column="1" />
+      <File FileName="Assets\Scripts\l7code.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\l7codeK.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\l7codeC.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\l7code (3rd copy).cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\L4TextSetter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\L3TextSetter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\l3mintextsetter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\L3TextSetterK.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Points.cs" Line="87" Column="3" />
+      <File FileName="Assets\Scripts\camera.cs" Line="220" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

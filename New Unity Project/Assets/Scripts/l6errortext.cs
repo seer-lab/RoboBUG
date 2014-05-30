@@ -12,7 +12,7 @@ public class l6errortext : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (l6dblack.GetComponent<TextMesh>().text == "{ \"black\",     0,   0,   0 },"){
+		if (l6dblack.GetComponent<TextMesh>().text == "{\"IO/Communications\",0,0,0},"){
 			GetComponent<TextMesh>().text = "No error!";
 		}
 	}

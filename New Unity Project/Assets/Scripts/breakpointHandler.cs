@@ -14,7 +14,12 @@ public class breakpointHandler : MonoBehaviour {
 
 	public string teststr;
 
-	public string namedcolors = "\"aqua\",\"0\",\"255\",\"255\"},{\"black\",\"0\",\"0\",\"0\"},{\"blue\",\"0\",\"0\",\"255\"},{\"fuchsia\",\"255\",\"0\",\"255\"},{\"gray\",\"128\",\"128\",\"128\"},{\"green\",\"0\",\"128\",\"0\"},{\"lime\",\"0\",\"255\",\"0\"},{\"maroon\",\"128\",\"0\",\"0\"},{\"navy\",\"0\",\"0\",\"128\"},{\"olive\",\"128\",\"128\",\"0\"},{\"purple\",\"128\",\"0\",\"128\"},{\"red\",\"255\",\"0\",\"0\"},{\"silver\",\"192\",\"192\",\"192\"},{\"teal\",\"0\",\"128\",\"128\"},{\"white\",\"255\",\"255\",\"255\"},{\"yellow\",\"255\",\"255\",\"0\"";
+	public string namedcolors = "\"EnemyRobot\",\"255\",\"0\",\"0\"},{\"RobotController\",\"0\",\"64\",\"0\"}," +
+		"{\"ChargingStation\",\"64\",\"64\",\"0\"},{\"Projectile\",\"0\",\"255\",\"255\"}," +
+			"{\"FlyingDrone\",\"255\",\"255\",\"255\"},{\"LightSource\",\"0\",\"128\",\"255\"},{\"FallingDebris\",\"0\",\"0\",\"192\"}," +
+			"{\"LaboratoryComputer\",\"128\",\"0\",\"0\"},{\"Exit\",\"255\",\"255\",\"0\"},{\"Explosive\",\"128\",\"128\",\"0\"}," +
+			"{\"NetworkCenter\",\"0\",\"128\",\"0\"},{\"Human\",\"255\",\"0\",\"0\"},{\"MechanicalArm\",\"192\",\"192\",\"192\"}," +
+			"{\"UnstableTerrain\",\"64\",\"64\",\"0\"},{\"UnknownObject\",\"255\",\"128\",\"255\"},{\"Camera\",\"128\",\"255\",\"255\"";
 	public string[] colors;
 	public string[] col1;
 	public string[] col2;
@@ -91,41 +96,41 @@ public class breakpointHandler : MonoBehaviour {
 		switch (stepnum) {
 		case 0:
 			col1 = colors[col1num].Split(',');
-			debugtexts[7].GetComponent<GUIText>().text = "Color 1 = " + col1[0];
+			debugtexts[7].GetComponent<GUIText>().text = "object1.name = " + col1[0];
 			break;
 		case 1:
-			debugtexts[0].GetComponent<GUIText>().text = "red 1 = " + col1[1];
+			debugtexts[0].GetComponent<GUIText>().text = "x1 = " + col1[1];
 			break;
 		case 2:
-			debugtexts[1].GetComponent<GUIText>().text = "green 1 = " + col1[2];
+			debugtexts[1].GetComponent<GUIText>().text = "y1 = " + col1[2];
 			break;
 		case 3:
-			debugtexts[2].GetComponent<GUIText>().text = "blue 1 = " + col1[3];
+			debugtexts[2].GetComponent<GUIText>().text = "z1 = " + col1[3];
 			break;
 		case 4:
 			col2 = colors[col2num].Split(',');
-			debugtexts[8].GetComponent<GUIText>().text = "Color 2 = " + col2[0];
+			debugtexts[8].GetComponent<GUIText>().text = "object2.name = " + col2[0];
 			break;
 		case 5:
-			debugtexts[3].GetComponent<GUIText>().text = "red 2 = " + col2[1];
+			debugtexts[3].GetComponent<GUIText>().text = "x2 = " + col2[1];
 			break;
 		case 6:
-			debugtexts[4].GetComponent<GUIText>().text = "green 2 = " + col2[2];
+			debugtexts[4].GetComponent<GUIText>().text = "y2 = " + col2[2];
 			break;
 		case 7:
-			debugtexts[5].GetComponent<GUIText>().text = "blue 2 = " + col2[3];
+			debugtexts[5].GetComponent<GUIText>().text = "z2 = " + col2[3];
 			break;
 		case 8:
-			debugtexts[6].GetComponent<GUIText>().text = "brighter = " + brighter(col1,col2);
+			debugtexts[6].GetComponent<GUIText>().text = "closer.name = " + closer(col1,col2);
 			break;
 		}
 	}
 
-	string brighter(string[] col1, string[] col2){
+	string closer(string[] col1, string[] col2){
 
-		int sum1 = (int) System.Convert.ToInt32(col1[2].Replace("\"", "")) + System.Convert.ToInt32(col1[3].Replace("\"", ""));
-		int sum2 = (int) System.Convert.ToInt32(col2[2].Replace("\"", "")) + System.Convert.ToInt32(col2[3].Replace("\"", ""));
-		if (sum1 > sum2) {
+		int sum1 = (int) System.Convert.ToInt32(col1[2].Replace("\"", "")) + System.Convert.ToInt32(col1[1].Replace("\"", ""));
+		int sum2 = (int) System.Convert.ToInt32(col2[2].Replace("\"", "")) + System.Convert.ToInt32(col2[1].Replace("\"", ""));
+		if (sum1 < sum2) {
 			return col1[0];
 		}
 		else{

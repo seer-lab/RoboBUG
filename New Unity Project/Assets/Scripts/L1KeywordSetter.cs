@@ -30,6 +30,7 @@ public class L1KeywordSetter : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = tracing;	
+		Tm.color = Color.blue;
 	}
 	
 	// Update is called once per frame

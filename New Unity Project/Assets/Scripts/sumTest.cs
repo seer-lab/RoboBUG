@@ -24,7 +24,7 @@ public class sumTest : MonoBehaviour
 		{
 				result.GetComponent<TextMesh> ().text = resultText;
 				if (Time.time > removetext) {
-						resultText = "";
+					result.renderer.enabled = false;
 				}
 
 
@@ -46,6 +46,7 @@ public class sumTest : MonoBehaviour
 												result.GetComponent<TextMesh> ().color = Color.black;
 												resultText = "ERROR!!!";
 												removetext = Time.time + textdelay;
+						result.renderer.enabled = true;
 										} else {
 												string[] vals = inputText.Split (',');
 												int sum = 0;
@@ -55,9 +56,11 @@ public class sumTest : MonoBehaviour
 												if (sum == System.Convert.ToDouble (outputText)) {
 														resultText = "True.";
 														removetext = Time.time + textdelay;
+							result.renderer.enabled = true;
 												} else {
 														resultText = "False.";
 														removetext = Time.time + textdelay;
+							result.renderer.enabled = true;
 												}
 										}
 								}
@@ -71,7 +74,7 @@ public class sumTest : MonoBehaviour
 				//coll = c;
 				if (c.name == "hero") {		
 						TextMesh tm = GetComponent<TextMesh> ();
-						tm.color = Color.red;
+						tm.color = Color.blue;
 				}
 		}
 }

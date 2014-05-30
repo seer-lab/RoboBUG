@@ -4,12 +4,14 @@ using System.Collections;
 public class breakpoint : MonoBehaviour {
 
 	public GameObject next;
+	public GameObject continuer;
 
 	// Use this for initialization
 	void Start () {
 		//SpriteRenderer sr = GetComponent<SpriteRenderer> ();
 	//	sr.color = Color.black;
 		this.renderer.enabled=false;
+		continuer.renderer.enabled=false;
 	}
 	
 	// Update is called once per frame
@@ -21,11 +23,13 @@ public class breakpoint : MonoBehaviour {
 			SpriteRenderer sr = GetComponent<SpriteRenderer> ();
 			if (sr.color == Color.black){
 				this.renderer.enabled=true;
+				continuer.renderer.enabled=true;
 				sr.color = Color.red;
 			}
 			else if (sr.color == Color.red){
 				sr.color = Color.black;
 				this.renderer.enabled=false;
+				continuer.renderer.enabled=false;
 			}
 		}
 	}
