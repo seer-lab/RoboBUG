@@ -16,6 +16,8 @@ public class l6bug : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D p){
 		if (p.name == "projectileBug(Clone)") {
 			this.renderer.enabled = true;
+			GetComponent<Animator>().SetBool("Dying", true);
+			Destroy(p.gameObject);
 		}
 	}
 }

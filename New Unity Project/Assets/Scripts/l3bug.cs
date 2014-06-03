@@ -18,10 +18,13 @@ public class l3bug : MonoBehaviour {
 		
 	}
 	void OnTriggerEnter2D(Collider2D p){
-		if (p.name == "projectileBug(Clone)") {
+		if (p.name == "projectileBug(Clone)" && this.renderer.enabled == false) {
 			if (l3bug1.renderer.enabled == true && l3bug2.renderer.enabled == true){
 				TextMesh tm = l3output.GetComponent<TextMesh>();
 				tm.text = "Correct!";
+				this.renderer.enabled = true;
+				GetComponent<Animator>().SetBool("Dying", true);
+				Destroy(p.gameObject);
 			}
 			else {
 				TextMesh tm = l3output.GetComponent<TextMesh>();
@@ -34,6 +37,8 @@ public class l3bug : MonoBehaviour {
 					"\nThe bug is that the loop doesn't finish" +
 					"\nThe bug is that it thinks 5>6 and 2<0";
 				this.renderer.enabled = true;
+				GetComponent<Animator>().SetBool("Dying", true);
+				Destroy(p.gameObject);
 				//this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y - 33f, 0);
 			//	firstguess = false;
 			}

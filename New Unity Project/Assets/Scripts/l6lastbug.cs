@@ -30,6 +30,7 @@ public class l6lastbug : MonoBehaviour {
 					if (breakpoint.renderer.enabled == true){
 						this.renderer.enabled = true;
 						Destroy(p.gameObject);
+						GetComponent<Animator>().SetBool("Dying", true);
 					}
 				}
 			}

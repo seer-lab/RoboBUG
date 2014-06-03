@@ -14,6 +14,7 @@ public class l2bug : MonoBehaviour {
 	void Update () {
 		if (text.GetComponent<TextMesh>().text == "ERROR!!!"){
 			this.renderer.enabled = true;
+			GetComponent<Animator>().SetBool("Dying", true);
 		}
 	}
 	

@@ -96,6 +96,9 @@ public class camera : MonoBehaviour {
 	int level4midHBoundary = -135;
 	int level4rigHBoundary = -95;
 
+	float delayamount = 1.5f;
+	float delaytime = 0f;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -141,14 +144,26 @@ public class camera : MonoBehaviour {
 
 		//level 3
 		if (level == 2 && l2Objective1.GetComponent<TextMesh>().text == "ERROR!!!" && l2Objective2.GetComponent<TextMesh>().text == "ERROR!!!" && l2Objective3.GetComponent<TextMesh>().text == "ERROR!!!"){
-			level = 30;
-			tm.text = "3";
+			if (delaytime == 0f){
+				delaytime = Time.time + delayamount;
+			}
+			else if (Time.time > delaytime){
+				delaytime = 0f;
+				level = 30;
+				tm.text = "3";
+			}
 		}
 
 		//level 4
 		if (level == 3 && l3Report.GetComponent<TextMesh>().text == "Correct!"){
-			level = 40;
-			tm.text = "4";
+			if (delaytime == 0f){
+				delaytime = Time.time + delayamount;
+			}
+			else if (Time.time > delaytime){
+				delaytime = 0f;
+				level = 40;
+				tm.text = "4";
+			}
 		}
 		if (level == 4) {
 			if (target.transform.position.y < level4botVBoundary){
@@ -201,8 +216,15 @@ public class camera : MonoBehaviour {
 		}
 
 		if (level == 6 && l6report.renderer.enabled == true){
-			level = 63;
-			target.transform.position = level6cStart;
+			if (delaytime == 0f){
+				delaytime = Time.time + delayamount;
+			}
+			else if (Time.time > delaytime){
+				delaytime = 0f;
+				level = 63;
+				target.transform.position = level6cStart;
+			}
+
 		}
 
 		if (level == 63 && target.transform.position.x < level6debugVBoundary){
@@ -213,13 +235,26 @@ public class camera : MonoBehaviour {
 		}
 
 		if (level == 63 && lastbug.renderer.enabled == true) {
-			level = 7;
-			target.transform.position = lastlevelstart;
+
+			if (delaytime == 0f){
+				delaytime = Time.time + delayamount;
+			}
+			else if (Time.time > delaytime){
+				delaytime = 0f;
+				level = 7;
+				target.transform.position = lastlevelstart;
+			}
 		}
 
 		if (level == 7 && verylastbug.renderer.enabled == true) {
-			level = 100;
-			tm.text = "7";
+			if (delaytime == 0f){
+				delaytime = Time.time + delayamount;
+			}
+			else if (Time.time > delaytime){
+				delaytime = 0f;
+				level = 100;
+				tm.text = "7";
+				}
 			}
 
 

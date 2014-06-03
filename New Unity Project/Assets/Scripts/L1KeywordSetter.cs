@@ -22,7 +22,7 @@ public class L1KeywordSetter : MonoBehaviour {
 			"\n		       " +
 			"\n    return      " +
 			"\n      " +
-			"\n} " +
+			"\n " +
 			"\n" +
 			"\n";
 
