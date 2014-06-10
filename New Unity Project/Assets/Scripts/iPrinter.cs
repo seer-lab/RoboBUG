@@ -15,7 +15,7 @@ public class iPrinter : MonoBehaviour {
 		TextMesh tm = GetComponent<TextMesh>();
 		if (output) {
 			tm.color = Color.cyan;
-			tm.text = "Console.WriteLine(i);";
+			tm.text = "cout<<priorities[i];";
 		}
 		else{
 			tm.color = Color.grey;

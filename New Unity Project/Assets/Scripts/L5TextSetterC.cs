@@ -3,7 +3,7 @@ using System.Collections;
 
 public class L5TextSetterC : MonoBehaviour {
 
-	string main = "//Robot needs to interpret surrounds appropriately" +
+	string main = "//Robot needs to interpret surroundings appropriately" +
 		"\n//this code will analyze the coordinates of nearby objects " +
 		"\n//and calculate the closest of each pair of objects to itself" +
 		"\n//NOTE: Robot is located at coordinates (0,0,0)" +

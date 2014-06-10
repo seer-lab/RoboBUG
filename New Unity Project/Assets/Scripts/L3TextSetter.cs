@@ -5,19 +5,24 @@ public class L3TextSetter : MonoBehaviour {
 
 	string printing = "" +
 		"\n" +
-		"\n                <stdio.h>  " +
-		"\n                <conio.h> \n " +
-		"\n           Prioritize(       priorities[],        numOfSystems) " +
-		"\n{" +
-		"\n" +
-		"\n               min=priorities[0],max=priorities[0]; " +
-		"\n\n	             i=1;i<numOfSystems;i++) " +
-		"\n	{  " +
-		"\n\n	   min =                        (min, priorities[i]);" + 
-		"\n\n	   max =                        (max, priorities[i]);" +
-		"\n\n	} " +
-		"\n\n                 [min, max];" +
-		"\n}  ";
+			"\n" +
+			"\n                  <algorithm.h> " + 
+			"\n                  <conio.h> " + 
+			"\n                  <stdio.h> " + 
+			"\n                  <iostream.h> " +
+			"\n        Prioritize(       priorities[],        numOfSystems){ " +
+			"\n" +
+			"\n" +
+			"\n		       i,j=1;" + 
+			"\n\n	           (i<numOfSystems){ " +
+			"\n\n		            (j<numOfSystems){ " +
+			"\n\n			     (priorities[i]>priorities[j]){ " + 
+			"\n\n		     		        (priorities[i],priorities[j]); " +
+			"\n\n       	} j++;" + 
+			"\n\n		} i++; j=1;" +
+			"\n\n	} " +
+			"\n\n                 priorities;" +
+			"\n}  ";
 
 	// Use this for initialization
 	void Start () {

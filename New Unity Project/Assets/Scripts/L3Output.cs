@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class L3Output : MonoBehaviour {
 
 	string output = "";
-	bool initmi = false;
+/*	bool initmi = false;
 	bool preminmi = false;
 	bool premaxmi = false;
 	bool postmaxmi = false;
@@ -26,11 +26,18 @@ public class L3Output : MonoBehaviour {
 	public GameObject Tpremaxma;
 	public GameObject Tpostmaxma;
 	public GameObject Tendma;
-	public GameObject Tiprinter;
+	public GameObject Tiprinter;*/
+
+	bool[] pbool = {false,false,false,false,false,false,false,false};
+	bool[] ibool = {false,false,false,false,false};
+	bool[] jbool = {false,false,false,false};
+	public GameObject[] ptxt = new GameObject[8];
+	public GameObject[] itxt = new GameObject[5];
+	public GameObject[] jtxt = new GameObject[4];
 
 	// Use this for initialization
 	void Start () {
-		TextMesh t;
+		/*TextMesh t;
 		t = Tinitmi.GetComponent<TextMesh>();
 		t.text = "";
 		t = Tpreminmi.GetComponent<TextMesh>();
@@ -52,13 +59,22 @@ public class L3Output : MonoBehaviour {
 		t = Tendma.GetComponent<TextMesh>();
 		t.text = "";
 		t = Tiprinter.GetComponent<TextMesh>();
-		t.text = "";
+		t.text = "";*/
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		TextMesh t;
-		t = Tinitmi.GetComponent<TextMesh>();
+
+		for (int i=0; i<8; i++) {
+			pbool[i] = ptxt[i].GetComponent<TextMesh>().text == "cout<<priorities;";
+		}
+		for (int i=0; i<5; i++) {
+			ibool[i] = itxt[i].GetComponent<TextMesh>().text == "cout<<priorities[i];";
+		}
+		for (int i=0; i<4; i++) {
+			jbool[i] = jtxt[i].GetComponent<TextMesh>().text == "cout<<priorities[j];";
+		}
+		/*t = Tinitmi.GetComponent<TextMesh>();
 		initmi = t.text == "Console.WriteLine(min);";
 		t = Tpreminmi.GetComponent<TextMesh>();
 		preminmi = t.text == "Console.WriteLine(min);";
@@ -79,13 +95,87 @@ public class L3Output : MonoBehaviour {
 		t = Tendma.GetComponent<TextMesh>();
 		endma = t.text == "Console.WriteLine(max);";
 		t = Tiprinter.GetComponent<TextMesh>();
-		iprint = t.text == "Console.WriteLine(i);";
-		SetText ();
+		iprint = t.text == "Console.WriteLine(i);";*/
+		setText ();
 	}
 
-	void SetText() {
+	string printArray(int[] ar){
+		output = "[";
+		for (int i = 0;i<ar.Length;i++){
+			output += System.Convert.ToString(ar[i]) + ",";
+		}
+		output.Remove (output.Length-1);
+		output += "]";
+		return output;
+	} 
+
+	void setText() {
 		output = "";
-		if (initmi) {
+		int[] values = {1,3,0,4,2};
+		int temp;
+		if (pbool [0]) {
+			output += printArray(values) + "\n";
+		}
+		for (int i = 1; i<5; i++) {
+			if (ibool[0]){
+				output += "i=" + System.Convert.ToString(values[i]) + "\n";
+			}
+			if (pbool[1]){
+				output += printArray(values) + "\n";
+			}
+			for(int j = 1;j<5;j++){
+				if (ibool[1]){
+					output += "i=" + System.Convert.ToString(values[i]) + "\n";
+				}
+				if (pbool[2]){
+					output += printArray(values) + "\n";
+				}
+				if (jbool[0]){
+					output += "j=" + System.Convert.ToString(values[j]) + "\n";
+				}
+
+				if (values[i]>values[j]){
+					if (ibool[2]){
+						output += "i=" + System.Convert.ToString(values[i]) + "\n";
+					}
+					if (pbool[3]){
+						output += printArray(values) + "\n";
+					}
+					if (jbool[1]){
+						output += "j=" + System.Convert.ToString(values[j]) + "\n";
+					}
+					temp = values[i];
+					values[i] = values[j];
+					values[j] = temp;
+					if (ibool[3]){
+						output += "i=" + System.Convert.ToString(values[i]) + "\n";
+					}
+					if (pbool[4]){
+						output += printArray(values) + "\n";
+					}
+					if (jbool[2]){
+						output += "j=" + System.Convert.ToString(values[j]) + "\n";
+					}
+				}
+
+				if (ibool[4]){
+					output += "i=" + System.Convert.ToString(values[i]) + "\n";
+				}
+				if (pbool[5]){
+					output += printArray(values) + "\n";
+				}
+				if (jbool[3]){
+					output += "j=" + System.Convert.ToString(values[j]) + "\n";
+				}
+			}
+			if (pbool[6]){
+				output += printArray(values) + "\n";
+			}
+		}
+		if (pbool[7]){
+			output += printArray(values) + "\n";
+		}
+	/*	if (initmi) {
 			output += "Min = 0\n";
 		}
 		if (initma){
@@ -134,7 +224,7 @@ public class L3Output : MonoBehaviour {
 		}
 		if (endma) {
 			output += "Max = " + System.Convert.ToString(max) + "\n";
-		}
+		}*/
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = output;
 		Tm.color = Color.black;

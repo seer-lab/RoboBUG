@@ -6,6 +6,8 @@ public class L4TextSetter : MonoBehaviour {
 	string main = "" +
 		"\n" +
 		"\n" +
+		"\n" +
+		"\n" +
 			"\n                <stdio.h>" +
 			"\n                <colourmanager.h>" +
 			"\n                TOTAL_COLORS   12" +
@@ -13,9 +15,7 @@ public class L4TextSetter : MonoBehaviour {
 		"\n             name[28];" +
 		"\n           red;" +
 		"\n           green;" +
-		"\n           blue;" +
-		"\n};" +
-		"\n" +
+		"\n           blue;};" +
 		"\n             tabs {" +
 		"\n                 colour *table;" +
 		"\n           tabsize;" +

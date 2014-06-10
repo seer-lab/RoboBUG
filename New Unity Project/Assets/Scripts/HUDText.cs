@@ -14,7 +14,12 @@ public class HUDText : MonoBehaviour {
 	void Update () {
 		GUIText gi = GetComponent<GUIText> ();
 		TextMesh tm = level.GetComponent<TextMesh> ();
-		gi.text = "Level " + tm.text;
+		int levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
+		if (levelnum > 0 && levelnum < 100) {
+						gi.text = "Level " + tm.text;
+				} else {
+			gi.text = "";
+				}
 	}
 
 }

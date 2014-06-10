@@ -3,16 +3,16 @@ using System.Collections;
 
 public class L2TextSetter : MonoBehaviour {
 	
-	string testing = "       WeightCalc(       weights[]);" +
+	string testing = "       DistanceCalc(       distances[]);" +
 		"\n" +
 			"\n       EnergyCalc(       powers[]);" +
 			"\n\n" +
 			"\n          TempCalc(           temps[]);" +
 			"\n\n" +
 			"" +
-			"\n         WeightCalcTest (){" +
-			"\n	       weights[] = " +
-			"\n	       totalweight = " +
+			"\n         DistanceCalcTest (){" +
+			"\n	       distances[] = " +
+			"\n	       totalDistance = " +
 			//		"\n	return sumCalc(values[]) == total;" +
 			"\n" +
 			"\n}" +

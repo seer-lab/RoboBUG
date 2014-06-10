@@ -1,37 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\l7code (3rd copy).cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\L0Intro.cs">
     <Files>
-      <File FileName="Assets\Scripts\heroControllerScript.cs" Line="67" Column="4" />
-      <File FileName="Assets\Scripts\l6lastbug.cs" Line="33" Column="55" />
-      <File FileName="Assets\Scripts\l7code.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\l7codeK.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\l7codeC.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\l7code (3rd copy).cs" Line="21" Column="31" />
-      <File FileName="Assets\Scripts\L4TextSetter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\L3TextSetter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\l3mintextsetter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\L3TextSetterK.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Points.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\camera.cs" Line="249" Column="60" />
-      <File FileName="Assets\Scripts\l1bug.cs" Line="22" Column="27" />
-      <File FileName="Assets\Scripts\l2bug.cs" Line="17" Column="52" />
-      <File FileName="Assets\Scripts\l3bug.cs" Line="24" Column="20" />
-      <File FileName="Assets\Scripts\l4bug.cs" Line="13" Column="2" />
-      <File FileName="Assets\Scripts\l5bug.cs" Line="23" Column="1" />
-      <File FileName="Assets\Scripts\l6bug.cs" Line="19" Column="16" />
-      <File FileName="Assets\Scripts\bug.cs" Line="11" Column="3" />
-      <File FileName="Assets\Scripts\L2TextSetter (3rd copy).cs" Line="6" Column="19" />
-      <File FileName="Assets\Scripts\L1TextSetter.cs" Line="23" Column="31" />
-      <File FileName="Assets\Scripts\L1KeywordSetter.cs" Line="17" Column="18" />
-      <File FileName="Assets\Scripts\L1CommentSetter.cs" Line="6" Column="19" />
-      <File FileName="Assets\Scripts\l3mintextsetter (3rd copy).cs" Line="35" Column="14" />
-      <File FileName="Assets\Scripts\L3TextSetter (3rd copy).cs" Line="6" Column="20" />
-      <File FileName="Assets\Scripts\L4TextSetter (3rd copy).cs" Line="66" Column="13" />
-      <File FileName="Assets\Scripts\L5ReportTextSetter (3rd copy).cs" Line="18" Column="33" />
-      <File FileName="Assets\Scripts\L5TextSetter (3rd copy).cs" Line="52" Column="9" />
-      <File FileName="Assets\Scripts\l6codetest (3rd copy).cs" Line="33" Column="13" />
-      <File FileName="Assets\Scripts\L7TextSetter (3rd copy).cs" Line="53" Column="9" />
+      <File FileName="Assets\Scripts\L3Output.cs" Line="114" Column="24" />
+      <File FileName="Assets\Scripts\L3TextSetter (3rd copy).cs" Line="14" Column="36" />
+      <File FileName="Assets\Scripts\L3TextSetterC.cs" Line="15" Column="36" />
+      <File FileName="Assets\Scripts\L3TextSetter.cs" Line="22" Column="21" />
+      <File FileName="Assets\Scripts\L3TextSetterK.cs" Line="13" Column="27" />
+      <File FileName="Assets\Scripts\prioritiesPrinter.cs" Line="18" Column="31" />
+      <File FileName="Assets\Scripts\jPrinter.cs" Line="18" Column="34" />
+      <File FileName="Assets\Scripts\iPrinter.cs" Line="18" Column="34" />
+      <File FileName="Assets\Scripts\l3bug.cs" Line="44" Column="7" />
+      <File FileName="Assets\Scripts\camera.cs" Line="285" Column="5" />
+      <File FileName="Assets\Scripts\sidebardescription.cs" Line="19" Column="86" />
+      <File FileName="Assets\Scripts\L0Intro.cs" Line="112" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

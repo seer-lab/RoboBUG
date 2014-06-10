@@ -6,6 +6,8 @@ public class L4TextSetterK : MonoBehaviour {
 	string main = "" +
 		"\n" +
 		"\n" +
+		"\n" +
+		"\n" +
 		"\n#include" +
 		"\n#include" +
 		"\n#define" +
@@ -14,8 +16,6 @@ public class L4TextSetterK : MonoBehaviour {
 		"\n    int" +
 		"\n    int" +
 		"\n    int" +
-		"\n" +
-		"\n" +
 		"\nstruct " +
 		"\n    struct " +
 		"\n    int" +

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class L5ReportTextSetter : MonoBehaviour {
@@ -7,13 +7,13 @@ public class L5ReportTextSetter : MonoBehaviour {
 	void Start () {
 		TextMesh tm = GetComponent<TextMesh> ();
 		tm.color = Color.black;
-		tm.text = "             *compare(object1, object2){" +
+		tm.text = "             *compareThreats(object1, object2){" +
 			"\n\t" +
 				"\n\t" + 
 				"\n\t       xval, yval, zval = 0,0,0;" + 
-				"\n\txval += ((red1-red2);" +
-				"\n\tyval += (blue1-blue2);" +
-				"\n\tzval += (green1-green2);t" +
+				"\n\txval = xval-red1+red2;" +
+				"\n\tyval -= (blue2-blue1);" +
+				"\n\tzval += (green1-green2);" +
 				"\n\t     (xval+yval+zval > 0){              object1;}" +
 				"\n\t         {               object2};";
 		/*tm.text = "The bug is that the wrong objects are compared" +

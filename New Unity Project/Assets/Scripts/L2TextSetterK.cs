@@ -3,7 +3,7 @@ using System.Collections;
 
 public class L2TextSetterK : MonoBehaviour {
 	
-	string testing = "int                         int" +
+	string testing = "int                            int" +
 		"\n" +
 			"\nint                         int" +
 			"\n\n" +

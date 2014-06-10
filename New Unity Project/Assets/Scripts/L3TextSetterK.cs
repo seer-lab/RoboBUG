@@ -5,19 +5,24 @@ public class L3TextSetterK : MonoBehaviour {
 
 	string printing = "" +
 		"\n" +
-		"\n#include" +
-		"\n#include\n " +
-		"\nint[]                       int                     int" +
-		"\n" +
-		"\n" +
-		"\n    float" +
-		"\n\n	for(int" +
-		"\n	  " +
-		"\n\n		              minimum" + 
-		"\n\n		              maximum" +
-		"\n\n	 " +
-		"\n\n    return" +
-		"\n}  ";
+			"\n" +
+			"\n#include " + 
+			"\n#include " + 
+			"\n#include  " + 
+			"\n#include " +
+			"\nint[]                     int                     int                  " +
+			"\n	" +
+			"\n	" +
+			"\n		int " + 
+			"\n\n	while  " +
+			"\n\n		while  " +
+			"\n\n			if  " + 
+			"\n\n				swap " +
+			"\n\n     " + 
+			"\n\n	 " +
+			"\n\n" +
+			"\n\n    return " +
+			"\n  ";
 
 	// Use this for initialization
 	void Start () {

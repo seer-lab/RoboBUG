@@ -5,8 +5,8 @@ public class l3bug : MonoBehaviour {
 
 	public GameObject l3output;
 //	bool firstguess = true;
-	public GameObject l3bug1;
-	public GameObject l3bug2;
+//	public GameObject l3bug1;
+//	public GameObject l3bug2;
 
 	// Use this for initialization
 	void Start () {
@@ -19,14 +19,14 @@ public class l3bug : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D p){
 		if (p.name == "projectileBug(Clone)" && this.renderer.enabled == false) {
-			if (l3bug1.renderer.enabled == true && l3bug2.renderer.enabled == true){
+		//	if (l3bug1.renderer.enabled == true && l3bug2.renderer.enabled == true){
 				TextMesh tm = l3output.GetComponent<TextMesh>();
 				tm.text = "Correct!";
 				this.renderer.enabled = true;
 				GetComponent<Animator>().SetBool("Dying", true);
 				Destroy(p.gameObject);
-			}
-			else {
+		//	}
+		/*	else {
 				TextMesh tm = l3output.GetComponent<TextMesh>();
 				tm.text = "The bug is that the min is wrong" +
 					"\nThe bug is that the max is wrong" +
@@ -41,7 +41,7 @@ public class l3bug : MonoBehaviour {
 				Destroy(p.gameObject);
 				//this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y - 33f, 0);
 			//	firstguess = false;
-			}
+			}*/
 
 		}
 	}

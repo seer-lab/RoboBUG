@@ -1,15 +1,18 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class L3TextSetterC : MonoBehaviour {
 
-	string printing = "//Identify system with highest priority and system with lowest priority" +
-		"\n" +
-		"\n" +
-		"\n\n " +
-		"\n" +
-		"\n   //test using pre-chosen values for systems " +
-			"\n	//priorities = [0,4,1,6,3,2,5], numOfSystems = 7";
+	string printing = "//Prioritize external threats by ordering them based" +
+		"\n//on their threat levels from most dangerous" +
+			"\n//(highest) to least dangerous (lowest)." +
+			"\n " + 
+			"\n" + 
+			"\n" + 
+			"\n" +
+			"\n " +
+			"\n		//test using pre-chosen values for systems " +
+			"\n		//int priorities[] = [1,3,0,4,2]; int numOfSystems = 5;";
 
 
 	// Use this for initialization
