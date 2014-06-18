@@ -9,6 +9,7 @@ public class L0Intro : MonoBehaviour {
 	public int stopY3;
 	public int stopY4;
 	public int stopY5;
+	public int stopYend;
 
 	public float moveSpeed;
 
@@ -24,6 +25,8 @@ public class L0Intro : MonoBehaviour {
 
 	public string L5Text;
 
+	public string endText;
+
 	// Use this for initialization
 	void Start () {
 		stopY0 = 20;
@@ -32,6 +35,7 @@ public class L0Intro : MonoBehaviour {
 		stopY3 = 23;
 		stopY4 = 24;
 		stopY5 = 23;
+		stopYend = 110;
 		moveSpeed = 0.01f;
 
 		L0Text = "" +
@@ -172,6 +176,60 @@ public class L0Intro : MonoBehaviour {
 			"\nand discover where the bug is." +
 			"\n" +
 			"\nPRESS SPACE TO START";
+
+		endText = "" + 
+			"\nVICTORY" +
+			"\n" +
+			"\nYou've repaired the Mech suit and successfully" +
+			"\neliminated all of the bugs that were in your way." +
+			"\n" +
+			"\nCongratulations!" +
+			"\n" +
+			"\n" +
+			"\n" +
+			"\n" +
+			"\nCREDITS:" +
+			"\n" +
+			"\nWebsites" +
+			"\n" +
+			"\nhttp://www.amon.co\n" +
+				"\nhttp://www.opengameart.org\n" + 
+				"\nhttp://opsound.org/\n" + "\n" + 
+				"\nGraphics Credits\n" + 
+				"\nhttp://www.opengameart.org\n" + 
+				"\nhttps://openclipart.org\n" +
+				"\nGui-Set by Rawdanitsu\n" +
+				"\nStephen \"Redshrike\" Challener " +
+				"\n- graphic artist \n" +
+				"\nWilliam.Thompsonj " +
+				"\n- contributor.\n" + 
+				"\nA robot \nby Anton Yu. \nFrom 0.18 OCAL database.\n" +
+				"\nglyph.png \nby Jinn (Submitted by Andrettin)\n" + 
+				"\n" + 
+				"\nMusic Credits from http://opsound.org/\n" + 
+				"\n(IT) ANTI-MATTER(S) \nby LDX#40\n" +
+				"\nTHIRTY \nby _AA_\n" + 
+				"\nACD8 \nby PERAMIDES\n" +
+				"\nFILTHYFILTER \nby Kid Cholera's VASCULOID\n" +
+				"\nNIGHTTIME \nby Kid Cholera's VASCULOID\n" +
+				"\nON THE DOWNLOAD \nby Kid Cholera's VASCULOID\n" + 
+				"\nSPIDERTWO \nby DAVE HOWES\n" + 
+				"\nThis work is licensed under a Creative Commons \n" + 
+				"\nAttribution-ShareAlike3.0 Unported License.\n" + 
+				"\n" +
+				"\nAudio Credits\n" + 
+				"\nSounds from Freesound:\n" + 
+				"\nalien_screecn_1.wav \nby CosmicD\n" +
+				"\nconcrete_step_3.wav \nby movingplaid\n" + 
+				"\nzoom up 1 (quicker delay).wav \nby Chriddof\n" +
+				"\nWhoosh_Swish_03.wav \nby mich3d\n" + 
+				"\nError.wav \nby Autistic Lucario\n" +
+				"\n" +
+				"\n" +
+				"\n" +
+				"\nThanks for playing!" +
+				"\n" +
+				"\nPress Escape to quit";
 	}
 	
 	// Update is called once per frame
@@ -195,6 +253,10 @@ public class L0Intro : MonoBehaviour {
 		else if (txt.text == "start5") {
 			txt.text = L5Text;
 		}
+		else if (txt.text == "end") {
+			this.transform.position = new Vector3(100f,-3f,0f);
+			txt.text = endText;
+		}
 	/*	else if (Input.GetButtonDown ("Jump")) {
 			this.transform.position = new Vector3(100f,0f,0f);
 			txt.text = "L";
@@ -204,19 +266,22 @@ public class L0Intro : MonoBehaviour {
 		if (txt.text == L0Text && this.transform.position.y < stopY0) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
 		}
-		if (txt.text == L1Text && this.transform.position.y < stopY1) {
+		else if (txt.text == L1Text && this.transform.position.y < stopY1) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
 		}
-		if (txt.text == L2Text && this.transform.position.y < stopY2) {
+		else if (txt.text == L2Text && this.transform.position.y < stopY2) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
 		}
-		if (txt.text == L3Text && this.transform.position.y < stopY3) {
+		else if (txt.text == L3Text && this.transform.position.y < stopY3) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
 		}
-		if (txt.text == L4Text && this.transform.position.y < stopY4) {
+		else if (txt.text == L4Text && this.transform.position.y < stopY4) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
 		}
-		if (txt.text == L5Text && this.transform.position.y < stopY5) {
+		else if (txt.text == L5Text && this.transform.position.y < stopY5) {
+			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
+		}
+		else if (txt.text == endText && this.transform.position.y < stopYend) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
 		}
 	}

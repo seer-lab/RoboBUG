@@ -10,18 +10,18 @@ public class L3TextSetter : MonoBehaviour {
 			"\n                  <conio.h> " + 
 			"\n                  <stdio.h> " + 
 			"\n                  <iostream.h> " +
-			"\n        Prioritize(       priorities[],        numOfSystems){ " +
+			"\n         Prioritize(       priorities[],       numOfThreats){ " +
 			"\n" +
 			"\n" +
-			"\n		       i,j=1;" + 
-			"\n\n	           (i<numOfSystems){ " +
-			"\n\n		            (j<numOfSystems){ " +
-			"\n\n			     (priorities[i]>priorities[j]){ " + 
-			"\n\n		     		        (priorities[i],priorities[j]); " +
-			"\n\n       	} j++;" + 
-			"\n\n		} i++; j=1;" +
-			"\n\n	} " +
-			"\n\n                 priorities;" +
+			"\n               i,j=1;" + 
+			"\n\n	                   (i<numOfThreats){ " +
+			"\n\n	                	          (j<numOfThreats){ " +
+			"\n\n	                        		   (priorities[i]>priorities[j]){ " + 
+			"\n\n		                              		        (priorities[i],priorities[j]); " +
+			"\n\n                        } j++;" + 
+			"\n\n                } i++; j=1;" +
+			"\n\n        } " +
+			"\n\n                     priorities;" +
 			"\n}  ";
 
 	// Use this for initialization

@@ -10,12 +10,12 @@ public class L5ReportTextSetter : MonoBehaviour {
 		tm.text = "             *compareThreats(object1, object2){" +
 			"\n\t" +
 				"\n\t" + 
-				"\n\t       xval, yval, zval = 0,0,0;" + 
-				"\n\txval = xval-red1+red2;" +
-				"\n\tyval -= (blue2-blue1);" +
-				"\n\tzval += (green1-green2);" +
-				"\n\t     (xval+yval+zval > 0){              object1;}" +
-				"\n\t         {               object2};";
+				"\n\t               xval, yval, zval = 0,0,0;" + 
+				"\n\t        xval = xval-object1.x+object2.x;" +
+				"\n\t        yval -= (object2.y-object1.y);" +
+				"\n\t        zval += (object1.z-object2.z);" +
+				"\n\t             (xval+yval+zval > 0){            object1;}" +
+				"\n\t                 {             object2};\n}";
 		/*tm.text = "The bug is that the wrong objects are compared" +
 				"\nThe bug is that the darker object is chosen" +
 				"\nThe bug is that not all objects are compared" +

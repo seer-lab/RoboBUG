@@ -22,6 +22,8 @@ public class Return : MonoBehaviour {
 		}
 		else if (c.name == "projectileWarp(Clone)"){
 			hero.transform.position = new Vector3 (destination.transform.position.x+1f, destination.transform.position.y, 0);
+			GetComponent<AudioSource>().Play();
+			Destroy(c.gameObject);
 		}
 	}
 

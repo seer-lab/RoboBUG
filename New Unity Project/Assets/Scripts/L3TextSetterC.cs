@@ -11,15 +11,15 @@ public class L3TextSetterC : MonoBehaviour {
 			"\n" + 
 			"\n" +
 			"\n " +
-			"\n		//test using pre-chosen values for systems " +
-			"\n		//int priorities[] = [1,3,0,4,2]; int numOfSystems = 5;";
+			"\n        //test using pre-chosen values for systems " +
+			"\n        //int priorities[] = [1,3,0,4,2]; int numOfThreats = 5;";
 
 
 	// Use this for initialization
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = printing;	
-		Tm.color = Color.grey;
+		Tm.color = new Color (.25f, .25f, .25f);
 	}
 	
 	// Update is called once per frame

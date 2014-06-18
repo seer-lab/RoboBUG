@@ -25,6 +25,7 @@ public class breakpoint : MonoBehaviour {
 				this.renderer.enabled=true;
 				continuer.renderer.enabled=true;
 				sr.color = Color.red;
+				GetComponent<AudioSource>().Play();
 			}
 			else if (sr.color == Color.red){
 				sr.color = Color.black;

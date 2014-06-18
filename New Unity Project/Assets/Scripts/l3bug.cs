@@ -24,6 +24,7 @@ public class l3bug : MonoBehaviour {
 				tm.text = "Correct!";
 				this.renderer.enabled = true;
 				GetComponent<Animator>().SetBool("Dying", true);
+				GetComponent<AudioSource>().Play();
 				Destroy(p.gameObject);
 		//	}
 		/*	else {

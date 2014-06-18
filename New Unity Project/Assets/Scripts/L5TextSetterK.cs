@@ -14,10 +14,10 @@ public class L5TextSetterK : MonoBehaviour {
 		"\n#include" +
 		"\nusing namespace" +
 		"\nstruct " +
-		"\n char " +
-		"\n int " +
-		"\n int " +
-		"\n int " +
+			"\n        char " +
+			"\n        int " +
+			"\n        int " +
+			"\n        int " +
 		"\n" +
 		"\nstruct                           getNearbyObjects();" +
 		"\n" +
@@ -26,19 +26,19 @@ public class L5TextSetterK : MonoBehaviour {
 		"\n" +
 		"\n" +
 		"\nvoid" +
-			"\n  enum " +
+			"\n        enum " +
 			"\n                " +
 			"\n                " +
-			"\n  enum " +
+			"\n        enum " +
 			"\n                " +
 			"\n                 " +
-		"\n  struct" +
-			"\n int" + //\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-		"\n   for(" +
+			"\n        struct" +
+			"\n        int" + //\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+			"\n        for(" +
 		"\n     " +
 		"\n     " +
 		"\n     "+
-		"\n     for(" +
+			"\n                for(" +
 			"\n       " +
 			"\n       " +
 			"\n      " +
@@ -49,7 +49,7 @@ public class L5TextSetterK : MonoBehaviour {
 		"\n " +
 		"\n" +
 		"\n" +
-		"\n}";
+		"\n";
 
 	// Use this for initialization
 	void Start () {

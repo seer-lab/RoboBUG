@@ -29,7 +29,7 @@ public class L5TextSetterC : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = main;	
-		Tm.color = Color.grey;
+		Tm.color = new Color (.25f, .25f, .25f);
 	}
 	
 	// Update is called once per frame

@@ -32,6 +32,7 @@ public class l1bug : MonoBehaviour {
 			this.renderer.enabled = true;
 			Destroy (p.gameObject);
 			anim.SetBool("Dying", true);
+			GetComponent<AudioSource>().Play();
 			dead = true;
 			deathdelay = Time.time + deathtime;
 				}

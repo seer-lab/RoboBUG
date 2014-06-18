@@ -4,6 +4,7 @@ using System.Collections;
 public class l2bug : MonoBehaviour {
 
 	public GameObject text;
+	bool played = false;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +16,10 @@ public class l2bug : MonoBehaviour {
 		if (text.GetComponent<TextMesh>().text == "ERROR!!!"){
 			this.renderer.enabled = true;
 			GetComponent<Animator>().SetBool("Dying", true);
+			if (!played){
+				GetComponent<AudioSource>().Play();
+				played = true;
+			}
 		}
 	}
 	

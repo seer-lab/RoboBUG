@@ -11,6 +11,8 @@ public class Points : MonoBehaviour
 		public int starttime;
 		public int points = 0;
 		public GameObject falsepositive;
+		int pointpenalty = 500;
+
 		int secs;
 
 		// Use this for initialization
@@ -25,7 +27,7 @@ public class Points : MonoBehaviour
 		{
 				levelnum = System.Convert.ToInt16 (level.GetComponent<TextMesh> ().text);
 				if (falsepositive.GetComponent<TextMesh> ().text == "Caught") {
-						points -= 50;
+					points -= pointpenalty;
 						falsepositive.GetComponent<TextMesh> ().text = "Pointed";
 				}
 				if (levelnum > 0) {

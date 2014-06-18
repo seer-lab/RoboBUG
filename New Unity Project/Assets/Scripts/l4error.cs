@@ -13,7 +13,8 @@ public class l4error : MonoBehaviour {
 	void Update () {
 		TextMesh tm = this.GetComponent<TextMesh> ();
 		TextMesh bugt = bugtext.GetComponent<TextMesh> ();
-		if (bugt.color.ToString() == "RGBA(0.502, 0.502, 0.502, 1.000)") {
+		if (bugt.text == "        //coltab[BLUE].table = bluetab;" +
+		    "\n\n        //coltab[BLUE].tabsize = sizeof(bluetab)") {
 			tm.color = Color.green;
 			tm.text = "No Error";
 		} 

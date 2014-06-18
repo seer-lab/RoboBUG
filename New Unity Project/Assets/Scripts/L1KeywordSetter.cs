@@ -11,16 +11,16 @@ public class L1KeywordSetter : MonoBehaviour {
 			"\n#include<conio.h>  " +
 			"\nint                      int                 int " +
 			"\n  " +
-			"\n    int " +
-			"\n    float " +
+			"\n        int " +
+			"\n        float " +
 			"\n    " +
-			"\n    for " +
+			"\n        for " +
 			"\n    " +
 			"\n		" +
-			"\n		           float        " +
+			"\n		                         float        " +
 			"\n       " +
 			"\n		       " +
-			"\n    return      " +
+			"\n        return      " +
 			"\n      " +
 			"\n " +
 			"\n" +

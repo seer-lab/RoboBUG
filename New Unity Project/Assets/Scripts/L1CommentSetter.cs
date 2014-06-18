@@ -12,7 +12,7 @@ public class L1CommentSetter : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = tracing;	
-		Tm.color = Color.gray;
+		Tm.color = new Color (.25f, .25f, .25f);
 	}
 	
 	// Update is called once per frame

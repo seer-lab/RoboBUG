@@ -96,7 +96,7 @@ public class breakpointHandler : MonoBehaviour {
 		switch (stepnum) {
 		case 0:
 			col1 = colors[col1num].Split(',');
-			debugtexts[7].GetComponent<GUIText>().text = "object1.name = " + col1[0];
+			debugtexts[7].GetComponent<GUIText>().text = "object1.name = \n" + col1[0];
 			break;
 		case 1:
 			debugtexts[0].GetComponent<GUIText>().text = "x1 = " + col1[1];
@@ -109,7 +109,7 @@ public class breakpointHandler : MonoBehaviour {
 			break;
 		case 4:
 			col2 = colors[col2num].Split(',');
-			debugtexts[8].GetComponent<GUIText>().text = "object2.name = " + col2[0];
+			debugtexts[8].GetComponent<GUIText>().text = "object2.name = \n" + col2[0];
 			break;
 		case 5:
 			debugtexts[3].GetComponent<GUIText>().text = "x2 = " + col2[1];
@@ -121,15 +121,15 @@ public class breakpointHandler : MonoBehaviour {
 			debugtexts[5].GetComponent<GUIText>().text = "z2 = " + col2[3];
 			break;
 		case 8:
-			debugtexts[6].GetComponent<GUIText>().text = "closer.name = " + closer(col1,col2);
+			debugtexts[6].GetComponent<GUIText>().text = "closer.name = \n" + closer(col1,col2);
 			break;
 		}
 	}
 
 	string closer(string[] col1, string[] col2){
 
-		int sum1 = (int) System.Convert.ToInt32(col1[2].Replace("\"", "")) + System.Convert.ToInt32(col1[1].Replace("\"", ""));
-		int sum2 = (int) System.Convert.ToInt32(col2[2].Replace("\"", "")) + System.Convert.ToInt32(col2[1].Replace("\"", ""));
+		int sum1 = (int) System.Convert.ToInt32(col1[2].Replace("\"", "")) + System.Convert.ToInt32(col1[3].Replace("\"", ""));
+		int sum2 = (int) System.Convert.ToInt32(col2[2].Replace("\"", "")) + System.Convert.ToInt32(col2[3].Replace("\"", ""));
 		if (sum1 < sum2) {
 			return col1[0];
 		}
@@ -142,7 +142,8 @@ public class breakpointHandler : MonoBehaviour {
 		if (c.name == "projectileDebug(Clone)") {
 				SpriteRenderer nxt = GetComponent<SpriteRenderer>();
 				nxt.color = Color.magenta;
-
+				Destroy(c.gameObject);
+			GetComponent<AudioSource>().Play();
 		}
 	}
 }

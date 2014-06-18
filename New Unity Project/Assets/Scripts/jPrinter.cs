@@ -18,7 +18,7 @@ public class jPrinter : MonoBehaviour {
 			tm.text = "cout<<priorities[j];";
 		}
 		else{
-			tm.color = Color.grey;
+			tm.color = new Color (.25f, .25f, .25f);
 			tm.text = "//Don't print j;";
 		}
 	}

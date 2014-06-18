@@ -32,6 +32,7 @@ void OnTriggerEnter2D(Collider2D p){
 		this.renderer.enabled = true;
 		Destroy (p.gameObject);
 		anim.SetBool("Dying", true);
+		GetComponent<AudioSource>().Play();
 		dead = true;
 		deathdelay = Time.time + deathtime;
 	}

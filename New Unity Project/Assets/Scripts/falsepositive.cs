@@ -28,6 +28,7 @@ public class falsepositive : MonoBehaviour {
 		//	Destroy (p.gameObject);
 			this.renderer.enabled = true;
 			text.renderer.enabled = true;
+			GetComponent<AudioSource>().Play();
 			fplabel.GetComponent<TextMesh>().text = "Caught";
 			hideself = Time.time + showdelay;
 		}

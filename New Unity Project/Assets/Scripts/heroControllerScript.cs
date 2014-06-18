@@ -19,13 +19,15 @@ public class heroControllerScript : MonoBehaviour {
 	public Rigidbody2D projectileW;
 	public Rigidbody2D projectileT;
 
+	private bool walkloop = false;
+
 	int projectilecode = 1;
 	int levelnum = 0;
 	int currentlevel = 0;
 
 	bool onWall = false;
 	bool facingRight = true;
-	float fireRate = 0.1f;
+	float fireRate = 0.5f;
 	private float nextFire = 0.0f;
 	float animTime = 0.3f;
 	private float animDelay = 0.0f;
@@ -33,6 +35,7 @@ public class heroControllerScript : MonoBehaviour {
 	bool dropping = false;
 	float dropTime = 0.3f;
 	private float dropDelay = 0.0f;
+	private float speedPenalty = 0.5f;
 
 
 
@@ -96,6 +99,17 @@ public class heroControllerScript : MonoBehaviour {
 	}
 	void Update(){
 
+		AudioSource ad = GetComponent<AudioSource> ();
+		if (!walkloop && Input.GetAxis ("Horizontal") != 0f && rigidbody2D.velocity.y == 0) {
+			ad.Play();
+			walkloop = true;
+			ad.loop = true;
+		}
+		if (Input.GetAxis ("Horizontal") == 0f || rigidbody2D.velocity.y != 0) {
+			ad.loop = false;
+			walkloop = false;
+		}
+
 		//stars
 		if (Input.GetKeyDown("0")) {projectilecode = 0;
 		}
@@ -121,8 +135,8 @@ public class heroControllerScript : MonoBehaviour {
 		}
 		if (falsepositive.GetComponent<TextMesh> ().text == "Pointed") {
 			falsepositive.GetComponent<TextMesh> ().text = "";
-			maxSpeed *= 0.9f;
-			climbSpeed *= 0.9f;
+			maxSpeed *= speedPenalty;
+			climbSpeed *= speedPenalty;
 		}
 	//firing
 		if (Input.GetButton ("Fire1") && Time.time > nextFire && !onWall && rigidbody2D.velocity == Vector2.zero) {

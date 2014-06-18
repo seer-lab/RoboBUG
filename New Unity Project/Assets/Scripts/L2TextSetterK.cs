@@ -3,29 +3,29 @@ using System.Collections;
 
 public class L2TextSetterK : MonoBehaviour {
 	
-	string testing = "int                            int" +
+	string testing = "\nint                             int" +
 		"\n" +
-			"\nint                         int" +
-			"\n\n" +
-			"\nfloat                       float" +
-			"\n\n" +
+			"\n\n\nint                          int" +
+			"\n" +
+			"\n\n\nfloat                       float" +
+			"\n" +
 			"" +
 			"\nbool " +
-			"\n	int" +
-			"\n	int" +
+			"\n        int" +
+			"\n        int" +
 			//		"\n	return sumCalc(values[]) == total;" +
 			"\n" +
 			"\n" +
-			"\n" +
-			"\nint " +
-			"\n	int " +
-			"\n	int " +
+			"" +
+			"\nbool " +
+			"\n        int " +
+			"\n        int " +
 			//		"\n	return medianCalc(values[]) == mid;" +
 			"\n" +
 			"\n" +
-			"\nfloat " +
-			"\n	float" +
-			"\n	float" +
+			"\nbool " +
+			"\n        float" +
+			"\n        float" +
 			//		"\n	return avgCalc(values[]) == average;" +
 			"\n" +
 			"\n" +

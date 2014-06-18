@@ -8,14 +8,14 @@ public class L5ReportTextSetterK : MonoBehaviour {
 		TextMesh tm = GetComponent<TextMesh> ();
 		tm.color = Color.blue;
 		tm.text = "object" +
-				"\n\t" +
-				"\n\t" + 
-				"\n\tint" + 
-				"\n\t" +
-				"\n\t" +
-				"\n\t" +
-				"\n\tif                                         return " +
-				"\n\telse    return";
+				"\n" +
+				"\n" + 
+				"\n        int" + 
+				"\n" +
+				"\n" +
+				"\n" +
+				"\n        if                                         return " +
+				"\n        else    return";
 		/*tm.text = "The bug is that the wrong objects are compared" +
 				"\nThe bug is that the darker object is chosen" +
 				"\nThe bug is that not all objects are compared" +

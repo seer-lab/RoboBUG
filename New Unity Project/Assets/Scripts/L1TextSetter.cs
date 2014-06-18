@@ -11,17 +11,17 @@ public class L1TextSetter : MonoBehaviour {
 			"\n " +
 			"\n       avgForce(        forces[],       numOfForces) " +
 			"\n{  " +
-			"\n             sum=0,i; " +
-			"\n              avgf; " +
+			"\n             sum, i=0; " +
+			"\n                  avgf; " +
 			"\n    " +
-			"\n          (i=0;i<numOfForces;i++) " +
-			"\n    { " +
-			"\n		sum=sum+forces[i];" +
-			"\n		avgf=             (sum/numOfForces);" +
-			"\n    }  " +
-			"\n		avgf++;" +
-			"\n                   avgf;" +
-			"\n    } " +
+			"\n              (i=0;i<numOfForces;i++) " +
+			"\n        { " +
+			"\n                sum=sum+forces[i];" +
+			"\n	               avgf=           (sum/numOfForces);" +
+			"\n        }  " +
+			"\n        avgf++;" +
+			"\n                    avgf;" +
+			"\n        } " +
 			"\n} " +
 			"\n" +
 			"\n";

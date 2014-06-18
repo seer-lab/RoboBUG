@@ -10,18 +10,18 @@ public class L3TextSetterK : MonoBehaviour {
 			"\n#include " + 
 			"\n#include  " + 
 			"\n#include " +
-			"\nint[]                     int                     int                  " +
+			"\nint []                    int                     int                  " +
 			"\n	" +
 			"\n	" +
-			"\n		int " + 
-			"\n\n	while  " +
-			"\n\n		while  " +
-			"\n\n			if  " + 
-			"\n\n				swap " +
+			"\n        int " + 
+			"\n\n        while  " +
+			"\n\n                while  " +
+			"\n\n                        if  " + 
+			"\n\n                                swap " +
 			"\n\n     " + 
 			"\n\n	 " +
 			"\n\n" +
-			"\n\n    return " +
+			"\n\n        return " +
 			"\n  ";
 
 	// Use this for initialization
