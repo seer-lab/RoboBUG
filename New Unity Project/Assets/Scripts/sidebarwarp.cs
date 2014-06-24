@@ -15,7 +15,7 @@ public class sidebarwarp : MonoBehaviour {
 	void Update () {
 		GUIText tm = GetComponent<GUIText> ();
 		levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
-		if (levelnum == 2 || levelnum == 3 || levelnum == 4 || levelnum == 5 || levelnum == 6) {
+		if (levelnum == 3 || levelnum == 4 || levelnum == 5 || levelnum == 6) {
 			tm.text = "5. Warper";
 		}
 		else{

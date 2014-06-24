@@ -9,42 +9,46 @@ public class ValueGetter : MonoBehaviour {
 	public bool minusOkay = true;
 	public bool decOkay = true;
 	public bool inside = false;
+	public bool validInput = true;
+	public int numdigits;
 	
 	// Use this for initialization
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
-		Tm.text = "Value = \n\n;";
+		Tm.text = "";
+		numdigits = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		value.GetComponent<TextMesh> ().text = valueText;
 		if (inside) {
+				if (validInput){
 				if (Input.GetKeyDown ("1")) {
-				valueText += "1";minusOkay = false;
+					valueText += "1";minusOkay = false;numdigits++;
 				} else if (Input.GetKeyDown ("2")) {
-				valueText += "2";minusOkay = false;
+					valueText += "2";minusOkay = false;numdigits++;
 				} else if (Input.GetKeyDown ("3")) {
-				valueText += "3";minusOkay = false;
+					valueText += "3";minusOkay = false;numdigits++;
 				} else if (Input.GetKeyDown ("4")) {
-				valueText += "4";minusOkay = false;
+					valueText += "4";minusOkay = false;numdigits++;
 				} else if (Input.GetKeyDown ("5")) {
-				valueText += "5";minusOkay = false;
+					valueText += "5";minusOkay = false;numdigits++;
 				} else if (Input.GetKeyDown ("6")) {
 				minusOkay = false;
-					valueText += "6";
+					valueText += "6";numdigits++;
 				} else if (Input.GetKeyDown ("7")) {
 				minusOkay = false;
-					valueText += "7";
+					valueText += "7";numdigits++;
 				} else if (Input.GetKeyDown ("8")) {
 				minusOkay = false;
-					valueText += "8";
+					valueText += "8";numdigits++;
 				} else if (Input.GetKeyDown ("9")) {
 				minusOkay = false;
-					valueText += "9";
+					valueText += "9";numdigits++;
 				} else if (Input.GetKeyDown ("0")) {
 				minusOkay = false;
-					valueText += "0";
+					valueText += "0";numdigits++;
 				} 
 			 if (Input.GetKeyDown("-") && minusOkay){
 				minusOkay = false;
@@ -54,19 +58,34 @@ public class ValueGetter : MonoBehaviour {
 				minusOkay = false;
 				decOkay = false;
 				valueText += ".";
+					numdigits = 0;
+				}}
+			if (valueText.Length >= 10 || numdigits>4){
+				validInput = false;
+				valueText = "<INVALID INPUT>";
 			}
 			 if (Input.GetKeyDown ("backspace")) {
 				valueText = "";
 				minusOkay = true;
 				decOkay = true;
+				validInput = true;
 			}	
 		}
 	}
 	void OnTriggerEnter2D(Collider2D c){
 		inside = true;
 		coll = c;
+		if (c.name == "hero") {
+			TextMesh Tm = GetComponent<TextMesh> ();
+			Tm.color = Color.yellow;
+			Tm.text = "**TYPE IN A NUMBER**";
+		}
 	}
 	void OnTriggerExit2D(Collider2D c){
 		inside = false;
+		if (c.name == "hero") {
+			TextMesh Tm = GetComponent<TextMesh>();
+			Tm.color = Color.black;
+			Tm.text = valueText + ";";}
 	}
 }

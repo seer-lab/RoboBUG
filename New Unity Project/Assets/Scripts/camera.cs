@@ -67,6 +67,8 @@ public class camera : MonoBehaviour {
 	public GameObject lastbug;
 	public GameObject verylastbug;
 
+	public GameObject success;
+
 	public bool xvalue = true;
 	public int level = -1;
 	public int stars = 0;
@@ -133,9 +135,9 @@ public class camera : MonoBehaviour {
 		if (target.transform.position.x < -15 && level==1) {
 			level = 200;
 			tm.text = "200";
-			ltxt.text = "start2";
+		//	ltxt.text = "start2";
 			ad.Pause();
-			ad.clip = texttheme;
+			ad.clip = introtheme;
 			ad.Play();
 		}
 
@@ -177,9 +179,9 @@ public class camera : MonoBehaviour {
 				delaytime = 0f;
 				level = 300;
 				tm.text = "300";
-				ltxt.text = "start3";
+		//		ltxt.text = "start3";
 				ad.Pause();
-				ad.clip = texttheme;
+				ad.clip = introtheme;
 				ad.Play();
 			}
 		}
@@ -193,9 +195,9 @@ public class camera : MonoBehaviour {
 				delaytime = 0f;
 				level = 400;
 				tm.text = "400";
-				ltxt.text = "start4";
+		//		ltxt.text = "start4";
 				ad.Pause();
-				ad.clip = texttheme;
+				ad.clip = introtheme;
 				ad.Play();
 			}
 		}
@@ -225,9 +227,9 @@ public class camera : MonoBehaviour {
 			if (target.transform.position.x > 0){
 				tm.text = "500";
 				level = 500;
-				ltxt.text = "start5";
+		//		ltxt.text = "start5";
 				ad.Pause();
-				ad.clip = texttheme;
+				ad.clip = introtheme;
 				ad.Play();
 			}
 			else if (target.transform.position.y < level4botVBoundary){
@@ -238,7 +240,11 @@ public class camera : MonoBehaviour {
 
 		if (level == 5){
 		//	if (l5report.GetComponent<TextMesh>().text == "Correct!"){level = 60; tm.text = "6";}
-			if (l5report.GetComponent<TextMesh>().text == "Correct!"){ltxt.text = "end";level = 999; tm.text = "999";}
+			if (l5report.GetComponent<TextMesh>().text == "Correct!"){ad.Pause();
+				ad.clip = introtheme;
+				ad.Play();
+			//	ltxt.text = "end";
+				level = 999; tm.text = "999";}
 		}
 
 		if (level == 6) {
@@ -384,11 +390,22 @@ public class camera : MonoBehaviour {
 			}
 			break;
 		case 1:
-			camera.transform.position = new Vector3 (l1.transform.position.x+2, target.transform.position.y, -5f);
+			camera.transform.position = new Vector3 (l1.transform.position.x+3, target.transform.position.y, -5f);
 			camera.orthographicSize = 5;
 			break;
 
 		case 200:
+			camera.orthographicSize = 6;
+			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
+			if (Input.GetButtonDown("Jump")){
+				ltxt.text = "start2";
+				level = 201;
+				ad.Pause();
+				ad.clip = texttheme;
+				ad.Play();
+			}
+			break;
+		case 201:
 			camera.orthographicSize = 6;
 			camera.transform.position = intropos;
 			if (Input.GetButtonDown("Jump")){
@@ -443,6 +460,17 @@ public class camera : MonoBehaviour {
 
 		case 300:
 			camera.orthographicSize = 6;
+			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
+			if (Input.GetButtonDown("Jump")){
+				ltxt.text = "start3";
+				level = 301;
+				ad.Pause();
+				ad.clip = texttheme;
+				ad.Play();
+			}
+			break;
+		case 301:
+			camera.orthographicSize = 6;
 			camera.transform.position = intropos;
 			if (Input.GetButtonDown("Jump")){
 				level = 30;
@@ -471,6 +499,17 @@ public class camera : MonoBehaviour {
 			break;
 
 		case 400:
+			camera.orthographicSize = 6;
+			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
+			if (Input.GetButtonDown("Jump")){
+				ltxt.text = "start4";
+				level = 401;
+				ad.Pause();
+				ad.clip = texttheme;
+				ad.Play();
+			}
+			break;
+		case 401:
 			camera.orthographicSize = 6;
 			camera.transform.position = intropos;
 			if (Input.GetButtonDown("Jump")){
@@ -549,6 +588,17 @@ public class camera : MonoBehaviour {
 
 		case 500:
 			camera.orthographicSize = 6;
+			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
+			if (Input.GetButtonDown("Jump")){
+				ltxt.text = "start5";
+				level = 501;
+				ad.Pause();
+				ad.clip = texttheme;
+				ad.Play();
+			}
+			break;
+		case 501:
+			camera.orthographicSize = 6;
 			camera.transform.position = intropos;
 			if (Input.GetButtonDown("Jump")){
 				level = 50;
@@ -610,13 +660,24 @@ public class camera : MonoBehaviour {
 			camera.orthographicSize = 5;
 			break;
 
-
 		case 999:
+			camera.orthographicSize = 6;
+			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
+			if (Input.GetButtonDown("Jump")){
+				ltxt.text = "end";
+				level = 9999;
+				ad.Pause();
+				ad.clip = texttheme;
+				ad.Play();
+			}
+			break;
+		case 9999:
 		//	camera.transform.position = new Vector3 (end.transform.position.x, end.transform.position.y, -5f);;
 	//		camera.orthographicSize = 3;
 			camera.transform.position = intropos;
 			camera.orthographicSize = 6;
 			break;
 		}
+
 	}
 }

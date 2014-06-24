@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\OColorTest.cs" />
      <Compile Include="Assets\Scripts\Points.cs" />
      <Compile Include="Assets\Scripts\Return.cs" />
+     <Compile Include="Assets\Scripts\SidebarDescriptionPanel.cs" />
      <Compile Include="Assets\Scripts\TextSetterblack.cs" />
      <Compile Include="Assets\Scripts\TextSetterblue.cs" />
      <Compile Include="Assets\Scripts\TextSetterbrown.cs" />
@@ -110,6 +111,8 @@
      <Compile Include="Assets\Scripts\jPrinter.cs" />
      <Compile Include="Assets\Scripts\l1bug.cs" />
      <Compile Include="Assets\Scripts\l2bug.cs" />
+     <Compile Include="Assets\Scripts\l2sidebarvalues.cs" />
+     <Compile Include="Assets\Scripts\l2valuelabels.cs" />
      <Compile Include="Assets\Scripts\l3bug.cs" />
      <Compile Include="Assets\Scripts\l3mintextsetter (3rd copy).cs" />
      <Compile Include="Assets\Scripts\l3mintextsetter.cs" />
@@ -117,6 +120,7 @@
      <Compile Include="Assets\Scripts\l4Return.cs" />
      <Compile Include="Assets\Scripts\l4bug.cs" />
      <Compile Include="Assets\Scripts\l4error.cs" />
+     <Compile Include="Assets\Scripts\l4sidebarerror.cs" />
      <Compile Include="Assets\Scripts\l5bug.cs" />
      <Compile Include="Assets\Scripts\l5variables.cs" />
      <Compile Include="Assets\Scripts\l6breakpointhandler.cs" />
@@ -144,12 +148,14 @@
      <Compile Include="Assets\Scripts\sidebarcomment.cs" />
      <Compile Include="Assets\Scripts\sidebardebug.cs" />
      <Compile Include="Assets\Scripts\sidebardescription.cs" />
+     <Compile Include="Assets\Scripts\sidebarhelppanel.cs" />
      <Compile Include="Assets\Scripts\sidebarprint.cs" />
      <Compile Include="Assets\Scripts\sidebarrobot.cs" />
      <Compile Include="Assets\Scripts\sidebartest.cs" />
      <Compile Include="Assets\Scripts\sidebartools.cs" />
      <Compile Include="Assets\Scripts\sidebarwarp.cs" />
      <Compile Include="Assets\Scripts\starttime.cs" />
+     <Compile Include="Assets\Scripts\success.cs" />
      <Compile Include="Assets\Scripts\sumTest.cs" />
   </ItemGroup>
   <ItemGroup>

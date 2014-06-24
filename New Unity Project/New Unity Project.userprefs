@@ -1,24 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\L0Intro.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\sidebarwarp.cs">
     <Files>
-      <File FileName="Assets\Scripts\L0Intro.cs" Line="206" Column="62" />
-      <File FileName="Assets\Scripts\sidebarrobot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\breakpointHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\jPrinter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\iPrinter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\L2TextSetterC.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\prioritiesPrinter.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\heroControllerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\camera.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\L0Intro.cs" Line="292" Column="1" />
-      <File FileName="Assets\Scripts\L5TextSetterC.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\L5ReportTextSetterC.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\l4Return.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\l4error.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\sidebardescription.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\breakpoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Points.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\sidebarwarp.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

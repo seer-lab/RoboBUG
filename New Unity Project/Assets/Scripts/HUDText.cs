@@ -16,7 +16,7 @@ public class HUDText : MonoBehaviour {
 		TextMesh tm = level.GetComponent<TextMesh> ();
 		int levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
 		if (levelnum > 0 && levelnum < 100) {
-						gi.text = "Level " + tm.text;
+						gi.text = "LEVEL " + tm.text;
 				} else {
 			gi.text = "";
 				}

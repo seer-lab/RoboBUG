@@ -14,7 +14,7 @@ public class sidebartools : MonoBehaviour {
 	void Update () {
 		int levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
 		if (levelnum > 0 && levelnum < 100) {
-			this.GetComponent<GUIText>().text = "Active Tools:";
+			this.GetComponent<GUIText>().text = "ACTIVE TOOLS:";
 				} else {
 			this.GetComponent<GUIText>().text = "";
 				}

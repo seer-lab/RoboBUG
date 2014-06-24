@@ -9,7 +9,7 @@ public class L2TextSetterK : MonoBehaviour {
 			"\n" +
 			"\n\n\nfloat                       float" +
 			"\n" +
-			"" +
+			"\nint\n\nint\n" +
 			"\nbool " +
 			"\n        int" +
 			"\n        int" +

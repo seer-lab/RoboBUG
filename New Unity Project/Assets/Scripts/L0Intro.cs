@@ -34,8 +34,8 @@ public class L0Intro : MonoBehaviour {
 		stopY2 = 22;
 		stopY3 = 23;
 		stopY4 = 24;
-		stopY5 = 23;
-		stopYend = 110;
+		stopY5 = 26;
+		stopYend = 114;
 		moveSpeed = 0.01f;
 
 		L0Text = "" +
@@ -161,27 +161,31 @@ public class L0Intro : MonoBehaviour {
 			"\nthreat levels based on the distance" +
 			"\nof each object from the mech suit." +
 			"\n" +
-			"\nThe COMPARETHREATS() function compares" +
-			"\npotential threats at varying coordinates" +
-			"\nand returns the threat that is closest to" +
-			"\nthe mech suit. However, a bug has caused" +
-			"\nit to miscalculate the correct distances." +
-			"\n" +
-			"\nFortunately, the DEBUGGER SYSTEM has finally" +
-			"\nloaded and become available for you to use. " +
-			"\nYou can observe function behavior during " +
-			"\nrun-time by setting up breakpoints in the code" +
-			"\nand running the code until it reaches the next" +
-			"\nbreakpoint. Use this to follow the code" +
-			"\nand discover where the bug is." +
-			"\n" +
+			"\nThe COMPARETHREATS() function " +
+			"\ncomparespotential threats at varying " +
+			"\ncoordinates and returns the threat " +
+			"\nthat is closest to the mech suit. " +
+			"\nHowever, a bug has caused it to" +
+			"\nmiscalculate the correct distances." +
+			"\n"+
+			"\nFortunately, the DEBUGGER SYSTEM " +
+			"\nhas finally loaded and become " +
+			"\navailable for you to use. You can" +
+			"\n observe function behavior during " +
+			"\nrun-time by setting up breakpoints " +
+			"\nin the code and running the code until" +
+			"\nit reaches the next breakpoint." +
+			"\nUse this system to follow the code " +
+			"\nand discover where the bug is. " +
+			"\n"+
 			"\nPRESS SPACE TO START";
 
 		endText = "" + 
 			"\nVICTORY" +
 			"\n" +
-			"\nYou've repaired the Mech suit and successfully" +
-			"\neliminated all of the bugs that were in your way." +
+			"\nYou've repaired the Mech suit and" +
+			"\nsuccessfully eliminated all of the " +
+			"\nbugs that were in your way." +
 			"\n" +
 			"\nCongratulations!" +
 			"\n" +
@@ -204,7 +208,10 @@ public class L0Intro : MonoBehaviour {
 				"\nWilliam.Thompsonj " +
 				"\n- contributor.\n" + 
 				"\nA robot \nby Anton Yu. \nFrom 0.18 OCAL database.\n" +
-				"\nglyph.png \nby Jinn (Submitted by Andrettin)\n" + 
+				"\nglyph.png \nby Jinn (Submitted by Andrettin)\n" +
+				"\nFREE Keyboard and controllers \nprompts pack" +
+				"\nby xelu\n" +
+				"\nSpace Gui in various colors\nby Rawdanitsu\n" + 
 				"\n" + 
 				"\nMusic Credits from http://opsound.org/\n" + 
 				"\n(IT) ANTI-MATTER(S) \nby LDX#40\n" +
@@ -214,9 +221,10 @@ public class L0Intro : MonoBehaviour {
 				"\nNIGHTTIME \nby Kid Cholera's VASCULOID\n" +
 				"\nON THE DOWNLOAD \nby Kid Cholera's VASCULOID\n" + 
 				"\nSPIDERTWO \nby DAVE HOWES\n" + 
-				"\nThis work is licensed under a Creative Commons \n" + 
-				"\nAttribution-ShareAlike3.0 Unported License.\n" + 
-				"\n" +
+				"\nThis work is licensed under a" + 
+				"\nCreative Commons " + 
+				"\nAttribution-ShareAlike3.0 " +
+				"\nUnported License.\n " +
 				"\nAudio Credits\n" + 
 				"\nSounds from Freesound:\n" + 
 				"\nalien_screecn_1.wav \nby CosmicD\n" +
@@ -284,6 +292,11 @@ public class L0Intro : MonoBehaviour {
 		else if (txt.text == endText && this.transform.position.y < stopYend) {
 			this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + moveSpeed, this.transform.position.z);
 		}
+		if (Input.GetAxisRaw ("Vertical") == 1) {
+						moveSpeed = 0.1f;
+				} else {
+					moveSpeed = 0.01f;
+				}
 	}
 	void FixedUpdate(){
 

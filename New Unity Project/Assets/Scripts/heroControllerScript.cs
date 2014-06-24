@@ -71,7 +71,8 @@ public class heroControllerScript : MonoBehaviour {
 
 
 		//code for falling down through platforms
-		if (Input.GetAxisRaw("Vertical") == -1 && Input.GetButton("Jump")){
+	//	if (Input.GetAxisRaw("Vertical") == -1 && Input.GetButton("Jump")){
+		if (Input.GetButton("Jump")){
 			dropDelay = Time.time + dropTime;
 			dropping = true;
 		}
