@@ -23,7 +23,7 @@ public class iPrinter : MonoBehaviour {
 		}
 	}
 	void OnTriggerEnter2D(Collider2D p){
-		if (p.name == "projectilePrint(Clone)") {
+		if (p.name == "projectileActivator(Clone)") {
 			output = !output;
 			Destroy(p.gameObject);
 		}

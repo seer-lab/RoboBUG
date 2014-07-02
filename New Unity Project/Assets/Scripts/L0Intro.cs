@@ -35,7 +35,7 @@ public class L0Intro : MonoBehaviour {
 		stopY3 = 23;
 		stopY4 = 24;
 		stopY5 = 26;
-		stopYend = 114;
+		stopYend = 124;
 		moveSpeed = 0.01f;
 
 		L0Text = "" +
@@ -211,7 +211,8 @@ public class L0Intro : MonoBehaviour {
 				"\nglyph.png \nby Jinn (Submitted by Andrettin)\n" +
 				"\nFREE Keyboard and controllers \nprompts pack" +
 				"\nby xelu\n" +
-				"\nSpace Gui in various colors\nby Rawdanitsu\n" + 
+				"\nSpace Gui in various colors\nby Rawdanitsu\n" +
+				"\nIcons by phaelax\n" + 
 				"\n" + 
 				"\nMusic Credits from http://opsound.org/\n" + 
 				"\n(IT) ANTI-MATTER(S) \nby LDX#40\n" +
@@ -221,10 +222,6 @@ public class L0Intro : MonoBehaviour {
 				"\nNIGHTTIME \nby Kid Cholera's VASCULOID\n" +
 				"\nON THE DOWNLOAD \nby Kid Cholera's VASCULOID\n" + 
 				"\nSPIDERTWO \nby DAVE HOWES\n" + 
-				"\nThis work is licensed under a" + 
-				"\nCreative Commons " + 
-				"\nAttribution-ShareAlike3.0 " +
-				"\nUnported License.\n " +
 				"\nAudio Credits\n" + 
 				"\nSounds from Freesound:\n" + 
 				"\nalien_screecn_1.wav \nby CosmicD\n" +
@@ -232,7 +229,11 @@ public class L0Intro : MonoBehaviour {
 				"\nzoom up 1 (quicker delay).wav \nby Chriddof\n" +
 				"\nWhoosh_Swish_03.wav \nby mich3d\n" + 
 				"\nError.wav \nby Autistic Lucario\n" +
-				"\n" +
+				"\n\n" +
+				"\nThese works are licensed under a" + 
+				"\nCreative Commons " + 
+				"\nAttribution-ShareAlike3.0 " +
+				"\nUnported License.\n" +
 				"\n" +
 				"\n" +
 				"\nThanks for playing!" +

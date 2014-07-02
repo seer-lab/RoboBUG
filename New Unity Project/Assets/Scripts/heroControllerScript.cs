@@ -13,15 +13,18 @@ public class heroControllerScript : MonoBehaviour {
 
 
 	public Rigidbody2D projectileB;
-	public Rigidbody2D projectileC;
-	public Rigidbody2D projectileD;
-	public Rigidbody2D projectileP;
-	public Rigidbody2D projectileW;
 	public Rigidbody2D projectileT;
+	public Rigidbody2D projectileA;
+	public Rigidbody2D projectileD;
+	public Rigidbody2D projectileW;
+	public Rigidbody2D projectileH;
+
+
 
 	private bool walkloop = false;
 
 	int projectilecode = 1;
+	public GameObject projectileobject;
 	int levelnum = 0;
 	int currentlevel = 0;
 
@@ -80,7 +83,7 @@ public class heroControllerScript : MonoBehaviour {
 			dropping = false;
 		}
 		
-		Physics2D.IgnoreLayerCollision(0,8, onWall || dropping);
+		Physics2D.IgnoreLayerCollision(0,8, onWall || dropping || Input.GetKey ("up"));
 
 		//move up if on the wall, otherwise let gravity do the work
 		if (dropping) {
@@ -111,8 +114,66 @@ public class heroControllerScript : MonoBehaviour {
 			walkloop = false;
 		}
 
+
+
+
+		levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
+		if (levelnum != currentlevel) {
+			currentlevel = levelnum;
+			maxSpeed = 10f;
+			climbSpeed = 10f;
+			if (levelnum == 2){
+				projectilecode = 2;
+				projectileobject.GetComponent<TextMesh>().text = System.Convert.ToString(projectilecode);
+			}
+			else{
+				projectilecode = 1;
+			}
+		}
+		if (falsepositive.GetComponent<TextMesh> ().text == "Pointed") {
+			falsepositive.GetComponent<TextMesh> ().text = "";
+			maxSpeed *= speedPenalty;
+			climbSpeed *= speedPenalty;
+		}
+
 		//stars
-		if (Input.GetKeyDown("0")) {projectilecode = 0;
+		if (Input.GetKeyDown("tab")){
+			projectilecode++;
+			switch(levelnum){
+			case 1:
+				projectilecode = 1;
+				break;
+			case 2:
+				projectilecode = 2;
+				break;
+			case 3:
+				if (projectilecode ==2 || projectilecode == 4){
+					projectilecode++;
+				}
+				else if (projectilecode == 6){
+					projectilecode = 1;
+				}
+				break;
+			case 4:
+				if (projectilecode ==2 || projectilecode == 4){
+					projectilecode++;
+				}
+				else if (projectilecode == 6){
+					projectilecode = 1;
+				}
+				break;
+			case 5:
+				if (projectilecode ==2){
+					projectilecode = 4;
+				}
+				else if (projectilecode == 6){
+					projectilecode = 1;
+				}
+				break;
+			}
+			projectileobject.GetComponent<TextMesh>().text = System.Convert.ToString(projectilecode);
+		}
+		/*		if (Input.GetKeyDown("0")) {projectilecode = 0;
 		}
 		if (Input.GetKeyDown("1")) {projectilecode = 1;
 		}
@@ -125,20 +186,8 @@ public class heroControllerScript : MonoBehaviour {
 		if (Input.GetKeyDown("5")) {projectilecode = 5;
 		}
 		if (Input.GetKeyDown("6")) {projectilecode = 6;
-		}
+		}*/
 
-
-		levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
-		if (levelnum != currentlevel) {
-			currentlevel = levelnum;
-			maxSpeed = 10f;
-			climbSpeed = 10f;
-		}
-		if (falsepositive.GetComponent<TextMesh> ().text == "Pointed") {
-			falsepositive.GetComponent<TextMesh> ().text = "";
-			maxSpeed *= speedPenalty;
-			climbSpeed *= speedPenalty;
-		}
 	//firing
 		if (Input.GetButton ("Fire1") && Time.time > nextFire && !onWall && rigidbody2D.velocity == Vector2.zero) {
 			anim.SetBool ("throw", true);
@@ -161,21 +210,21 @@ public class heroControllerScript : MonoBehaviour {
 					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
 				break;
 			case 2:
-				newstar = (Rigidbody2D) Instantiate(projectileC, transform.position, transform.rotation);
+				newstar = (Rigidbody2D) Instantiate(projectileT, transform.position, transform.rotation);
 				if (facingRight){
 					newstar.rigidbody2D.AddForce(Vector2.right*300);}
 				else{
 					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
 				break;
 			case 3:
-				newstar = (Rigidbody2D) Instantiate(projectileD, transform.position, transform.rotation);
+				newstar = (Rigidbody2D) Instantiate(projectileA, transform.position, transform.rotation);
 				if (facingRight){
 					newstar.rigidbody2D.AddForce(Vector2.right*300);}
 				else{
 					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
 				break;
 			case 4:
-				newstar = (Rigidbody2D) Instantiate(projectileP, transform.position, transform.rotation);
+				newstar = (Rigidbody2D) Instantiate(projectileD, transform.position, transform.rotation);
 				if (facingRight){
 					newstar.rigidbody2D.AddForce(Vector2.right*300);}
 				else{
@@ -189,7 +238,7 @@ public class heroControllerScript : MonoBehaviour {
 					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
 				break;
 			case 6:
-				newstar = (Rigidbody2D) Instantiate(projectileT, transform.position, transform.rotation);
+				newstar = (Rigidbody2D) Instantiate(projectileH, transform.position, transform.rotation);
 				if (facingRight){
 					newstar.rigidbody2D.AddForce(Vector2.right*300);}
 				else{

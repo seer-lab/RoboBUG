@@ -30,7 +30,7 @@ public class l4Return : MonoBehaviour
 		void OnTriggerEnter2D (Collider2D c)
 		{
 				TextMesh tm = GetComponent<TextMesh> ();
-				if (c.name == "projectileComment(Clone)") {
+				if (c.name == "projectileActivator(Clone)") {
 						if (tm.text == "        //coltab[" + colorTable.ToUpper () + "].table = " + colorTable + "tab;" +
 								"\n\n        //coltab[" + colorTable.ToUpper () + "].tabsize = sizeof(" + colorTable + "tab)") {
 

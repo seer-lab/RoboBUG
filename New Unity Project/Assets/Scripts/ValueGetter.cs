@@ -69,6 +69,7 @@ public class ValueGetter : MonoBehaviour {
 				minusOkay = true;
 				decOkay = true;
 				validInput = true;
+				numdigits = 0;
 			}	
 		}
 	}

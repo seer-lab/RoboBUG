@@ -71,14 +71,14 @@ public class breakpointHandler : MonoBehaviour {
 						}
 					}
 					SpriteRenderer sr = breakpoints[stepnum].GetComponent<SpriteRenderer>();
-					if (breakstate[stepnum]==1){
+					if (breakstate[stepnum]>0){
 						sr.color = Color.magenta;
 						stop = true;
 						hero.transform.position = new Vector3(hero.transform.position.x, breakpoints[stepnum].transform.position.y, 0);
 					}
 				}
 			}
-			if (col1num == 15){
+			if (col1num == 15 && !stop){
 				for (int i =0;i<9;i++){
 					SpriteRenderer sr = breakpoints[i].GetComponent<SpriteRenderer>();
 					if (sr.color == Color.magenta){

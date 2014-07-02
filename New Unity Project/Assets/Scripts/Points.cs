@@ -6,10 +6,12 @@ public class Points : MonoBehaviour
 
 		public GameObject level;
 		public GameObject starttimer;
+		public GameObject endtext;
 		public int levelnum;
 		public int currentlevel;
 		public int starttime;
 		public int points = 0;
+	int pointsGet = 0;
 		public GameObject falsepositive;
 		int pointpenalty = 500;
 
@@ -116,60 +118,81 @@ public class Points : MonoBehaviour
 
 			
 				case 200:
-					points += Mathf.Max (50, (300 - (int)Time.time - starttime));
-					starttime = (int)Time.time;
-					starttimer.GetComponent<GUIText> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
+					starttimer.GetComponent<GUIText>().text = "";
+					pointsGet = Mathf.Max (50, (300 - (int)Time.time - starttime));
+					points += pointsGet;
+					endtext.GetComponent<TextMesh> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
 					secs = (int)Time.time % 60;
 					if (secs < 10) {
-						starttimer.GetComponent<GUIText> ().text += "0" + System.Convert.ToString (secs);
+						endtext.GetComponent<TextMesh> ().text += "0" + System.Convert.ToString (secs);
 					} else {
-						starttimer.GetComponent<GUIText> ().text += System.Convert.ToString (secs);
-					}			
+						endtext.GetComponent<TextMesh> ().text += System.Convert.ToString (secs);
+					}
+					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
+					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+				//	starttime = (int)Time.time;
 					break;
 				case 300:
-					points += Mathf.Max (50, (300 - (int)Time.time - starttime)) * 2;
-					starttime = (int)Time.time;
-					starttimer.GetComponent<GUIText> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
+					starttimer.GetComponent<GUIText>().text = "";
+					pointsGet = Mathf.Max (50, (300 - (int)Time.time - starttime)) * 2;
+					points += pointsGet;
+					endtext.GetComponent<TextMesh> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
 					secs = (int)Time.time % 60;
 					if (secs < 10) {
-						starttimer.GetComponent<GUIText> ().text += "0" + System.Convert.ToString (secs);
+						endtext.GetComponent<TextMesh> ().text += "0" + System.Convert.ToString (secs);
 					} else {
-						starttimer.GetComponent<GUIText> ().text += System.Convert.ToString (secs);
-					}				
+						endtext.GetComponent<TextMesh> ().text += System.Convert.ToString (secs);
+					}			
+					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
+					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+				//	starttime = (int)Time.time;
 					break;
 				case 400:
-					points += Mathf.Max (50, (300 - (int)Time.time - starttime)) * 3;
-					starttime = (int)Time.time;
-					starttimer.GetComponent<GUIText> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
+					starttimer.GetComponent<GUIText>().text = "";
+					pointsGet = Mathf.Max (50, (300 - (int)Time.time - starttime)) * 3;
+					points += pointsGet;
+					endtext.GetComponent<TextMesh> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
 					secs = (int)Time.time % 60;
 					if (secs < 10) {
-						starttimer.GetComponent<GUIText> ().text += "0" + System.Convert.ToString (secs);
+						endtext.GetComponent<TextMesh> ().text += "0" + System.Convert.ToString (secs);
 					} else {
-						starttimer.GetComponent<GUIText> ().text += System.Convert.ToString (secs);
-					}		
+						endtext.GetComponent<TextMesh> ().text += System.Convert.ToString (secs);
+					}			
+					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
+					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+				//	starttime = (int)Time.time;
 					break;
 				case 500:
-					points += Mathf.Max (50, (300 - (int)Time.time - starttime)) * 4;
-					starttime = (int)Time.time;
-					starttimer.GetComponent<GUIText> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
+					starttimer.GetComponent<GUIText>().text = "";
+					pointsGet = Mathf.Max (50, (300 - (int)Time.time - starttime)) * 4;
+					points += pointsGet;
+					endtext.GetComponent<TextMesh> ().text = "Level " + System.Convert.ToString (levelnum / 100 - 1) + " end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
 					secs = (int)Time.time % 60;
 					if (secs < 10) {
-						starttimer.GetComponent<GUIText> ().text += "0" + System.Convert.ToString (secs);
+						endtext.GetComponent<TextMesh> ().text += "0" + System.Convert.ToString (secs);
 					} else {
-						starttimer.GetComponent<GUIText> ().text += System.Convert.ToString (secs);
-					}				
+						endtext.GetComponent<TextMesh> ().text += System.Convert.ToString (secs);
+					}		
+					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
+					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+				//	starttime = (int)Time.time;
 					break;
 				case 999:
-					points += Mathf.Max (50, (300 - (int)Time.time - starttime)) * 5;
-					this.GetComponent<GUIText> ().text = "FINAL SCORE = " + System.Convert.ToString (points) + " points";
-					starttime = (int)Time.time;
-					starttimer.GetComponent<GUIText> ().text = "Level 5 end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
+					starttimer.GetComponent<GUIText>().text = "";
+					pointsGet = Mathf.Max (50, (300 - (int)Time.time - starttime)) * 5;
+					points += pointsGet;
+				//	this.GetComponent<GUIText> ().text = "FINAL SCORE = " + System.Convert.ToString (points) + " points";
+					endtext.GetComponent<TextMesh> ().text = "Level 5 end time = " + System.Convert.ToString ((int)Time.time / 60) + ":";
 					secs = (int)Time.time % 60;
 					if (secs < 10) {
-						starttimer.GetComponent<GUIText> ().text += "0" + System.Convert.ToString (secs);
+						endtext.GetComponent<TextMesh> ().text += "0" + System.Convert.ToString (secs);
 					} else {
-						starttimer.GetComponent<GUIText> ().text += System.Convert.ToString (secs);
-					}				
+						endtext.GetComponent<TextMesh> ().text += System.Convert.ToString (secs);
+					}		
+					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
+					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+					endtext.GetComponent<TextMesh> ().text += "\nFinal score: " + points + " points";
+				//	starttime = (int)Time.time;
 					break;
 				}
 						}

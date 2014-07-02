@@ -1,8 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\sidebarwarp.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ValuesGetter.cs">
     <Files>
-      <File FileName="Assets\Scripts\sidebarwarp.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\iPrinter.cs" Line="26" Column="37" />
+      <File FileName="Assets\Scripts\jPrinter.cs" Line="26" Column="37" />
+      <File FileName="Assets\Scripts\l4Return.cs" Line="33" Column="39" />
+      <File FileName="Assets\Scripts\prioritiesPrinter.cs" Line="20" Column="8" />
+      <File FileName="Assets\Scripts\breakpointHandler.cs" Line="142" Column="17" />
+      <File FileName="Assets\Scripts\Timer.cs" Line="16" Column="75" />
+      <File FileName="Assets\Scripts\Points.cs" Line="165" Column="14" />
+      <File FileName="Assets\Scripts\success.cs" Line="31" Column="118" />
+      <File FileName="Assets\Scripts\L0Intro.cs" Line="38" Column="18" />
+      <File FileName="Assets\Scripts\heroControllerScript.cs" Line="91" Column="35" />
+      <File FileName="Assets\Scripts\l4sidebarerror.cs" Line="15" Column="30" />
+      <File FileName="Assets\Scripts\L2TextSetterC.cs" Line="22" Column="27" />
+      <File FileName="Assets\Scripts\L2TextSetter (3rd copy).cs" Line="6" Column="51" />
+      <File FileName="Assets\Scripts\L2TextSetter.cs" Line="25" Column="36" />
+      <File FileName="Assets\Scripts\L2TextSetterK.cs" Line="23" Column="9" />
+      <File FileName="Assets\Scripts\l2bug.cs" Line="32" Column="52" />
+      <File FileName="Assets\Scripts\l2valuelabels.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\l2sidebarvalues.cs" Line="13" Column="33" />
+      <File FileName="Assets\Scripts\ValuesGetter.cs" Line="131" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

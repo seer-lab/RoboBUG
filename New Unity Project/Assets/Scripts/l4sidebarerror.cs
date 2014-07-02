@@ -9,7 +9,7 @@ public class l4sidebarerror : MonoBehaviour
 		public bool[] tableStates;
 		public GameObject level;
 		bool compiling = false;
-		float compileDelay = 20f;
+		float compileDelay = 5f;
 		float compileTime = 0f;
 	
 		// Use this for initialization

@@ -141,22 +141,22 @@
      <Compile Include="Assets\Scripts\midTest.cs" />
      <Compile Include="Assets\Scripts\prioritiesPrinter.cs" />
      <Compile Include="Assets\Scripts\projectile.cs" />
+     <Compile Include="Assets\Scripts\sidebaractivator.cs" />
+     <Compile Include="Assets\Scripts\sidebarbreakpointer.cs" />
      <Compile Include="Assets\Scripts\sidebarbug.cs" />
      <Compile Include="Assets\Scripts\sidebarbug3.cs" />
      <Compile Include="Assets\Scripts\sidebarbug5.cs" />
      <Compile Include="Assets\Scripts\sidebarbugcatcher.cs" />
-     <Compile Include="Assets\Scripts\sidebarcomment.cs" />
-     <Compile Include="Assets\Scripts\sidebardebug.cs" />
      <Compile Include="Assets\Scripts\sidebardescription.cs" />
      <Compile Include="Assets\Scripts\sidebarhelppanel.cs" />
-     <Compile Include="Assets\Scripts\sidebarprint.cs" />
      <Compile Include="Assets\Scripts\sidebarrobot.cs" />
-     <Compile Include="Assets\Scripts\sidebartest.cs" />
+     <Compile Include="Assets\Scripts\sidebartester.cs" />
      <Compile Include="Assets\Scripts\sidebartools.cs" />
-     <Compile Include="Assets\Scripts\sidebarwarp.cs" />
+     <Compile Include="Assets\Scripts\sidebarwarper.cs" />
      <Compile Include="Assets\Scripts\starttime.cs" />
      <Compile Include="Assets\Scripts\success.cs" />
      <Compile Include="Assets\Scripts\sumTest.cs" />
+     <Compile Include="Assets\sidebarselected.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

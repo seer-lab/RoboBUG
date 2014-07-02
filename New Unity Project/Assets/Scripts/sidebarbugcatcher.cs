@@ -5,37 +5,25 @@ public class sidebarbugcatcher : MonoBehaviour {
 
 	public GameObject level;
 	int levelnum;
+	public GameObject projectilecode;
+	int projectilenum;
 
 	// Use this for initialization
 	void Start () {
-		GUIText tm = GetComponent<GUIText> ();
-		tm.text = "";
-		this.GetComponent<GUIText> ().color = Color.green;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
-		GUIText tm = GetComponent<GUIText> ();
-		if (levelnum > 0 && levelnum != 2 && levelnum < 100) {
-						tm.text = "1. Bugcatcher";
-				} else {
-						tm.text = "";
-				}
-
-			if (Input.GetKeyDown("0")) {this.GetComponent<GUIText>().color = Color.black;
-			}
-			if (Input.GetKeyDown("1")) {this.GetComponent<GUIText>().color = Color.green;
-			}
-			if (Input.GetKeyDown("2")) {this.GetComponent<GUIText>().color = Color.black;
-			}
-			if (Input.GetKeyDown("3")) {this.GetComponent<GUIText>().color = Color.black;
-			}
-			if (Input.GetKeyDown("4")) {this.GetComponent<GUIText>().color = Color.black;
-			}
-			if (Input.GetKeyDown("5")) {this.GetComponent<GUIText>().color = Color.black;
-			}
-			if (Input.GetKeyDown("6")) {this.GetComponent<GUIText>().color = Color.black;
-			}
+		projectilenum = System.Convert.ToInt16(projectilecode.GetComponent<TextMesh> ().text);
+		if (levelnum < 1 || levelnum == 2 || levelnum > 5) {
+			this.GetComponent<GUITexture> ().color = new Color (0.5f,0.5f,0.5f,0);
 		}
+		else if (projectilenum == 1) {
+			this.GetComponent<GUITexture> ().color = new Color (0.5f,0.5f,0.5f,1);
+		} else {
+			this.GetComponent<GUITexture> ().color = new Color (0.5f,0.5f,0.5f,0.2f);
+		}
+	}
 }

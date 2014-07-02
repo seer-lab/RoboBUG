@@ -5,10 +5,10 @@ public class L2TextSetterC : MonoBehaviour {
 	
 	string testing = "" +
 		//"\n//Calculate the robot's weight based on the weight of its parts" +
-		"//Calculate total sum of distances from cannon to all threats" +
-			"\n\n" +
+		"\n//Calculate total sum of distances from cannon to all threats" +
+			"\n\n\n\n\n\n\n" +
 			"\n//Calculate the cannon's energy level based \n//on the median power rating of its internal systems" +
-			"\n" +
+			"\n\n\n\n\n\n" +
 			"\n\n//Calculate the cannon's temperature based \n//on the average temperature of all its parts";
 
 	

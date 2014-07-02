@@ -112,6 +112,7 @@ public class ValuesGetter : MonoBehaviour {
 						minusOkay = true;
 						validInput = true;
 						valueText = "";
+						numdigits = 0;
 					}	
 			}
 	}
@@ -129,6 +130,6 @@ public class ValuesGetter : MonoBehaviour {
 		if (c.name == "hero") {
 		TextMesh Tm = GetComponent<TextMesh>();
 			Tm.color = Color.black;
-		Tm.text = valueText;}
+			Tm.text = "{" + valueText + "};";}
 	}
 }
