@@ -35,7 +35,7 @@ public class L0Intro : MonoBehaviour {
 		stopY3 = 23;
 		stopY4 = 24;
 		stopY5 = 26;
-		stopYend = 124;
+		stopYend = 128;
 		moveSpeed = 0.01f;
 
 		L0Text = "" +
@@ -134,7 +134,7 @@ public class L0Intro : MonoBehaviour {
 			"\nSYSTEM." +
 			"\n" +
 			"\nThe system that identifies objects" +
-			"\nbased on color and shape is crashing" +
+			"\nbased on colour and shape is crashing" +
 			"\ndue to a bug in the robot's COLOUR" +
 			"\nDATABASE. Without locating the bug" +
 			"\nin the database, all vision" +
@@ -162,7 +162,7 @@ public class L0Intro : MonoBehaviour {
 			"\nof each object from the mech suit." +
 			"\n" +
 			"\nThe COMPARETHREATS() function " +
-			"\ncomparespotential threats at varying " +
+			"\ncompares potential threats at varying " +
 			"\ncoordinates and returns the threat " +
 			"\nthat is closest to the mech suit. " +
 			"\nHowever, a bug has caused it to" +
@@ -189,7 +189,10 @@ public class L0Intro : MonoBehaviour {
 			"\n" +
 			"\nCongratulations!" +
 			"\n" +
-			"\n" +
+			"\nCreated by: Michael Miljanovic" +
+			"\nunder supervision of Dr. Jeremy Bradbury" +
+			"\nin SQRLab, University of Ontario" +
+			"\nInstitute of Technology" +
 			"\n" +
 			"\n" +
 			"\nCREDITS:" +
@@ -212,7 +215,8 @@ public class L0Intro : MonoBehaviour {
 				"\nFREE Keyboard and controllers \nprompts pack" +
 				"\nby xelu\n" +
 				"\nSpace Gui in various colors\nby Rawdanitsu\n" +
-				"\nIcons by phaelax\n" + 
+				"\nIcons by phaelax\n" +
+				"\nangled metal tracks on an \nelectronic circuit board\nfrom creative103.com\n" + 
 				"\n" + 
 				"\nMusic Credits from http://opsound.org/\n" + 
 				"\n(IT) ANTI-MATTER(S) \nby LDX#40\n" +
@@ -244,6 +248,7 @@ public class L0Intro : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		TextMesh txt = GetComponent<TextMesh> ();
+		txt.color = Color.white;
 		if (txt.text == "start0") {
 			txt.text = L0Text;
 		}

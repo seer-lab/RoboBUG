@@ -69,10 +69,12 @@ public class L3Output : MonoBehaviour {
 			pbool[i] = ptxt[i].GetComponent<TextMesh>().text == "cout<<priorities;";
 		}
 		for (int i=0; i<5; i++) {
-			ibool[i] = itxt[i].GetComponent<TextMesh>().text == "cout<<priorities[i];";
+			//ibool[i] = itxt[i].GetComponent<TextMesh>().text == "cout<<priorities[i];";
+			ibool[i] = itxt[i].GetComponent<TextMesh>().text == "cout<<i;";
 		}
 		for (int i=0; i<4; i++) {
-			jbool[i] = jtxt[i].GetComponent<TextMesh>().text == "cout<<priorities[j];";
+			//jbool[i] = jtxt[i].GetComponent<TextMesh>().text == "cout<<priorities[j];";
+			jbool[i] = jtxt[i].GetComponent<TextMesh>().text == "cout<<j;";
 		}
 		/*t = Tinitmi.GetComponent<TextMesh>();
 		initmi = t.text == "Console.WriteLine(min);";
@@ -120,54 +122,63 @@ public class L3Output : MonoBehaviour {
 		}
 		for (int i = 1; i<5; i++) {
 			if (ibool[0]){
-				output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+				//output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+				output += "i = " + System.Convert.ToString(i) + "\n";
 			}
 			if (pbool[1]){
 				output += printArray(values) + "\n";
 			}
 			for(int j = 1;j<5;j++){
 				if (ibool[1]){
-					output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+					//output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+					output += "i = " + System.Convert.ToString(i) + "\n";
 				}
 				if (pbool[2]){
 					output += printArray(values) + "\n";
 				}
 				if (jbool[0]){
-					output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";
+					//output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";
+					output += "j = " + System.Convert.ToString(j) + "\n";
 				}
 
 				if (values[i]>values[j]){
 					if (ibool[2]){
-						output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+						//output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+						output += "i = " + System.Convert.ToString(i) + "\n";
 					}
 					if (pbool[3]){
 						output += printArray(values) + "\n";
 					}
 					if (jbool[1]){
-						output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";;
+						//output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";
+						output += "j = " + System.Convert.ToString(j) + "\n";
 					}
 					temp = values[i];
 					values[i] = values[j];
 					values[j] = temp;
 					if (ibool[3]){
-						output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+						//output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+						output += "i = " + System.Convert.ToString(i) + "\n";
 					}
 					if (pbool[4]){
 						output += printArray(values) + "\n";
 					}
 					if (jbool[2]){
-						output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";;
+						//output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";
+						output += "j = " + System.Convert.ToString(j) + "\n";
 					}
 				}
 
 				if (ibool[4]){
-					output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+					//output += "priorities[i] = " + System.Convert.ToString(values[i]) + "\n";
+					output += "i = " + System.Convert.ToString(i) + "\n";
 				}
 				if (pbool[5]){
 					output += printArray(values) + "\n";
 				}
 				if (jbool[3]){
-					output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";;
+					//output += "priorities[j] = " + System.Convert.ToString(values[j]) + "\n";
+					output += "j = " + System.Convert.ToString(j) + "\n";
 				}
 			}
 			if (pbool[6]){

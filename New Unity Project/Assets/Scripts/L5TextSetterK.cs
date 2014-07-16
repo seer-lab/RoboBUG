@@ -14,31 +14,31 @@ public class L5TextSetterK : MonoBehaviour {
 		"\n#include" +
 		"\nusing namespace" +
 		"\nstruct " +
-			"\n        char " +
-			"\n        int " +
-			"\n        int " +
-			"\n        int " +
+			"\n    char " +
+			"\n    int " +
+			"\n    int " +
+			"\n    int " +
 		"\n" +
-		"\nstruct                           getNearbyObjects();" +
+		"\nstruct              getNearbyObjects();" +
 		"\n" +
 		"\n" +
 		"\n" +
 		"\n" +
 		"\n" +
 		"\nvoid" +
-			"\n        enum " +
+			"\n    enum " +
 			"\n                " +
 			"\n                " +
-			"\n        enum " +
+			"\n    enum " +
 			"\n                " +
 			"\n                 " +
-			"\n        struct" +
-			"\n        int" + //\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-			"\n        for(" +
+			"\n    struct" +
+			"\n    int" + //\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+			"\n    for" +
 		"\n     " +
 		"\n     " +
 		"\n     "+
-			"\n                for(" +
+			"\n        for" +
 			"\n       " +
 			"\n       " +
 			"\n      " +
@@ -55,7 +55,7 @@ public class L5TextSetterK : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = main;
-		Tm.color = Color.blue;
+		Tm.color = new Color(61f/255f, 189f/255f, 232f/255f);
 	}
 	
 	// Update is called once per frame

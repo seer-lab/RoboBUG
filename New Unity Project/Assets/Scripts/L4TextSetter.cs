@@ -8,26 +8,26 @@ public class L4TextSetter : MonoBehaviour {
 		"\n" +
 		"\n" +
 		"\n" +
-			"\n                <stdio.h>" +
-			"\n                <colourmanager.h>" +
-			"\n                TOTAL_COLORS   12" +
-		"\n             colour {" +
-			"\n                name[28];" +
-			"\n                red;" +
-			"\n                green;" +
-			"\n                blue;};" +
-		"\n             tabs {" +
-			"\n                    colour *table;" +
-			"\n                tabsize;" +
-		"\n} coltab[TOTAL_COLORS];" +
-		"\n\n         colourDatabase() {" +
-			"\n                      colours { WHITE, GREY, BLACK, RED, BROWN, " +
-			"\n        ORANGE, YELLOW, GREEN, CYAN, BLUE, " +
-			"\n        MAGENTA, NAMED } color;" +
-			"\n                    *colourname[] = { \"white\", \"grey\", \"black\", \"red\", " +
-			"\n        \"brown\", \"orange\", \"yellow\", \"green\", \"cyan\", \"blue\"," +
-			"\n        \"magenta\", \"named colors\" };" +
-			"\n                i = 0;\n               red = 0, green = 0, blue = 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" +
+			"\n         <stdio.h>" +
+			"\n         <colourmanager.h>" +
+			"\n        TOTAL_COLOURS   12" +
+		"\n       colour {" +
+			"\n         name[28];" +
+			"\n        red;" +
+			"\n        green;" +
+			"\n        blue;};" +
+		"\n             tables {" +
+			"\n           colour *table;" +
+			"\n       tablesize;" +
+		"\n} coltable[TOTAL_COLOURS];" +
+		"\n\n     colourDatabase() {" +
+			"\n         colours { WHITE, GREY, BLACK, RED, BROWN, " +
+			"\n    ORANGE, YELLOW, GREEN, CYAN, BLUE, " +
+			"\n    MAGENTA, NAMED } colour;" +
+			"\n         *colourname[] = { \"white\", \"grey\", \"black\", \"red\", " +
+			"\n    \"brown\", \"orange\", \"yellow\", \"green\", \"cyan\", \"blue\"," +
+			"\n    \"magenta\", \"named colours\" };" +
+			"\n        i = 0;\n        red = 0, green = 0, blue = 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" +
 /*		"\n\n coltab[WHITE].table = whitetab;" +
 		"\n coltab[WHITE].tabsize = sizeof(whitetab) / sizeof(whitetab[0]);" +
 		"\n coltab[GREY].table = greytab;" +
@@ -52,19 +52,19 @@ public class L4TextSetter : MonoBehaviour {
 		"\n coltab[MAGENTA].tabsize = sizeof(magentatab) / sizeof(magentatab[0]);" +
 		"\n coltab[NAMED].table = namedtab;" +
 		"\n coltab[NAMED].tabsize = sizeof(namedtab) / sizeof(namedtab[0]);" +
-*/		"\n\n                    color = 0; color < TOTAL_COLORS; color++) {" +
+*/		"\n\n       (    colour = 0; colour < TOTAL_COLOURS; colour++) {" +
 	//	"\n  printf(\"" +
 	//	"\n ==> %s <==" +
-	//	"\n\", colourname[color]);" +
-			"\n                       i = 0; i < coltab[color].tabsize; i++) {" +
-			"\n                               red   = coltab[color].table[i].red;" +
-			"\n                               green = coltab[color].table[i].green;" +
-			"\n                               blue  = coltab[color].table[i].blue;" +
-			"\n                                     name = coltab[color].table[i].name;" + 
-			"\n                                          (red, green, blue, name);" +
+	//	"\n\", colourname[colour]);" +
+			"\n           (    i = 0; i < coltable[colour].tablesize; i++) {" +
+			"\n                red   = coltable[colour].table[i].red;" +
+			"\n                green = coltable[colour].table[i].green;" +
+			"\n                blue  = coltable[colour].table[i].blue;" +
+			"\n                   name = coltable[colour].table[i].name;" + 
+			"\n                     (red, green, blue, name);" +
 	/*	"\n   printf(\" %03d %03d %03d - #%02x%02x%02x - %s" +
 		"\n\", " +
-		"\n     red, green, blue, red, green, blue, coltab[color].table[i].name);" +
+		"\n     red, green, blue, red, green, blue, coltab[colour].table[i].name);" +
 		"\n  }" +
 		"\n }" +
 		"\n" +
@@ -77,7 +77,7 @@ public class L4TextSetter : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = main;	
-		Tm.color = Color.black;
+		Tm.color = Color.white;
 	}
 	
 	// Update is called once per frame

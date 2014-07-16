@@ -63,6 +63,8 @@ public class ValueGetter : MonoBehaviour {
 			if (valueText.Length >= 10 || numdigits>4){
 				validInput = false;
 				valueText = "<INVALID INPUT>";
+				TextMesh Tm = GetComponent<TextMesh> ();
+				Tm.text = "**PRESS BACKSPACE TO RETRY**";
 			}
 			 if (Input.GetKeyDown ("backspace")) {
 				valueText = "";
@@ -70,6 +72,8 @@ public class ValueGetter : MonoBehaviour {
 				decOkay = true;
 				validInput = true;
 				numdigits = 0;
+				TextMesh Tm = GetComponent<TextMesh> ();
+				Tm.text = "**TYPE IN A NUMBER**";
 			}	
 		}
 	}
@@ -79,14 +83,19 @@ public class ValueGetter : MonoBehaviour {
 		if (c.name == "hero") {
 			TextMesh Tm = GetComponent<TextMesh> ();
 			Tm.color = Color.yellow;
-			Tm.text = "**TYPE IN A NUMBER**";
+			if (validInput){
+				Tm.text = "**TYPE IN A NUMBER**";
+			}
+			else{
+				Tm.text = "**PRESS BACKSPACE TO RETRY**";
+			}
 		}
 	}
 	void OnTriggerExit2D(Collider2D c){
 		inside = false;
 		if (c.name == "hero") {
 			TextMesh Tm = GetComponent<TextMesh>();
-			Tm.color = Color.black;
+			Tm.color = Color.white;
 			Tm.text = valueText + ";";}
 	}
 }

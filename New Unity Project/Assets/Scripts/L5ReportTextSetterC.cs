@@ -6,14 +6,14 @@ public class L5ReportTextSetterC : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		TextMesh tm = GetComponent<TextMesh> ();
-		tm.color = new Color (.25f, .25f, .25f);
+		tm.color = new Color (166f/255f,226f/255f,46f/255f);
 		tm.text = "" +
 				"\n\t//compare object 1 to object 2" +
 				"\n\t//return the closer object to self at (0,0,0)" + 
-				"\n\t                                                           //use of all 3 objects" + 
-				"\n\t                                                                  //x component" +
-				"\n\t                                                            //y component" +
-				"\n\t                                                             //z component" +
+				"\n\t                                  //use of all 3 objects" + 
+				"\n\t                                     //x component" +
+				"\n\t                                    //y component" +
+				"\n\t                                   //z component" +
 				"\n\t" +
 				"\n\t";
 		/*tm.text = "The bug is that the wrong objects are compared" +

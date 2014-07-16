@@ -88,8 +88,32 @@ public class breakpointHandler : MonoBehaviour {
 				col1num = 0;
 				col2num = 15;
 				stepnum = 0;
+				debugtexts[0].GetComponent<GUIText>().text = "x1 = ";
+				debugtexts[1].GetComponent<GUIText>().text = "y1 = ";
+				debugtexts[2].GetComponent<GUIText>().text = "z1 = ";
+				debugtexts[3].GetComponent<GUIText>().text = "x2 = ";
+				debugtexts[4].GetComponent<GUIText>().text = "y2 = ";
+				debugtexts[5].GetComponent<GUIText>().text = "z2 = ";
+				debugtexts[6].GetComponent<GUIText>().text = "closer.name = \"\"";
+				debugtexts[7].GetComponent<GUIText>().text = "object1.name = \"\"";
+				debugtexts[8].GetComponent<GUIText>().text = "object2.name = \"\"";
 			}
 			stop = false;
+		}
+		else if (slf.color == Color.cyan){
+			slf.color = Color.black;
+			col1num = 0;
+			col2num = 15;
+			stepnum = 0;
+			debugtexts[0].GetComponent<GUIText>().text = "x1 = ";
+			debugtexts[1].GetComponent<GUIText>().text = "y1 = ";
+			debugtexts[2].GetComponent<GUIText>().text = "z1 = ";
+			debugtexts[3].GetComponent<GUIText>().text = "x2 = ";
+			debugtexts[4].GetComponent<GUIText>().text = "y2 = ";
+			debugtexts[5].GetComponent<GUIText>().text = "z2 = ";
+			debugtexts[6].GetComponent<GUIText>().text = "closer.name = \"\"";
+			debugtexts[7].GetComponent<GUIText>().text = "object1.name = \"\"";
+			debugtexts[8].GetComponent<GUIText>().text = "object2.name = \"\"";
 		}
 	}
 	void step(){
@@ -139,7 +163,7 @@ public class breakpointHandler : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D c){
-		if (c.name == "projectileDebug(Clone)") {
+		if (c.name == "projectileTest(Clone)") {
 				SpriteRenderer nxt = GetComponent<SpriteRenderer>();
 				nxt.color = Color.magenta;
 				Destroy(c.gameObject);

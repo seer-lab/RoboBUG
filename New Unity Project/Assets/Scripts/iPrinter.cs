@@ -15,11 +15,14 @@ public class iPrinter : MonoBehaviour {
 		TextMesh tm = GetComponent<TextMesh>();
 		if (output) {
 			tm.color = Color.cyan;
-			tm.text = "cout<<priorities[i];";
+			//tm.text = "cout<<priorities[i];";
+			tm.text = "cout<<i;";
 		}
 		else{
-			tm.color = new Color (.25f, .25f, .25f);
-			tm.text = "//Don't print i;";
+			//tm.color = new Color (.25f, .25f, .25f);
+			tm.color = Color.grey;
+			//tm.text = "//cout<<priorities[i];";
+			tm.text = "//cout<<i;";
 		}
 	}
 	void OnTriggerEnter2D(Collider2D p){

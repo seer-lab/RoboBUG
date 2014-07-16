@@ -22,6 +22,8 @@ public class sidebarrobot : MonoBehaviour {
 		GUITexture img = GetComponent<GUITexture> ();
 		if (levelnum > 0 && levelnum < 100) {
 				img.enabled = true;
+				//Animator anim = GetComponent<Animator>();
+			//anim.SetInteger("levelnum", levelnum);
 			switch(levelnum){
 			case 1:
 				img.texture = lvl1;

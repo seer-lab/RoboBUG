@@ -3,27 +3,27 @@ using System.Collections;
 
 public class L2TextSetterK : MonoBehaviour {
 	
-	string testing = "int                             int" +
+	string testing = "float              float" +
 		"\n" +
-	//		"\nint\n\nint\n" +
+	//		"\nfloat\n\nfloat\n" +
 			"\nbool " +
-			"\n        int" +
-			"\n        int" +
+			"\n    float" +
+			"\n    float" +
 			//		"\n	return sumCalc(values[]) == total;" +
 			"\n" +
 			"\n" +
-			"\n\nint                          int" +
+			"\n\nfloat            float" +
 			"\n\n" +
 			"\nbool " +
-			"\n        int " +
-			"\n        int " +
+			"\n    float " +
+			"\n    float " +
 			//		"\n	return medianCalc(values[]) == mid;" +
 			"\n" +
-			"\n\n\nfloat                       float" +
+			"\n\n\nfloat          float" +
 			"\n\n" +
 			"\nbool " +
-			"\n        float" +
-			"\n        float" +
+			"\n    float" +
+			"\n    float" +
 			//		"\n	return avgCalc(values[]) == average;" +
 			"\n" +
 			"\n" +
@@ -33,7 +33,7 @@ public class L2TextSetterK : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = testing;	
-		Tm.color = Color.blue;
+		Tm.color = new Color(61f/255f, 189f/255f, 232f/255f);
 	}
 	
 	// Update is called once per frame

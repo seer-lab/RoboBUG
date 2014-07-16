@@ -12,22 +12,22 @@ public class L4TextSetterK : MonoBehaviour {
 		"\n#include" +
 		"\n#define" +
 		"\nstruct" +
-			"\n        char" +
-			"\n        int" +
-			"\n        int" +
-			"\n        int" +
+			"\n    char" +
+			"\n    int" +
+			"\n    int" +
+			"\n    int" +
 		"\nstruct " +
-			"\n        struct " +
-			"\n        int" +
+			"\n    struct " +
+			"\n    int" +
 		"\n" +
 		"\n\nvoid" +
-			"\n        enum" +
+			"\n    enum" +
 		"\n" +
 		"\n" +
-			"\n        char " +
+			"\n    char " +
 		"\n" +
 		"\n" +
-			"\n        int           \n        int\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" +
+			"\n    int           \n    int\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" +
 /*		"\n\n coltab[WHITE].table = whitetab;" +
 		"\n coltab[WHITE].tabsize = sizeof(whitetab) / sizeof(whitetab[0]);" +
 		"\n coltab[GREY].table = greytab;" +
@@ -52,16 +52,16 @@ public class L4TextSetterK : MonoBehaviour {
 		"\n coltab[MAGENTA].tabsize = sizeof(magentatab) / sizeof(magentatab[0]);" +
 		"\n coltab[NAMED].table = namedtab;" +
 		"\n coltab[NAMED].tabsize = sizeof(namedtab) / sizeof(namedtab[0]);" +
-*/		"\n\n        for(int" +
+*/		"\n\n    for int" +
 	//	"\n  printf(\"" +
 	//	"\n ==> %s <==" +
 	//	"\n\", colourname[color]);" +
-			"\n                for(" +
-			"\n                        int" +
-			"\n                        int" +
-			"\n                        int" +
-			"\n                        string" + 
-			"\n                        loadcolor" +
+			"\n        for int" +
+			"\n            int" +
+			"\n            int" +
+			"\n            int" +
+			"\n            string" + 
+			"\n            loadcolor" +
 	/*	"\n   printf(\" %03d %03d %03d - #%02x%02x%02x - %s" +
 		"\n\", " +
 		"\n     red, green, blue, red, green, blue, coltab[color].table[i].name);" +
@@ -77,7 +77,7 @@ public class L4TextSetterK : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = main;	
-		Tm.color = Color.blue;
+		Tm.color = new Color(61f/255f, 189f/255f, 232f/255f);
 	}
 	
 	// Update is called once per frame

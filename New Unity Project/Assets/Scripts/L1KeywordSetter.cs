@@ -9,7 +9,7 @@ public class L1KeywordSetter : MonoBehaviour {
 			"\n	" +
 			"\n#include<stdio.h>  " +
 			"\n#include<conio.h>  " +
-			"\nint                      int                 int " +
+			"\nfloat          int          int " +
 			"\n  " +
 			"\n        int " +
 			"\n        float " +
@@ -17,7 +17,7 @@ public class L1KeywordSetter : MonoBehaviour {
 			"\n        for " +
 			"\n    " +
 			"\n		" +
-			"\n		                         float        " +
+			"\n	                    float        " +
 			"\n       " +
 			"\n		       " +
 			"\n        return      " +
@@ -30,7 +30,8 @@ public class L1KeywordSetter : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = tracing;	
-		Tm.color = Color.blue;
+		Tm.color = new Color(61f/255f, 189f/255f, 232f/255f);
+
 	}
 	
 	// Update is called once per frame

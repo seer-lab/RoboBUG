@@ -17,7 +17,7 @@ public class sidebartester : MonoBehaviour {
 	void Update () {
 		levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
 		projectilenum = System.Convert.ToInt16(projectilecode.GetComponent<TextMesh> ().text);
-		if (levelnum != 2) {
+		if (levelnum != 2 && levelnum != 5) {
 			this.GetComponent<GUITexture> ().color = new Color (0.5f,0.5f,0.5f,0);
 		}
 		else if (projectilenum == 2) {

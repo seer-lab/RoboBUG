@@ -16,7 +16,7 @@ public class sumTest : MonoBehaviour
 		void Start ()
 		{
 				TextMesh tm = GetComponent<TextMesh> ();
-				tm.color = Color.blue;
+		tm.color = new Color(61f/255f, 189f/255f, 232f/255f);
 		}
 	
 		// Update is called once per frame
@@ -34,19 +34,19 @@ public class sumTest : MonoBehaviour
 		{
 				string inputText = input.GetComponent<TextMesh> ().text;
 				string outputText = output.GetComponent<TextMesh> ().text;
-				if (inputText != "" && outputText != "" && inputText != "<INVALID INPUT>") {
+			//	if (inputText != "" && outputText != "" && inputText != "<INVALID INPUT>") {
 						if (c.name == "hero") {
 								TextMesh tm = GetComponent<TextMesh> ();
 								tm.color = Color.green;
 						} else if (c.name == "projectileTest(Clone)") {
 								inputText = input.GetComponent<TextMesh> ().text;
 								outputText = output.GetComponent<TextMesh> ().text;
-								if (inputText != "" && outputText != "" && inputText != "<INVALID INPUT>") {
-										if (inputText.Contains ("-")) {
-												result.GetComponent<TextMesh> ().color = Color.black;
+								if (inputText != "<INVALID INPUT>") {
+									if ( inputText == "" || inputText.Contains (".")) {
+												result.GetComponent<TextMesh> ().color = Color.red;
 												resultText = "ERROR!!!";
 												removetext = Time.time + textdelay;
-						result.renderer.enabled = true;
+												result.renderer.enabled = true;
 										} else {
 												string[] vals = inputText.Split (',');
 												int sum = 0;
@@ -67,14 +67,14 @@ public class sumTest : MonoBehaviour
 						}
 				}
 				
-		}
+	//	}
 
 		void OnTriggerExit2D (Collider2D c)
 		{
 				//coll = c;
 				if (c.name == "hero") {		
 						TextMesh tm = GetComponent<TextMesh> ();
-						tm.color = Color.blue;
+			tm.color = new Color(61f/255f, 189f/255f, 232f/255f);
 				}
 		}
 }

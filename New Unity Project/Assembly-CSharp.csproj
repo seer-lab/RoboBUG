@@ -54,22 +54,27 @@
      <Compile Include="Assets\Scripts\HUDText.cs" />
      <Compile Include="Assets\Scripts\L0Intro.cs" />
      <Compile Include="Assets\Scripts\L1CommentSetter.cs" />
+     <Compile Include="Assets\Scripts\L1Intro.cs" />
      <Compile Include="Assets\Scripts\L1KeywordSetter.cs" />
      <Compile Include="Assets\Scripts\L1TextSetter.cs" />
+     <Compile Include="Assets\Scripts\L2Intro.cs" />
      <Compile Include="Assets\Scripts\L2TextSetter (3rd copy).cs" />
      <Compile Include="Assets\Scripts\L2TextSetter.cs" />
      <Compile Include="Assets\Scripts\L2TextSetterC.cs" />
      <Compile Include="Assets\Scripts\L2TextSetterK.cs" />
+     <Compile Include="Assets\Scripts\L3Intro.cs" />
      <Compile Include="Assets\Scripts\L3Output.cs" />
      <Compile Include="Assets\Scripts\L3ReportTextSetter.cs" />
      <Compile Include="Assets\Scripts\L3TextSetter (3rd copy).cs" />
      <Compile Include="Assets\Scripts\L3TextSetter.cs" />
      <Compile Include="Assets\Scripts\L3TextSetterC.cs" />
      <Compile Include="Assets\Scripts\L3TextSetterK.cs" />
+     <Compile Include="Assets\Scripts\L4Intro.cs" />
      <Compile Include="Assets\Scripts\L4TextSetter (3rd copy).cs" />
      <Compile Include="Assets\Scripts\L4TextSetter.cs" />
      <Compile Include="Assets\Scripts\L4TextSetterC.cs" />
      <Compile Include="Assets\Scripts\L4TextSetterK.cs" />
+     <Compile Include="Assets\Scripts\L5Intro.cs" />
      <Compile Include="Assets\Scripts\L5ReportTextSetter (3rd copy).cs" />
      <Compile Include="Assets\Scripts\L5ReportTextSetter.cs" />
      <Compile Include="Assets\Scripts\L5ReportTextSetterC.cs" />
@@ -103,6 +108,7 @@
      <Compile Include="Assets\Scripts\ValuesGetter.cs" />
      <Compile Include="Assets\Scripts\breakpoint.cs" />
      <Compile Include="Assets\Scripts\breakpointHandler.cs" />
+     <Compile Include="Assets\Scripts\breakpointReset.cs" />
      <Compile Include="Assets\Scripts\bug.cs" />
      <Compile Include="Assets\Scripts\camera.cs" />
      <Compile Include="Assets\Scripts\falsepositive.cs" />
@@ -150,13 +156,13 @@
      <Compile Include="Assets\Scripts\sidebardescription.cs" />
      <Compile Include="Assets\Scripts\sidebarhelppanel.cs" />
      <Compile Include="Assets\Scripts\sidebarrobot.cs" />
+     <Compile Include="Assets\Scripts\sidebarselected.cs" />
      <Compile Include="Assets\Scripts\sidebartester.cs" />
      <Compile Include="Assets\Scripts\sidebartools.cs" />
      <Compile Include="Assets\Scripts\sidebarwarper.cs" />
      <Compile Include="Assets\Scripts\starttime.cs" />
      <Compile Include="Assets\Scripts\success.cs" />
      <Compile Include="Assets\Scripts\sumTest.cs" />
-     <Compile Include="Assets\sidebarselected.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

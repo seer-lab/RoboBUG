@@ -71,6 +71,8 @@ public class ValuesGetter : MonoBehaviour {
 								if (!minusOkay) {
 									validInput = false;
 									valueText = "<INVALID INPUT>";
+						TextMesh Tm = GetComponent<TextMesh> ();
+						Tm.text = "**PRESS BACKSPACE TO RETRY**";
 								}
 								else{
 								minusOkay = false;
@@ -81,6 +83,8 @@ public class ValuesGetter : MonoBehaviour {
 							if (!decOkay) {
 								validInput = false;
 								valueText = "<INVALID INPUT>";
+						TextMesh Tm = GetComponent<TextMesh> ();
+						Tm.text = "**PRESS BACKSPACE TO RETRY**";
 							}
 							else{
 								minusOkay = false;
@@ -93,6 +97,8 @@ public class ValuesGetter : MonoBehaviour {
 							if (!commaOkay) {
 									validInput = false;
 									valueText = "<INVALID INPUT>";
+						TextMesh Tm = GetComponent<TextMesh> ();
+						Tm.text = "**PRESS BACKSPACE TO RETRY**";
 							}
 							else{
 							commaOkay = false;
@@ -106,13 +112,18 @@ public class ValuesGetter : MonoBehaviour {
 			if (valueText.Length >= 24 || numdigits > 4){
 				validInput = false;
 				valueText = "<INVALID INPUT>";
+				TextMesh Tm = GetComponent<TextMesh> ();
+				Tm.text = "**PRESS BACKSPACE TO RETRY**";
 			}
 					if (Input.GetKeyDown ("backspace")) {
 						commaOkay = false;
 						minusOkay = true;
+						decOkay = true;
 						validInput = true;
 						valueText = "";
 						numdigits = 0;
+				TextMesh Tm = GetComponent<TextMesh> ();
+				Tm.text = "**TYPE IN A LIST OF NUMBERS**";
 					}	
 			}
 	}
@@ -122,14 +133,19 @@ public class ValuesGetter : MonoBehaviour {
 		if (c.name == "hero") {
 						TextMesh Tm = GetComponent<TextMesh> ();
 						Tm.color = Color.yellow;
-						Tm.text = "**TYPE IN A LIST OF NUMBERS**";
+						if (validInput){
+							Tm.text = "**TYPE IN A LIST OF NUMBERS**";
+							}
+						else{
+							Tm.text = "**PRESS BACKSPACE TO RETRY**";
+			}
 				}
 	}
 	void OnTriggerExit2D(Collider2D c){
 		inside = false;
 		if (c.name == "hero") {
 		TextMesh Tm = GetComponent<TextMesh>();
-			Tm.color = Color.black;
+			Tm.color = Color.white;
 			Tm.text = "{" + valueText + "};";}
 	}
 }

@@ -8,6 +8,8 @@ public class heroControllerScript : MonoBehaviour {
 
 	public GameObject level;
 	public GameObject falsepositive;
+	public GameObject quitPrompt;
+	public GameObject selectedtool;
 
 	public Rigidbody2D projectile;
 
@@ -28,17 +30,20 @@ public class heroControllerScript : MonoBehaviour {
 	int levelnum = 0;
 	int currentlevel = 0;
 
-	bool onWall = false;
+	public bool onWall = false;
 	bool facingRight = true;
 	float fireRate = 0.5f;
 	private float nextFire = 0.0f;
 	float animTime = 0.3f;
 	private float animDelay = 0.0f;
 	Animator anim;
-	bool dropping = false;
-	float dropTime = 0.3f;
+	public bool dropping = false;
+	float dropTime = 0.01f;
 	private float dropDelay = 0.0f;
-	private float speedPenalty = 0.5f;
+//	private float speedPenalty = 0.5f;
+	float falseDelay = 10f;
+	float falseTime = 0.0f;
+	bool quitting = false;
 
 
 
@@ -75,7 +80,8 @@ public class heroControllerScript : MonoBehaviour {
 
 		//code for falling down through platforms
 	//	if (Input.GetAxisRaw("Vertical") == -1 && Input.GetButton("Jump")){
-		if (Input.GetButton("Jump")){
+	//	if (Input.GetButton("Jump")){
+		if (Input.GetAxis("Vertical")<0 && !onWall){
 			dropDelay = Time.time + dropTime;
 			dropping = true;
 		}
@@ -97,7 +103,9 @@ public class heroControllerScript : MonoBehaviour {
 						if (!onWall) {
 								rigidbody2D.velocity = new Vector2 (move * maxSpeed, Mathf.Min (0f, rigidbody2D.velocity.y));
 						} else {
+				rigidbody2D.isKinematic = true;
 								rigidbody2D.velocity = new Vector2 (move * maxSpeed, up * climbSpeed);
+				rigidbody2D.isKinematic = false;
 						}
 				}
 	}
@@ -128,16 +136,31 @@ public class heroControllerScript : MonoBehaviour {
 			}
 			else{
 				projectilecode = 1;
+				projectileobject.GetComponent<TextMesh>().text = System.Convert.ToString(projectilecode);
 			}
 		}
 		if (falsepositive.GetComponent<TextMesh> ().text == "Pointed") {
 			falsepositive.GetComponent<TextMesh> ().text = "";
-			maxSpeed *= speedPenalty;
-			climbSpeed *= speedPenalty;
+			//maxSpeed *= speedPenalty;
+			//climbSpeed *= speedPenalty;
+			projectilecode = 0;
+			projectileobject.GetComponent<TextMesh>().text = System.Convert.ToString(projectilecode);
+			falseTime = Time.time + falseDelay;
+			falseDelay += 10;
+			if (falseDelay>70f){
+				falseDelay=60f;
+			}
 		}
 
+		if (falseTime > Time.time) {
+						selectedtool.GetComponent<GUIText> ().text = "DISABLED FOR " + Mathf.Round (falseTime - Time.time) + " SECONDS.";
+				} else if (projectilecode == 0) {
+			projectilecode = 1;
+			projectileobject.GetComponent<TextMesh>().text = System.Convert.ToString(projectilecode);
+				}
+
 		//stars
-		if (Input.GetKeyDown("tab")){
+		if (Input.GetKeyDown("tab") && projectilecode > 0){
 			projectilecode++;
 			switch(levelnum){
 			case 1:
@@ -163,7 +186,7 @@ public class heroControllerScript : MonoBehaviour {
 				}
 				break;
 			case 5:
-				if (projectilecode ==2){
+				if (projectilecode ==3){
 					projectilecode = 4;
 				}
 				else if (projectilecode == 6){
@@ -189,18 +212,18 @@ public class heroControllerScript : MonoBehaviour {
 		}*/
 
 	//firing
-		if (Input.GetButton ("Fire1") && Time.time > nextFire && !onWall && rigidbody2D.velocity == Vector2.zero) {
+		if ((Input.GetKeyDown ("left ctrl")||Input.GetKeyDown ("right ctrl")) && Time.time > nextFire && !onWall && rigidbody2D.velocity == Vector2.zero) {
 			anim.SetBool ("throw", true);
 			nextFire = Time.time + fireRate;
 			animDelay = Time.time + animTime;
 			Rigidbody2D newstar;
 			switch(projectilecode){
 			case 0:
-				newstar = (Rigidbody2D) Instantiate(projectile, transform.position, transform.rotation);
+			/*	newstar = (Rigidbody2D) Instantiate(projectile, transform.position, transform.rotation);
 				if (facingRight){
 					newstar.rigidbody2D.AddForce(Vector2.right*300);}
 				else{
-					newstar.rigidbody2D.AddForce(Vector2.right*-300);}
+					newstar.rigidbody2D.AddForce(Vector2.right*-300);}*/
 				break;
 			case 1:
 				newstar = (Rigidbody2D) Instantiate(projectileB, transform.position, transform.rotation);
@@ -260,8 +283,19 @@ public class heroControllerScript : MonoBehaviour {
 	//quit
 		if(Input.GetKeyDown(KeyCode.Escape) == true)
 		{
-			Application.Quit();
+			quitting = true;
 		}
+		if (quitting) {
+						quitPrompt.GetComponent<GUIText> ().text = "Would you like to quit?\nPress Y to Quit\nPress N to return";
+						if (Input.GetKeyDown ("y")) {
+								Application.Quit ();
+						} else if (Input.GetKeyDown ("n")) {
+								quitting = false;
+								
+						}
+				} else {
+			quitPrompt.GetComponent<GUIText> ().text = "";
+				}
 	}
 
 }

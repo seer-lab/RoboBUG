@@ -14,9 +14,9 @@ public class sidebarhelppanel : MonoBehaviour {
 	void Update () {
 		int levelnum = System.Convert.ToInt16 (level.GetComponent<TextMesh> ().text);
 		if (levelnum == 2 || levelnum == 4 || levelnum == 5 ) {
-			this.guiTexture.enabled = true;
+		//	this.guiTexture.enabled = true;
 		} else {
-			this.guiTexture.enabled = false;
+		//	this.guiTexture.enabled = false;
 		}
 	}
 }

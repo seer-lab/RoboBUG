@@ -9,7 +9,7 @@ public class l4sidebarerror : MonoBehaviour
 		public bool[] tableStates;
 		public GameObject level;
 		bool compiling = false;
-		float compileDelay = 5f;
+		float compileDelay = 10.5f;
 		float compileTime = 0f;
 	
 		// Use this for initialization
@@ -45,27 +45,27 @@ public class l4sidebarerror : MonoBehaviour
 								compiling = false;
 						} 
 						for (int i = 0; i<12; i++) {
-				if (tables [i].GetComponent<TextMesh> ().text.StartsWith ("        //") && tableStates [i] == true) 
+				if (tables [i].GetComponent<TextMesh> ().text.StartsWith ("    //") && tableStates [i] == true) 
 				    			{
 									compiling = true;
 									compileTime = Time.time + compileDelay;
 									tableStates[i] = false;
 								}
-				else if (!tables [i].GetComponent<TextMesh> ().text.StartsWith ("        //") && tableStates [i] == false){
+				else if (!tables [i].GetComponent<TextMesh> ().text.StartsWith ("    //") && tableStates [i] == false){
 									compiling = true;
 									compileTime = Time.time + compileDelay;
 									tableStates[i] = true;
 								}
 						}
 						if (!compiling){
-							if (bugt.text == "        //coltab[BLUE].table = bluetab;" +
-							    "\n\n        //coltab[BLUE].tabsize = sizeof(bluetab)"){
+							if (bugt.text == "    //coltable[BLUE].table = bluetab;" +
+							    "\n    //coltable[BLUE].tabsize = sizeof(bluetab)"){
 								tm.color = Color.green;
 								tm.text = "No Error";
 							}
 							else{
 								tm.color = Color.red;
-								tm.text = "Error:\nGreen value out of bounds";
+								tm.text = "Error:\nGreen value\nout of bounds";
 							}
 						}
 				} else {

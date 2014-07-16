@@ -18,8 +18,9 @@ public class prioritiesPrinter : MonoBehaviour {
 			tm.text = "cout<<priorities;";
 		}
 		else{
-			tm.color = new Color (.25f, .25f, .25f);
-			tm.text = "//Don't print priorities;";
+			//tm.color = new Color (.25f, .25f, .25f);
+			tm.color = Color.grey;
+			tm.text = "//cout<<priorities;";
 		}
 	}
 	void OnTriggerEnter2D(Collider2D p){

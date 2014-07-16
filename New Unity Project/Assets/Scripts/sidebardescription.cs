@@ -16,22 +16,22 @@ public class sidebardescription : MonoBehaviour {
 		levelnum = System.Convert.ToInt16(level.GetComponent<TextMesh> ().text);
 		switch (levelnum) {
 		case 1:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nFind the bug\nHit it with a Bugcatcher";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nFind the bug\nHit it with a Bugcatcher\nPress CTRL to Throw";
 			break;
 		case 2:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nType in values while standing in the yellow text\nuse the tester tool at the return lines\nModify each test case till you get an error\n";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nType in values while standing in the yellow text\nUse the TESTER tool at the return lines\nModify each test case till you get an error\n";
 			break;
 		case 3:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nTurn on/off print statements with the printer tool\nobserve the output by following the output warp\nlocate the bug and catch it with the Bugcatcher";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to toggle printing\nObserve the output by using the WARPER tool\nCatch the bug with a BUGCATCHER";
 			break;
 		case 4:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nread the error report at the bottom\ncomment out segments(tabs) of code\nfigure out where the bug is and catch it";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to comment out tables\nExamine the output after commenting out regions\nWARP to the appropriate table and catch the bug";
 			break;
 		case 5:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nuse the breakpointer tool to turn on/off breakpoints\ndetermine where the bug is";
+			GetComponent<GUIText>().text = "OBJECTIVE:\nObserve variable behaviour using the debugger\nThrow BREAKPOINTERS left to toggle breakpoints\nThrow TESTERS right to run the program\nUse the TESTER tool if you want to reset\nYou can WARP to the compare function";
 			break;
 		case 6:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n1)figure out which function is faulty and throw a bugcatcher at it\n2)use the error message to determine the source of bug#1 and fix it\n3)Use the breakpoints to find bug#2\n4)Throw a bugcatcher at the exact place the bug occurs\n5)Find and catch the final bug";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n1)figure out which function is faulty and throw a Bugcatcher at it\n2)use the error message to determine the source of bug#1 and fix it\n3)Use the breakpoints to find bug#2\n4)Throw a bugcatcher at the exact place the bug occurs\n5)Find and catch the final bug";
 			break;
 		case 0:
 			GetComponent<GUIText>().text = "";

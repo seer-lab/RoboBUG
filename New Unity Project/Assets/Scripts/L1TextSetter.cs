@@ -9,18 +9,18 @@ public class L1TextSetter : MonoBehaviour {
 			"\n	" +
 			"\n " +
 			"\n " +
-			"\n       avgForce(        forces[],       numOfForces) " +
+			"\n      avgForce(    forces[],    numOfForces) " +
 			"\n{  " +
-			"\n             sum, i=0; " +
-			"\n                  avgf; " +
+			"\n            sum, i=0; " +
+			"\n              avgf; " +
 			"\n    " +
-			"\n              (i=0;i<numOfForces;i++) " +
+			"\n            (i=0;i<numOfForces;i++) " +
 			"\n        { " +
 			"\n                sum=sum+forces[i];" +
-			"\n	               avgf=           (sum/numOfForces);" +
+			"\n	               avgf=     (sum/numOfForces);" +
 			"\n        }  " +
 			"\n        avgf++;" +
-			"\n                    avgf;" +
+			"\n               avgf;" +
 			"\n        } " +
 			"\n} " +
 			"\n" +
@@ -30,7 +30,7 @@ public class L1TextSetter : MonoBehaviour {
 	void Start () {
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = tracing;	
-		Tm.color = Color.black;
+		Tm.color = Color.white;
 	}
 	
 	// Update is called once per frame

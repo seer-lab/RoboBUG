@@ -15,11 +15,14 @@ public class jPrinter : MonoBehaviour {
 		TextMesh tm = GetComponent<TextMesh>();
 		if (output) {
 			tm.color = Color.cyan;
-			tm.text = "cout<<priorities[j];";
+			//tm.text = "cout<<priorities[j];";
+			tm.text = "cout<<j;";
 		}
 		else{
-			tm.color = new Color (.25f, .25f, .25f);
-			tm.text = "//Don't print j;";
+			//tm.color = new Color (.25f, .25f, .25f);
+			tm.color = Color.grey;
+			//tm.text = "//cout<<priorities[j];";
+			tm.text = "//cout<<j;";
 		}
 	}
 	void OnTriggerEnter2D(Collider2D p){

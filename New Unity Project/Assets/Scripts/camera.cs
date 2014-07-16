@@ -23,6 +23,7 @@ public class camera : MonoBehaviour {
 
 	public GameObject l30;
 	public GameObject l3;
+	public GameObject l31;
 
 	public GameObject l40;
 	public GameObject l4;
@@ -56,6 +57,9 @@ public class camera : MonoBehaviour {
 	public GameObject levelText;
 
 	public GameObject l2Objective1;
+	bool L2O1;
+		bool L2O2;
+			bool L2O3;
 	public GameObject l2Objective2;
 	public GameObject l2Objective3;
 	public GameObject l3Report;
@@ -81,12 +85,14 @@ public class camera : MonoBehaviour {
 	public AudioClip theme4;
 	public AudioClip theme5;
 
+	bool mute = false;
+
 	//Vector3 startScreen = new Vector3 (27, 4, -5f);
 	Vector3 instructScreen = new Vector3 (28, -6, -5f);
 	Vector3 level1Start = new Vector3(-3f,15.12f,0);
-	Vector3 level3Start = new Vector3(-99f,-21.8f,0);
-	Vector3 level4Start = new Vector3(-138f,-68.8f,0);
-	Vector3 level5Start = new Vector3(-248f,104.2f,0);
+	Vector3 level3Start = new Vector3(-97f,-28.1f,0);
+	Vector3 level4Start = new Vector3(-146f,-68.8f,0);
+	Vector3 level5Start = new Vector3(-252f,109.2f,0);
 	Vector3 level6Start = new Vector3(-286f,73.2f,0);
 	Vector3 level6cStart = new Vector3(-343f,109.2f,0);
 	Vector3 lastlevelstart = new Vector3 (-424,80,0);
@@ -97,9 +103,11 @@ public class camera : MonoBehaviour {
 	int level6debugVBoundary = -358;
 
 	int level2LeftBoundary = -37;
-	int level21TopBoundary = -8;
+	/*int level21TopBoundary = -8;
 	int level23TopBoundary = 11;
-	int level22LeftBoundary = -55;
+	int level22LeftBoundary = -55;*/
+
+	int l3boundary = -100;
 
 	int level4topVBoundary = 86;
 	int level4midVBoundary = 36;
@@ -116,19 +124,38 @@ public class camera : MonoBehaviour {
 		intropos = new Vector3(100f,0f,-5f);
 		AudioSource ad = GetComponent<AudioSource> ();
 		ad.Play();
+		L2O1 = false;
+		L2O2 = false;
+		L2O3 = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 		AudioSource ad = GetComponent<AudioSource> ();
 		TextMesh tm = levelText.GetComponent<TextMesh> ();
 		TextMesh ltxt = lintro.GetComponent<TextMesh> ();
 
-		if (ad.clip == texttheme) {
-						ad.volume = 0.2f;
+
+		if (Input.GetKeyDown ("m")) {
+			mute = !mute;
+		}
+			if (mute == false){
+				if (ad.clip == texttheme) {
+					ad.volume = 0.2f;
 				} else {
-			ad.volume = 0.05f;
+					ad.volume = 0.05f;
 				}
+			}
+		if (mute) {
+			ad.volume = 0f;
+				}
+
+
+
+
+
+
 
 		//level determinants
 		//level 1
@@ -142,7 +169,7 @@ public class camera : MonoBehaviour {
 		}
 
 		//level 2
-		if (level == 2) {
+	/*	if (level == 2) {
 			if (target.transform.position.x < level22LeftBoundary){
 				if (target.transform.position.y > level23TopBoundary){
 					level = 25;
@@ -165,13 +192,22 @@ public class camera : MonoBehaviour {
 					level = 22;				
 				}
 			}
-		}
+		}*/
 		if (21<=level && level <=26 && target.transform.position.x > level2LeftBoundary){
 			level = 2;
 		}
 
 		//level 3
-		if (level == 2 && l2Objective1.GetComponent<TextMesh>().text == "ERROR!!!" && l2Objective2.GetComponent<TextMesh>().text == "ERROR!!!" && l2Objective3.GetComponent<TextMesh>().text == "ERROR!!!"){
+		if (level == 2 && l2Objective1.GetComponent<TextMesh> ().text == "ERROR!!!") {
+			L2O1 = true;
+				}
+		if (level == 2 && l2Objective2.GetComponent<TextMesh> ().text == "ERROR!!!") {
+			L2O2 = true;
+		}
+		if (level == 2 && l2Objective3.GetComponent<TextMesh> ().text == "ERROR!!!") {
+			L2O3 = true;
+		}
+		if (level == 2 && L2O1 && L2O2 && L2O3){
 			if (delaytime == 0f){
 				delaytime = Time.time + delayamount;
 			}
@@ -187,6 +223,12 @@ public class camera : MonoBehaviour {
 		}
 
 		//level 4
+		if (level == 3 && target.transform.position.y < l3boundary) {
+			level = 31;
+		}
+		if (level == 31 && target.transform.position.y > l3boundary) {
+			level = 3;
+		}
 		if (level == 3 && l3Report.GetComponent<TextMesh>().text == "Correct!"){
 			if (delaytime == 0f){
 				delaytime = Time.time + delayamount;
@@ -379,7 +421,7 @@ public class camera : MonoBehaviour {
 			break;
 		case 10:
 			camera.transform.position = new Vector3 (l10.transform.position.x, l10.transform.position.y, -5f);
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			if (Input.GetButtonDown("Jump")){
 				level = 1;
 				target.transform.position = level1Start;
@@ -390,12 +432,12 @@ public class camera : MonoBehaviour {
 			}
 			break;
 		case 1:
-			camera.transform.position = new Vector3 (l1.transform.position.x+3, target.transform.position.y, -5f);
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l1.transform.position.x+4, target.transform.position.y, -5f);
+			camera.orthographicSize = 7;
 			break;
 
 		case 200:
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
 			if (Input.GetButtonDown("Jump")){
 				ltxt.text = "start2";
@@ -420,7 +462,7 @@ public class camera : MonoBehaviour {
 
 		case 20:
 			camera.transform.position = new Vector3 (l20.transform.position.x, l20.transform.position.y, -5f);
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			if (Input.GetButtonDown("Jump")){
 				level = 2;
 				tm.text = "2";
@@ -430,8 +472,8 @@ public class camera : MonoBehaviour {
 			}
 			break;
 		case 2:
-			camera.transform.position = new Vector3 (l2.transform.position.x+2, target.transform.position.y, -5f);
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l2.transform.position.x+4, target.transform.position.y, -5f);
+			camera.orthographicSize = 7;
 			break;
 		case 21:
 			camera.transform.position = new Vector3 (l2a.transform.position.x, l2a.transform.position.y, -5f);
@@ -459,7 +501,7 @@ public class camera : MonoBehaviour {
 			break;
 
 		case 300:
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
 			if (Input.GetButtonDown("Jump")){
 				ltxt.text = "start3";
@@ -483,7 +525,7 @@ public class camera : MonoBehaviour {
 			break;
 		case 30:
 			camera.transform.position = new Vector3 (l30.transform.position.x, l30.transform.position.y, -5f);
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			if (Input.GetButtonDown("Jump")){
 				level = 3;
 				tm.text = "3";
@@ -494,12 +536,16 @@ public class camera : MonoBehaviour {
 			}
 			break;
 		case 3:
-			camera.transform.position = new Vector3 (l3.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l3.transform.position.x+4, target.transform.position.y, -5f);
+			camera.orthographicSize = 7;
+			break;
+		case 31:
+			camera.transform.position = new Vector3 (l31.transform.position.x+4, target.transform.position.y, -5f);
+			camera.orthographicSize = 7;
 			break;
 
 		case 400:
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
 			if (Input.GetButtonDown("Jump")){
 				ltxt.text = "start4";
@@ -523,7 +569,7 @@ public class camera : MonoBehaviour {
 			break;
 		case 40:
 			camera.transform.position = new Vector3 (l40.transform.position.x, l40.transform.position.y, -5f);
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			if (Input.GetButtonDown("Jump")){
 				level = 4;
 				tm.text = "4";
@@ -534,60 +580,60 @@ public class camera : MonoBehaviour {
 			}
 			break;
 		case 4:
-			camera.transform.position = new Vector3 (l4.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 41:
-			camera.transform.position = new Vector3 (l4bla.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4bla.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 42:
-			camera.transform.position = new Vector3 (l4blu.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4blu.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 43:
-			camera.transform.position = new Vector3 (l4br.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4br.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 44:
-			camera.transform.position = new Vector3 (l4c.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4c.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 45:
-			camera.transform.position = new Vector3 (l4gree.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4gree.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 46:
-			camera.transform.position = new Vector3 (l4grey.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4grey.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 47:
-			camera.transform.position = new Vector3 (l4m.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4m.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 48:
-			camera.transform.position = new Vector3 (l4n.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4n.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 49:
-			camera.transform.position = new Vector3 (l4o.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4o.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 410:
-			camera.transform.position = new Vector3 (l4r.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4r.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 411:
-			camera.transform.position = new Vector3 (l4w.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4w.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 412:
-			camera.transform.position = new Vector3 (l4y.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l4y.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 
 		case 500:
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
 			if (Input.GetButtonDown("Jump")){
 				ltxt.text = "start5";
@@ -610,12 +656,12 @@ public class camera : MonoBehaviour {
 			}
 			break;
 		case 5:
-			camera.transform.position = new Vector3 (l5.transform.position.x+2, target.transform.position.y, -5f);;
-			camera.orthographicSize = 5;
+			camera.transform.position = new Vector3 (l5.transform.position.x+4, target.transform.position.y, -5f);;
+			camera.orthographicSize = 7;
 			break;
 		case 50:
 			camera.transform.position = new Vector3 (l50.transform.position.x, l50.transform.position.y, -5f);
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			if (Input.GetButtonDown("Jump")){
 				level = 5;
 				tm.text = "5";
@@ -661,7 +707,7 @@ public class camera : MonoBehaviour {
 			break;
 
 		case 999:
-			camera.orthographicSize = 6;
+			camera.orthographicSize = 8;
 			camera.transform.position = new Vector3(success.transform.position.x, success.transform.position.y, -5f);
 			if (Input.GetButtonDown("Jump")){
 				ltxt.text = "end";
