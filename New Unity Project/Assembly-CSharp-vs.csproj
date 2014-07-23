@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\FColorTest.cs" />
      <Compile Include="Assets\Scripts\HUDText.cs" />
      <Compile Include="Assets\Scripts\L0Intro.cs" />
+     <Compile Include="Assets\Scripts\L0IntroK.cs" />
+     <Compile Include="Assets\Scripts\L0IntroOriginal.cs" />
      <Compile Include="Assets\Scripts\L1CommentSetter.cs" />
      <Compile Include="Assets\Scripts\L1Intro.cs" />
      <Compile Include="Assets\Scripts\L1KeywordSetter.cs" />

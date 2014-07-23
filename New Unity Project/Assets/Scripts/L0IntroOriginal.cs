@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class L0Intro : MonoBehaviour {
+public class L0IntroOriginal : MonoBehaviour {
 
 	public int stopY0;
 	public int stopY1;
@@ -45,46 +45,46 @@ public class L0Intro : MonoBehaviour {
 			"\n" +
 			"\nThe year is 2114, and the " +
 			"\nmalicious alien bugs of " +
-				"\n<color=red>PLANET Z</color> have launched an " +
+			"\nPLANET Z have launched an " +
 			"\nall-out assault on Earth." +
 			"\n" +
 			"\nAs Earth's greatest" +
 			"\nprogrammer, you are the best" +
 			"\nhope for humanity. However, " +
 			"\nThe bugs have already" +
-				"\ninfested your armoured <color=#3dbde8>MECH" +
-				"\nSUIT</color>." +
+			"\ninfested your armoured MECH" +
+			"\nSUIT." +
 			"\n" +
-				"\nIn your <color=#3dbde8>DEBUG ARMOUR</color>, you" +
+			"\nIn your DEBUG ARMOUR, you" +
 			"\nmust find and exterminate" +
 			"\nall of the bugs that are" +
 			"\ncausing the mech suit to " +
 			"\nmalfunction." +
 			"\n" +
-				"\n<color=#3dbde8>PRESS SPACE TO START</color>";
+			"\nPRESS SPACE TO START";
 
 		L1Text = "" +
-			"\n<color=#3dbde8>LEVEL 1</color>" +
+			"\nLEVEL 1" +
 			"\n" +
 			"\nThe mech suit is unable to" +
-				"\nperform <color=#3dbde8>basic movement</color>. It" +
+			"\nperform basic movement. It" +
 			"\nseems like it is having " +
 			"\ndifficulty adjusting to " +
-				"\nexternal <color=#3dbde8>forces</color> and properly" +
+			"\nexternal forces and properly" +
 			"\nmeasuring them. As a result," +
 			"\nit is making sporadic" +
 			"\nand unpredictable movements." +
 			"\n" +
 			"\nYou must trace through the " +
-				"\nsource code of the <color=#3dbde8>AVGFORCE()</color>" +
+			"\nsource code of the AVGFORCE()" +
 			"\nfunction and find the bug." +
 			"\n" +
-				"\n<color=#3dbde8>PRESS SPACE TO START</color>";
+			"\nPRESS SPACE TO START";
 
 		L2Text = "" +
-			"\n<color=#3dbde8>LEVEL 2</color>" +
+			"\nLEVEL 2" +
 			"\n" +
-				"\nThe <color=#3dbde8>MECH LASER CANNON MkII</color>" +
+			"\nThe MECH LASER CANNON MkII" +
 			"\nis a powerful bug-killing" +
 			"\nweapon that can target as many" +
 			"\nas ten bugs per laser burst." +
@@ -93,27 +93,27 @@ public class L0Intro : MonoBehaviour {
 			"\nthe MkII has been installed " +
 			"\ninto your mech suit, but the " +
 			"\ncode is confidential and " +
-				"\nhidden in a <color=#3dbde8>\"BLACK BOX\"</color>." +
+			"\nhidden in a \"BLACK BOX\"." +
 			"\n" +
 			"\nThe bugs have infiltrated " +
 			"\nthe code that calculates the" +
-				"\n<color=#3dbde8>target distance, energy values," +
-				"\nand cannon temperature</color>. You " +
+			"\ntarget distance, energy values," +
+			"\nand cannon temperature. You " +
 			"\nmust find the bugs by using " +
-				"\n<color=#3dbde8>tests</color> since you cannot view" +
+			"\ntests since you cannot view" +
 			"\nthe MkII source code directly." +
 			"\n" +
-				"\n<color=#3dbde8>PRESS SPACE TO START</color>";
+			"\nPRESS SPACE TO START";
 
 		L3Text = "" +
-			"\n<color=#3dbde8>LEVEL 3</color>" +
+			"\nLEVEL 3" +
 			"\n" +
 			"\nNow that the MkII laser cannon" +
 			"\nis functional, the next " +
 			"\nessential system to repair is the" +
-				"\n<color=#3dbde8>EXTERNAL DEFENSE SYSTEM</color>." +
+			"\nEXTERNAL DEFENSE SYSTEM." +
 			"\n" +
-				"\nThis system <color=#3dbde8>prioritizes</color> threats" +
+			"\nThis system prioritizes threats" +
 			"\nand determines the most dangerous" +
 			"\ntarget within range. However, it" +
 			"\nis currently non-functional and " +
@@ -121,66 +121,66 @@ public class L0Intro : MonoBehaviour {
 			"\ncritical threats." +
 			"\n" +
 			"\nYou must use the mech suit's " +
-				"\n<color=#3dbde8>PRINT OUTPUT SYSTEM</color> to obtain" +
+			"\nPRINT OUTPUT SYSTEM to obtain" +
 			"\nfeedback and locate the bug " +
 			"\ninfecting the system." +
 			"\n" +
-				"\n<color=#3dbde8>PRESS SPACE TO START</color>";
+			"\nPRESS SPACE TO START";
 
 		L4Text = "" +
-			"\n<color=#3dbde8>LEVEL 4</color>" +
+			"\nLEVEL 4" +
 			"\n" +
 			"\nReparing the external defense" +
 			"\nsystem has unveiled a new error" +
-				"\nlocated in the robot's <color=#3dbde8>VISION" +
-				"\nSYSTEM</color>." +
+			"\nlocated in the robot's VISION" +
+			"\nSYSTEM." +
 			"\n" +
 			"\nThe system that identifies objects" +
 			"\nbased on colour and shape is crashing" +
-				"\ndue to a bug in the robot's <color=#3dbde8>COLOUR" +
-				"\nDATABASE</color>. Without locating the bug" +
+			"\ndue to a bug in the robot's COLOUR" +
+			"\nDATABASE. Without locating the bug" +
 			"\nin the database, all vision" +
 			"\ncapabilities are currently non-" +
 			"\nfunctional." +
 			"\n" +
 			"\nThe code in the database is massive" +
-				"\nand divided into <color=#3dbde8>tables</color> based on colour"+
+			"\nand divided into tables based on colour"+
 			"\nTo find the bug, you should use a " +
-				"\n<color=#3dbde8>DIVIDE AND CONQUER</color> approach by " +
+			"\nDIVIDE AND CONQUER approach by " +
 			"\ncommenting out the tables that do not" +
-				"\ncontain the bug. Use the <color=#3dbde8>error message</color> " +
-			"\non your heads-up-display to check for" +
+			"\ncontain the bug. Use the error message " +
+			"\nat the bottom of the code to check for" +
 			"\nfaulty tables." +
 			"\n" +
-				"\n<color=#3dbde8>PRESS SPACE TO START</color>";
+			"\nPRESS SPACE TO START";
 
 		L5Text = "" +
-			"\n<color=#3dbde8>LEVEL 5</color>" +
+			"\nLEVEL 5" +
 			"\n" +
 			"\nNow that the vision system is online," +
 			"\nthe mech suit needs to be able to" +
 			"\nreassess the external defense system " +
-				"\nthreat levels based on the <color=#3dbde8>distance</color>" +
+			"\nthreat levels based on the distance" +
 			"\nof each object from the mech suit." +
 			"\n" +
-				"\nThe <color=#3dbde8>COMPARETHREATS()</color> function " +
+			"\nThe COMPARETHREATS() function " +
 			"\ncompares potential threats at varying " +
-				"\n<color=#3dbde8>coordinates</color> and returns the threat " +
+			"\ncoordinates and returns the threat " +
 			"\nthat is closest to the mech suit. " +
 			"\nHowever, a bug has caused it to" +
 			"\nmiscalculate the correct distances." +
 			"\n"+
-				"\nFortunately, the <color=#3dbde8>DEBUGGER SYSTEM</color> " +
+			"\nFortunately, the DEBUGGER SYSTEM " +
 			"\nhas finally loaded and become " +
 			"\navailable for you to use. You can" +
-				"\n<color=#3dbde8>observe function behavior</color> during " +
-				"\nrun-time by setting up <color=#3dbde8>breakpoints</color> " +
+			"\n observe function behavior during " +
+			"\nrun-time by setting up breakpoints " +
 			"\nin the code and running the code until" +
 			"\nit reaches the next breakpoint." +
 			"\nUse this system to follow the code " +
 			"\nand discover where the bug is. " +
 			"\n"+
-				"\n<color=#3dbde8>PRESS SPACE TO START</color>";
+			"\nPRESS SPACE TO START";
 
 		/*endText = "" + 
 			"\nVICTORY" +
@@ -250,13 +250,13 @@ public class L0Intro : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		endText = "" + 
-			"\n<color=#3dbde8>VICTORY</color>" +
+			"\nVICTORY" +
 				"\n" +
 				"\nYou've repaired the Mech suit and" +
 				"\nsuccessfully eliminated all of the " +
 				"\nbugs that were in your way." +
 				"\n" +
-				"\n<color=#3dbde8>Congratulations!</color>" +
+				"\nCongratulations!" +
 				"\n" +
 				"\nCreated by: Michael Miljanovic" +
 				"\nunder supervision of Dr. Jeremy Bradbury" +

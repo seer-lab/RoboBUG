@@ -240,6 +240,6 @@ public class L3Output : MonoBehaviour {
 		}*/
 		TextMesh Tm = GetComponent<TextMesh>();
 		Tm.text = output;
-		Tm.color = Color.black;
+		Tm.color = Color.white;
 	}
 }

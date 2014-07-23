@@ -19,13 +19,13 @@ public class sidebardescription : MonoBehaviour {
 			GetComponent<GUIText>().text = "OBJECTIVE:\n\nFind the bug\nHit it with a Bugcatcher\nPress CTRL to Throw";
 			break;
 		case 2:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nType in values while standing in the yellow text\nUse the TESTER tool at the return lines\nModify each test case till you get an error\n";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nType values while standing in the yellow text\nUse the TESTER tool at the return lines\nModify the tests to find each error\n";
 			break;
 		case 3:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to toggle printing\nObserve the output by using the WARPER tool\nCatch the bug with a BUGCATCHER";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to toggle printing\nObserve the output using the WARPER tool\nCatch the bug with a BUGCATCHER";
 			break;
 		case 4:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to comment out tables\nExamine the output after commenting out regions\nWARP to the appropriate table and catch the bug";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to comment out tables\nWatch the error after commenting\nWARP to the table causing the error\nThrow a BUGCATCHER at the bug";
 			break;
 		case 5:
 			GetComponent<GUIText>().text = "OBJECTIVE:\nObserve variable behaviour using the debugger\nThrow BREAKPOINTERS left to toggle breakpoints\nThrow TESTERS right to run the program\nUse the TESTER tool if you want to reset\nYou can WARP to the compare function";

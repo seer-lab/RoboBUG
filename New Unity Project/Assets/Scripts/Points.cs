@@ -14,6 +14,7 @@ public class Points : MonoBehaviour
 	int pointsGet = 0;
 		public GameObject falsepositive;
 		int pointpenalty = 500;
+	public GameObject pointnumber;
 
 		int secs;
 
@@ -27,6 +28,7 @@ public class Points : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
+				pointnumber.GetComponent<TextMesh> ().text = System.Convert.ToString (points);
 				levelnum = System.Convert.ToInt16 (level.GetComponent<TextMesh> ().text);
 				if (falsepositive.GetComponent<TextMesh> ().text == "Caught") {
 					points -= pointpenalty;
