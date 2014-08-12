@@ -22,7 +22,7 @@ public class sidebardescription : MonoBehaviour {
 			GetComponent<GUIText>().text = "OBJECTIVE:\n\nType values while standing in the yellow text\nUse the TESTER tool at the return lines\nModify the tests to find each error\n";
 			break;
 		case 3:
-			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to toggle printing\nObserve the output using the WARPER tool\nCatch the bug with a BUGCATCHER";
+			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to toggle printing\nObserve output on LINE#1 using the WARPER\nCatch the bug with a BUGCATCHER";
 			break;
 		case 4:
 			GetComponent<GUIText>().text = "OBJECTIVE:\n\nUse the ACTIVATOR tool to comment out tables\nWatch the error after commenting\nWARP to the table causing the error\nThrow a BUGCATCHER at the bug";

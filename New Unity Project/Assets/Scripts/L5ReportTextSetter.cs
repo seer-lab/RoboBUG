@@ -15,7 +15,7 @@ public class L5ReportTextSetter : MonoBehaviour {
 				"\n\t    yval -= (object2.y-object1.y);" +
 				"\n\t    zval += (object1.z-object2.z);" +
 				"\n\t      (xval+yval+zval > 0){        object1;}" +
-				"\n\t         {        object2};\n}";
+				"\n\t         {        object2;}\n}";
 		/*tm.text = "The bug is that the wrong objects are compared" +
 				"\nThe bug is that the darker object is chosen" +
 				"\nThe bug is that not all objects are compared" +

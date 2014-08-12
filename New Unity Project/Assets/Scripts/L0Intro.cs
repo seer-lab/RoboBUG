@@ -11,6 +11,12 @@ public class L0Intro : MonoBehaviour {
 	public int stopY5;
 	public int stopYend;
 
+	public GameObject l1time;
+	public GameObject l2time;
+	public GameObject l3time;
+	public GameObject l4time;
+	public GameObject l5time;
+
 	public float moveSpeed;
 
 	public string L0Text;
@@ -311,6 +317,12 @@ public class L0Intro : MonoBehaviour {
 				"\n" +
 				"\nThanks for playing!" +
 				"\nFINAL SCORE: " + points.GetComponent<TextMesh>().text + 
+				"\nLevel 1 Time: " + l1time.GetComponent<TextMesh>().text + " seconds" + 
+				"\nLevel 2 Time: " + l2time.GetComponent<TextMesh>().text + " seconds" + 
+				"\nLevel 3 Time: " + l3time.GetComponent<TextMesh>().text + " seconds" + 
+				"\nLevel 4 Time: " + l4time.GetComponent<TextMesh>().text + " seconds" + 
+				"\nLevel 5 Time: " + l5time.GetComponent<TextMesh>().text + " seconds" + 
+				"\n" +
 				"\nPress Escape to quit";
 
 

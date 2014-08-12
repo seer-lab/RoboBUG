@@ -7,6 +7,13 @@ public class Points : MonoBehaviour
 		public GameObject level;
 		public GameObject starttimer;
 		public GameObject endtext;
+
+	public GameObject l1time;
+	public GameObject l2time;
+	public GameObject l3time;
+	public GameObject l4time;
+	public GameObject l5time;
+
 		public int levelnum;
 		public int currentlevel;
 		public int starttime;
@@ -131,6 +138,7 @@ public class Points : MonoBehaviour
 						endtext.GetComponent<TextMesh> ().text += System.Convert.ToString (secs);
 					}
 					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
+					l1time.GetComponent<TextMesh>().text = System.Convert.ToString ((int)Time.time - starttime);
 					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
 				//	starttime = (int)Time.time;
 					break;
@@ -147,6 +155,7 @@ public class Points : MonoBehaviour
 					}			
 					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
 					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+					l2time.GetComponent<TextMesh>().text = System.Convert.ToString ((int)Time.time - starttime);
 				//	starttime = (int)Time.time;
 					break;
 				case 400:
@@ -162,6 +171,7 @@ public class Points : MonoBehaviour
 					}			
 					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
 					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+					l3time.GetComponent<TextMesh>().text = System.Convert.ToString ((int)Time.time - starttime);
 				//	starttime = (int)Time.time;
 					break;
 				case 500:
@@ -177,6 +187,7 @@ public class Points : MonoBehaviour
 					}		
 					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
 					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+					l4time.GetComponent<TextMesh>().text = System.Convert.ToString ((int)Time.time - starttime);
 				//	starttime = (int)Time.time;
 					break;
 				case 999:
@@ -193,6 +204,7 @@ public class Points : MonoBehaviour
 					}		
 					endtext.GetComponent<TextMesh> ().text += "\nTime elapsed: " + System.Convert.ToString ((int)Time.time - starttime) + " seconds";
 					endtext.GetComponent<TextMesh> ().text += "\nPoint Bonus: " + System.Convert.ToString (pointsGet) + " points!";
+					l5time.GetComponent<TextMesh>().text = System.Convert.ToString ((int)Time.time - starttime);
 					endtext.GetComponent<TextMesh> ().text += "\nFinal score: " + points + " points";
 				//	starttime = (int)Time.time;
 					break;
