@@ -349,6 +349,18 @@ public class L0Intro : MonoBehaviour {
 		else if (txt.text == "end") {
 			this.transform.position = new Vector3(100f,-3f,0f);
 			txt.text = endText;
+		//	Output to desktop
+			string username = System.Environment.GetEnvironmentVariable("username");
+			
+			using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\" + username + @"\desktop\RoboLOG.txt"))
+				{
+				file.WriteLine(l1time.GetComponent<TextMesh>().text);
+				file.WriteLine(l2time.GetComponent<TextMesh>().text);
+				file.WriteLine(l3time.GetComponent<TextMesh>().text);
+				file.WriteLine(l4time.GetComponent<TextMesh>().text);
+				file.WriteLine(l5time.GetComponent<TextMesh>().text);
+			}
+
 		}
 	/*	else if (Input.GetButtonDown ("Jump")) {
 			this.transform.position = new Vector3(100f,0f,0f);

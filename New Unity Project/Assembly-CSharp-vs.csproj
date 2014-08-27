@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Answer.cs" />
      <Compile Include="Assets\Scripts\AvgTest.cs" />
      <Compile Include="Assets\Scripts\Badbreakpoint.cs" />
      <Compile Include="Assets\Scripts\CColorTest.cs" />
