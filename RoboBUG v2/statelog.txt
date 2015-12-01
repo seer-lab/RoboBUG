@@ -1,0 +1,9 @@
+NewState,PreviousState#,Time,CurrentLevel
+MenuAccessed,10,1.830285,level0
+LevelBegin,2,10.53587,level3a.xml
+MenuAccessed,1,11.5029,level3a.xml
+LevelBegin,2,15.92238,tut3.xml
+LevelComplete,1,23.47705,tut3.xml
+LevelBegin,2,37.43139,level3a.xml
+MenuAccessed,1,62.3847,level3a.xml
+LevelBegin,2,65.20313,level3a.xml

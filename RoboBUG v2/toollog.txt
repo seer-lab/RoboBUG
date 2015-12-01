@@ -1,0 +1,6 @@
+Tool,Location,Time
+Warped,tut4.xml,17.06
+Commented,13,19.32
+BugCaught,12,21.46
+Printed,13,47.16
+Printed,13,69.24
