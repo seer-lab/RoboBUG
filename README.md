@@ -1,3 +1,6 @@
+
+**RoboBUG has now been integrated into the RoboGames repository.**
+
 RoboBUG
 =======
 
